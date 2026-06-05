@@ -1,0 +1,56 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "• Q1 What is the primary raw material used for manufacturing semiconductor wafers?",
+      "answers": {
+        "a": "Copper",
+        "b": "Silicon",
+        "c": "Aluminum",
+        "d": "Gold"
+      },
+      "explanations": {
+        "a": "Copper is mainly used for interconnections inside chips.",
+        "b": "Correct! Silicon is the most commonly used semiconductor material for wafer manufacturing.",
+        "c": "Aluminum is used in some metallization processes but not for wafer production.",
+        "d": "Gold is used in certain packaging and bonding applications."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "• Q2 In the Czochralski process, silicon is initially present in which state?",
+      "answers": {
+        "a": "Gas",
+        "b": "Liquid (Molten Silicon)",
+        "c": "Powder",
+        "d": "Finished Wafer"
+      },
+      "explanations": {
+        "a": "Silicon is not used in gaseous form during crystal growth.",
+        "b": "Correct! Silicon is melted above its melting point to form molten silicon.",
+        "c": "Silicon powder is not directly used in the crystal pulling process.",
+        "d": "The wafer is produced only after crystal growth and slicing."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "• Q3 What is used to start crystal growth in the Czochralski process?",
+      "answers": {
+        "a": "Metal Rod",
+        "b": "Quartz Plate",
+        "c": "Seed Crystal",
+        "d": "Silicon Wafer"
+      },
+      "explanations": {
+        "a": "A metal rod may hold the crystal but does not initiate growth.",
+        "b": "Quartz is commonly used for the crucible, not for starting crystal growth.",
+        "c": "Correct! A seed crystal provides the structure from which the crystal grows.",
+        "d": "The wafer is produced after crystal growth, not before."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  ]
+}

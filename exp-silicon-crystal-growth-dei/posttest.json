@@ -1,0 +1,39 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "• Q1 What is the most likely result if the crystal is pulled too quickly during the Czochralski growth process?",
+      "answers": {
+        "a": "A larger and more uniform crystal is formed",
+        "b": "The crystal may become thin and develop defects",
+        "c": "The silicon immediately becomes a wafer",
+        "d": "The melting point of silicon increases"
+      },
+      "explanations": {
+        "a": "Pulling too quickly does not improve crystal quality.",
+        "b": "Correct! Excessive pull rates can make the crystal unstable, leading to a smaller diameter and defects.",
+        "c": "The crystal must still be sliced and polished before wafers are produced.",
+        "d": "Pull rate does not affect the melting point of silicon."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "• Q2 Which combination of parameters generally produces a high-quality silicon crystal?",
+      "answers": {
+        "a": "Maximum pull rate and maximum temperature",
+        "b": "No rotation and very high temperature",
+        "c": "Controlled pull rate, proper rotation speed, and stable temperature",
+        "d": "Very low temperature below the melting point"
+      },
+      "explanations": {
+        "a": "Very high values can lead to instability and crystal defects.",
+        "b": "Lack of rotation can cause non-uniform crystal growth.",
+        "c": "Correct! Stable growth conditions help produce a uniform crystal with fewer defects.",
+        "d": "Silicon must remain molten for crystal growth to occur."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  ]
+}
