@@ -11,9 +11,7 @@ body {
 
 }
 
-/* =========================
-   MAIN CONTAINER
-========================= */
+/* MAIN CONTAINER */
 
 .main-container {
 
@@ -25,9 +23,7 @@ body {
 
 }
 
-/* =========================
-   PANELS
-========================= */
+/*PANELS*/
 
 .panel {
 
@@ -70,9 +66,7 @@ h2 {
 
 }
 
-/* =========================
-   CONTROLS
-========================= */
+/* CONTROLS */
 
 .control-group {
 
@@ -97,9 +91,7 @@ input[type="range"] {
 
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTONS */
 
 .button-group {
 
@@ -139,9 +131,7 @@ button:hover {
 
 }
 
-/* =========================
-   LIVE PROCESS BOX
-========================= */
+/*LIVE PROCESS BOX */
 
 .live-process-box {
 
@@ -168,9 +158,7 @@ button:hover {
 
 }
 
-/* =========================
-   FURNACE
-========================= */
+/* FURNACE */
 
 .furnace {
 
@@ -206,9 +194,7 @@ button:hover {
 
 }
 
-/* =========================
-   FURNACE LABEL
-========================= */
+/* FURNACE LABEL */
 
 .furnace-label {
 
@@ -228,9 +214,7 @@ button:hover {
 
 }
 
-/* =========================
-   GAS PIPE
-========================= */
+/* GAS PIPE*/
 
 .gas-pipe {
 
@@ -283,9 +267,7 @@ button:hover {
 
 }
 
-/* =========================
-   GAS AREA
-========================= */
+/*GAS AREA*/
 
 .gas-area {
 
@@ -395,9 +377,7 @@ button:hover {
 
 }
 
-/* =========================
-   HEATER ZONE
-========================= */
+/*HEATER ZONE */
 
 .heater-zone {
 
@@ -440,9 +420,7 @@ button:hover {
 
 }
 
-/* =========================
-   WAFER SECTION
-========================= */
+/* WAFER SECTION*/
 
 .wafer-section {
 
@@ -473,9 +451,7 @@ button:hover {
 
 }
 
-/* =========================
-   WAFER
-========================= */
+/*  WAFER */
 
 .wafer {
 
@@ -499,9 +475,7 @@ button:hover {
 
 }
 
-/* =========================
-   OXIDE LAYER
-========================= */
+/* OXIDE LAYER */
 
 .oxide-layer {
 
@@ -523,9 +497,7 @@ button:hover {
 
 }
 
-/* =========================
-   OUTPUT BOXES
-========================= */
+/* OUTPUT BOXES */
 
 .output-box,
 .flow-box {
@@ -558,9 +530,7 @@ button:hover {
 
 }
 
-/* =========================
-   STATUS BOX
-========================= */
+/* STATUS BOX */
 
 #statusBox {
 
@@ -576,9 +546,7 @@ button:hover {
 
 }
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
+/* MOBILE RESPONSIVE*/
 
 @media screen and (max-width: 768px) {
 

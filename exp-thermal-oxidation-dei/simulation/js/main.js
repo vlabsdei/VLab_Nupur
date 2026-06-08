@@ -88,9 +88,7 @@ const liveTemp =
         "liveTemp"
     );
 
-// =========================
 // SLIDER VALUES
-// =========================
 
 temperature.addEventListener(
     "input",
@@ -113,18 +111,13 @@ time.addEventListener(
 
     });
 
-// =========================
 // START BUTTON
-// =========================
-
 startBtn.addEventListener(
     "click",
     startOxidation
 );
 
-// =========================
 // MAIN FUNCTION
-// =========================
 
 function startOxidation() {
 
@@ -141,17 +134,13 @@ function startOxidation() {
             time.value
         );
 
-    // =========================
     // HOT FURNACE EFFECT
-    // =========================
 
     furnace.classList.add(
         "hot"
     );
 
-    // =========================
     // VISUAL DIFFERENCE
-    // =========================
 
     if (type === "dry") {
 
@@ -215,9 +204,7 @@ function startOxidation() {
 
     }
 
-    // =========================
     // DEAL GROVE MODEL
-    // =========================
 
     let A;
     let B;
@@ -242,10 +229,6 @@ function startOxidation() {
 
     }
 
-    // =========================
-    // TEMPERATURE EFFECT
-    // =========================
-
     const temperatureFactor =
         (temp - 800) / 400;
 
@@ -253,22 +236,13 @@ function startOxidation() {
 
     B *= temperatureFactor;
 
-    // =========================
-    // TIME
-    // =========================
-
     const t =
         heatingTime;
 
-    // =========================
-    // CORRECTION FACTOR
-    // =========================
 
     const tau = 1;
 
-    // =========================
     // DEAL GROVE EQUATION
-    // =========================
 
     const thickness =
     (
@@ -288,10 +262,7 @@ function startOxidation() {
             )
         ) / 2
     ).toFixed(2);
-
-    // =========================
     // GROWTH RATE
-    // =========================
 
     let growthRate = 0;
 
@@ -304,9 +275,7 @@ function startOxidation() {
 
     }
 
-    // =========================
     // QUALITY LOGIC
-    // =========================
 
     let quality =
         "Good";
@@ -347,10 +316,7 @@ function startOxidation() {
             "Poor";
 
     }
-
-    // =========================
     // VISUAL OXIDE GROWTH
-    // =========================
 
     const visualThickness =
         thickness * 8;
@@ -358,9 +324,7 @@ function startOxidation() {
     oxideLayer.style.height =
         visualThickness + "px";
 
-    // =========================
     // OUTPUTS
-    // =========================
 
     thicknessText.innerHTML =
         thickness;
@@ -371,18 +335,15 @@ function startOxidation() {
     qualityText.innerHTML =
         quality;
 
-    // =========================
     // STATUS UPDATE
-    // =========================
+
 
     statusBox.innerHTML +=
         "<br><br>Silicon dioxide layer formation detected on wafer surface.";
 
 }
 
-// =========================
 // RESET
-// =========================
 
 resetBtn.addEventListener(
     "click",
