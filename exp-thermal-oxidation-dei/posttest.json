@@ -1,0 +1,73 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "• Q1 What happens to oxide thickness when oxidation time increases?",
+      "answers": {
+        "a": "Oxide thickness decreases",
+        "b": "Oxide thickness remains constant",
+        "c": "Oxide thickness increases",
+        "d": "The oxide layer disappears"
+      },
+      "explanations": {
+        "a": "Longer oxidation time generally increases thickness.",
+        "b": "Oxide thickness changes with oxidation duration.",
+        "c": "Correct! Longer heating time increases oxide growth.",
+        "d": "The oxide layer does not disappear during oxidation."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "• Q2 Which oxidation method generally produces denser and higher-quality oxide layers?",
+      "answers": {
+        "a": "Wet Oxidation",
+        "b": "Dry Oxidation",
+        "c": "Steam Oxidation",
+        "d": "Vacuum Oxidation"
+      },
+      "explanations": {
+        "a": "Wet oxidation produces faster growth but comparatively less dense oxide.",
+        "b": "Correct! Dry oxidation produces thinner but higher-quality oxide layers.",
+        "c": "Steam oxidation is associated with wet oxidation.",
+        "d": "Vacuum oxidation is not the standard method used here."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "• Q3 In the Deal-Grove model, what does X₀ represent?",
+      "answers": {
+        "a": "Oxidation temperature",
+        "b": "Oxide thickness",
+        "c": "Oxidation pressure",
+        "d": "Wafer diameter"
+      },
+      "explanations": {
+        "a": "Temperature is one factor affecting oxidation but not represented by X₀.",
+        "b": "Correct! X₀ represents oxide thickness.",
+        "c": "Pressure is not represented by X₀ in the Deal-Grove model.",
+        "d": "Wafer diameter is unrelated to X₀."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "• Q4 Which factor does NOT directly affect oxide growth rate?",
+      "answers": {
+        "a": "Temperature",
+        "b": "Heating time",
+        "c": "Oxidation type",
+        "d": "Wafer color"
+      },
+      "explanations": {
+        "a": "Higher temperature increases oxidation rate.",
+        "b": "Longer heating duration increases oxide thickness.",
+        "c": "Dry and wet oxidation have different growth rates.",
+        "d": "Correct! Wafer color does not affect oxide growth."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+  ]
+}

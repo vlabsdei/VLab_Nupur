@@ -1,0 +1,73 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "• Q1 What is the main purpose of thermal oxidation in semiconductor fabrication?",
+      "answers": {
+        "a": "To cut silicon wafers",
+        "b": "To create a protective SiO₂ layer",
+        "c": "To melt the silicon wafer",
+        "d": "To increase wafer thickness"
+      },
+      "explanations": {
+        "a": "Cutting wafers is part of wafer preparation, not oxidation.",
+        "b": "Correct! Thermal oxidation creates a protective and insulating silicon dioxide layer.",
+        "c": "The silicon wafer is heated during oxidation but not melted.",
+        "d": "Oxidation forms an oxide layer, not a thicker wafer."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "• Q2 Which gas is mainly used in dry oxidation?",
+      "answers": {
+        "a": "Nitrogen",
+        "b": "Hydrogen",
+        "c": "Oxygen (O₂)",
+        "d": "Argon"
+      },
+      "explanations": {
+        "a": "Nitrogen is commonly used as an inert gas in semiconductor processing.",
+        "b": "Hydrogen is not the primary gas used in dry oxidation.",
+        "c": "Correct! Dry oxidation uses pure oxygen (O₂).",
+        "d": "Argon is an inert gas and is not used for oxidation."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "• Q3 Which oxidation process produces oxide layers faster?",
+      "answers": {
+        "a": "Dry Oxidation",
+        "b": "Wet Oxidation",
+        "c": "Vacuum Oxidation",
+        "d": "Cold Oxidation"
+      },
+      "explanations": {
+        "a": "Dry oxidation produces high-quality layers but at a slower rate.",
+        "b": "Correct! Wet oxidation grows oxide layers much faster.",
+        "c": "Vacuum oxidation is not commonly used for thermal oxidation.",
+        "d": "Cold oxidation is not a standard semiconductor oxidation process."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "• Q4 What is the typical temperature range used in thermal oxidation?",
+      "answers": {
+        "a": "100–300°C",
+        "b": "400–700°C",
+        "c": "800–1200°C",
+        "d": "1500–2000°C"
+      },
+      "explanations": {
+        "a": "This temperature range is too low for thermal oxidation.",
+        "b": "Thermal oxidation generally requires higher temperatures.",
+        "c": "Correct! Thermal oxidation is commonly performed between 800°C and 1200°C.",
+        "d": "This range is excessively high for standard oxidation processes."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  ]
+}

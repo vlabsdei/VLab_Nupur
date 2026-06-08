@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Thermal Oxidation Virtual Lab
+    </title>
+
+    <link rel="stylesheet"
+          href="./css/main.css">
+
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- LEFT PANEL -->
+
+        <div class="panel left-panel">
+
+            <h2>
+                Process Controls
+            </h2>
+
+            <div class="control-group">
+
+                <label>
+                    Oxidation Type
+                </label>
+
+                <select id="oxidationType">
+
+                    <option value="dry">
+                        Dry Oxidation
+                    </option>
+
+                    <option value="wet">
+                        Wet Oxidation
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="control-group">
+
+                <label>
+                    Temperature:
+                    <span id="tempValue">
+                        1000
+                    </span>
+                    °C
+                </label>
+
+                <input type="range"
+                       id="temperature"
+                       min="900"
+                       max="1200"
+                       value="1000">
+
+            </div>
+
+            <div class="control-group">
+
+                <label>
+                    Heating Time:
+                    <span id="timeValue">
+                        60
+                    </span>
+                    min
+                </label>
+
+                <input type="range"
+                       id="time"
+                       min="0"
+                       max="180"
+                       value="60">
+
+            </div>
+
+            <div class="button-group">
+
+                <button id="startBtn">
+                    Start Oxidation
+                </button>
+
+                <button id="resetBtn">
+                    Reset
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- CENTER PANEL -->
+
+        <div class="panel center-panel">
+
+            <h2>
+                Oxidation Furnace
+            </h2>
+
+            <!-- LIVE PROCESS BOX -->
+
+            <div class="live-process-box">
+
+                <p>
+                    <strong>Process:</strong>
+                    <span id="liveProcessType">
+                        Dry Oxidation
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Active Gas:</strong>
+                    <span id="liveGas">
+                        O₂
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Temperature:</strong>
+                    <span id="liveTemp">
+                        1000
+                    </span>
+                    °C
+                </p>
+
+            </div>
+
+            <div class="furnace"
+                 id="furnace">
+
+                <div class="furnace-label">
+                    Thermal Oxidation Chamber
+                </div>
+
+                <!-- GAS PIPE -->
+
+                <div class="gas-pipe">
+
+                    <div class="pipe-label"
+                         id="pipeLabel">
+
+                        O₂ Gas Inlet
+
+                    </div>
+
+                </div>
+
+                <!-- GAS FLOW -->
+
+                <div class="gas-area"
+                     id="gasArea">
+
+                    <div class="particle p1"></div>
+                    <div class="particle p2"></div>
+                    <div class="particle p3"></div>
+                    <div class="particle p4"></div>
+                    <div class="particle p5"></div>
+
+                </div>
+
+                <!-- HEATER -->
+
+                <div class="heater-zone">
+
+                    <div class="heater-label">
+                        High Temperature Furnace
+                    </div>
+
+                </div>
+
+                <!-- WAFER -->
+
+                <div class="wafer-section">
+
+                    <div class="wafer-label">
+                        Silicon Wafer
+                    </div>
+
+                    <div class="wafer">
+
+                        <div class="oxide-layer"
+                             id="oxideLayer">
+
+                        </div>
+
+                    </div>
+
+                    <div class="oxide-label">
+                        Growing SiO₂ Layer
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+
+        <div class="panel right-panel">
+
+            <h2>
+                Process Outputs
+            </h2>
+
+            <div class="output-box">
+
+                <p>
+                    <strong>
+                        Oxide Thickness:
+                    </strong>
+
+                    <span id="thickness">
+                        0
+                    </span>
+                    nm
+
+                </p>
+
+                <p>
+                    <strong>
+                        Growth Rate:
+                    </strong>
+
+                    <span id="growthRate">
+                        0
+                    </span>
+                    nm/min
+
+                </p>
+
+                <p>
+                    <strong>
+                        Layer Quality:
+                    </strong>
+
+                    <span id="quality">
+                        Not Started
+                    </span>
+
+                </p>
+
+                <p>
+                    <strong>
+                        Furnace Status:
+                    </strong>
+                </p>
+
+                <div id="statusBox">
+
+                    Waiting to start oxidation...
+
+                </div>
+
+            </div>
+
+            <!-- DEAL GROVE -->
+
+            <div class="flow-box">
+
+                <h3>
+                    Deal-Grove Oxidation Model
+                </h3>
+
+                <p>
+                    Xₒ =
+                    (-A + √(A² + 4B(t+τ))) / 2
+                </p>
+
+                <p>
+                    Xₒ → Oxide Thickness
+                </p>
+
+                <p>
+                    A, B → Oxidation Constants
+                </p>
+
+                <p>
+                    t → Oxidation Time
+                </p>
+
+            </div>
+
+            <!-- PROCESS RELATIONS -->
+
+            <div class="flow-box">
+
+                <h3>
+                    Process Relations
+                </h3>
+
+                <p>
+                    Higher Temperature →
+                    Faster Oxidation
+                </p>
+
+                <p>
+                    Wet Oxidation →
+                    Faster Growth
+                </p>
+
+                <p>
+                    Dry Oxidation →
+                    Better Oxide Quality
+                </p>
+
+                <p>
+                    Longer Heating →
+                    Thicker Oxide Layer
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

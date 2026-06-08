@@ -1,0 +1,2 @@
+### Aim of the experiment
+To study the thermal oxidation process used in semiconductor fabrication and analyze the effect of oxidation type, temperature, and heating time on silicon dioxide layer growth.

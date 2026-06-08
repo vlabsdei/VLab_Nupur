@@ -1,0 +1,601 @@
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #eef4fb;
+
+    color: #333;
+
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.main-container {
+
+    display: flex;
+
+    gap: 15px;
+
+    padding: 15px;
+
+}
+
+/* =========================
+   PANELS
+========================= */
+
+.panel {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 2px 10px rgba(0,0,0,0.1);
+
+}
+
+.left-panel {
+
+    width: 25%;
+
+}
+
+.center-panel {
+
+    width: 45%;
+
+}
+
+.right-panel {
+
+    width: 30%;
+
+}
+
+h2 {
+
+    text-align: center;
+
+    color: #2d5da8;
+
+    margin-top: 0;
+
+}
+
+/* =========================
+   CONTROLS
+========================= */
+
+.control-group {
+
+    margin-bottom: 25px;
+
+}
+
+label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-weight: bold;
+
+}
+
+select,
+input[type="range"] {
+
+    width: 100%;
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+button {
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #2d5da8;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+button:hover {
+
+    background: #1f467f;
+
+}
+
+/* =========================
+   LIVE PROCESS BOX
+========================= */
+
+.live-process-box {
+
+    background: #f5f9ff;
+
+    border: 1px solid #d8e4f2;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.05);
+
+}
+
+.live-process-box p {
+
+    margin: 10px 0;
+
+    font-size: 14px;
+
+}
+
+/* =========================
+   FURNACE
+========================= */
+
+.furnace {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 550px;
+
+    background: #edf4fb;
+
+    border: 3px solid #abc0dd;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        inset 0 0 25px rgba(0,0,0,0.06);
+
+}
+
+/* HOT FURNACE */
+
+.furnace.hot {
+
+    background:
+    linear-gradient(
+        to bottom,
+        #edf4fb,
+        #fff0d8
+    );
+
+}
+
+/* =========================
+   FURNACE LABEL
+========================= */
+
+.furnace-label {
+
+    position: absolute;
+
+    top: 20px;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    color: #2d5da8;
+
+    font-size: 18px;
+
+}
+
+/* =========================
+   GAS PIPE
+========================= */
+
+.gas-pipe {
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 22px;
+
+    background: #8f9aa5;
+
+    top: 60px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 10px;
+
+}
+
+/* PIPE LABEL */
+
+.pipe-label {
+
+    position: absolute;
+
+    top: -35px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #2d5da8;
+
+    background: white;
+
+    padding: 6px 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid #d8e3ef;
+
+    box-shadow:
+        0 1px 5px rgba(0,0,0,0.08);
+
+}
+
+/* =========================
+   GAS AREA
+========================= */
+
+.gas-area {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 180px;
+
+    top: 70px;
+
+}
+
+/* GAS PARTICLES */
+
+.particle {
+
+    position: absolute;
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    box-shadow:
+        0 0 12px rgba(255,255,255,0.6);
+
+}
+
+/* PARTICLE POSITIONS */
+
+.p1 {
+
+    left: 30%;
+
+    top: 20px;
+
+}
+
+.p2 {
+
+    left: 40%;
+
+    top: 60px;
+
+}
+
+.p3 {
+
+    left: 50%;
+
+    top: 30px;
+
+}
+
+.p4 {
+
+    left: 60%;
+
+    top: 80px;
+
+}
+
+.p5 {
+
+    left: 70%;
+
+    top: 40px;
+
+}
+
+/* PARTICLE ANIMATION */
+
+.animate {
+
+    animation:
+        flow 2s infinite linear;
+
+}
+
+@keyframes flow {
+
+    0% {
+
+        transform: translateY(0);
+
+        opacity: 0;
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: translateY(120px);
+
+        opacity: 0;
+
+    }
+
+}
+
+/* =========================
+   HEATER ZONE
+========================= */
+
+.heater-zone {
+
+    position: absolute;
+
+    width: 320px;
+
+    height: 320px;
+
+    border: 12px solid #efc688;
+
+    border-radius: 50%;
+
+    top: 130px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    box-shadow:
+        0 0 35px rgba(255,170,0,0.35);
+
+}
+
+/* HEATER LABEL */
+
+.heater-label {
+
+    position: absolute;
+
+    bottom: -35px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-weight: bold;
+
+    color: #d98200;
+
+}
+
+/* =========================
+   WAFER SECTION
+========================= */
+
+.wafer-section {
+
+    position: absolute;
+
+    bottom: 90px;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+/* LABELS */
+
+.wafer-label,
+.oxide-label {
+
+    font-weight: bold;
+
+    margin: 8px;
+
+    color: #2d5da8;
+
+}
+
+/* =========================
+   WAFER
+========================= */
+
+.wafer {
+
+    position: relative;
+
+    width: 240px;
+
+    height: 45px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #98a2ad,
+            #5d6670
+        );
+
+    border-radius: 50px;
+
+    box-shadow:
+        0 0 15px rgba(0,0,0,0.15);
+
+}
+
+/* =========================
+   OXIDE LAYER
+========================= */
+
+.oxide-layer {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 0px;
+
+    left: 0;
+
+    top: -2px;
+
+    border-radius: 50px;
+
+    transition: 4s;
+
+    opacity: 0.85;
+
+}
+
+/* =========================
+   OUTPUT BOXES
+========================= */
+
+.output-box,
+.flow-box {
+
+    background: #f3f7fc;
+
+    border: 1px solid #d8e3ef;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+/* FLOW BOX TEXT */
+
+.flow-box h3 {
+
+    margin-top: 0;
+
+    color: #2d5da8;
+
+}
+
+.flow-box p {
+
+    line-height: 1.6;
+
+}
+
+/* =========================
+   STATUS BOX
+========================= */
+
+#statusBox {
+
+    background: white;
+
+    border: 1px solid #d8e3ef;
+
+    border-radius: 6px;
+
+    padding: 10px;
+
+    min-height: 70px;
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .main-container {
+
+        flex-direction: column;
+
+    }
+
+    .left-panel,
+    .center-panel,
+    .right-panel {
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+    }
+
+}
