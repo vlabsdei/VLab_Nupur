@@ -1,7 +1,3 @@
-// =========================
-// ELEMENTS
-// =========================
-
 const furnace =
     document.getElementById("furnace");
 
@@ -65,9 +61,7 @@ const siliconGuide =
     const liveTemp =
     document.getElementById("liveTemp");
 
-// =========================
 // STATES
-// =========================
 
 let cruciblePlaced = false;
 
@@ -75,9 +69,7 @@ let siliconAdded = false;
 
 let heated = false;
 
-// =========================
 // DRAGGING
-// =========================
 
 const draggableItems = [
     crucible,
@@ -98,10 +90,8 @@ draggableItems.forEach(item => {
         });
 
 });
+// MOBILE Optimize
 
-// =========================
-// MOBILE CLICK SUPPORT
-// =========================
 
 crucible.addEventListener(
     "click",
@@ -130,9 +120,7 @@ silicon.addEventListener(
 
     });
 
-// =========================
 // PLACE CRUCIBLE FUNCTION
-// =========================
 
 function placeCrucible() {
 
@@ -174,10 +162,7 @@ function placeCrucible() {
         "Crucible placed successfully.";
 
 }
-
-// =========================
 // ADD SILICON FUNCTION
-// =========================
 
 function addSilicon() {
 
@@ -194,9 +179,7 @@ function addSilicon() {
 
 }
 
-// =========================
 // ALLOW DROP
-// =========================
 
 furnace.addEventListener(
     "dragover",
@@ -206,9 +189,7 @@ furnace.addEventListener(
 
     });
 
-// =========================
 // DROP LOGIC
-// =========================
 
 furnace.addEventListener(
     "drop",
@@ -243,10 +224,7 @@ furnace.addEventListener(
         }
 
     });
-
-// =========================
 // SLIDER VALUES
-// =========================
 
 pullRate.addEventListener(
     "input",
@@ -275,9 +253,6 @@ temperature.addEventListener(
 
     });
 
-// =========================
-// HEATING
-// =========================
 
 heatBtn.addEventListener(
     "click",
@@ -306,9 +281,7 @@ heatBtn.addEventListener(
 
     });
 
-// =========================
 // START GROWTH
-// =========================
 
 growthBtn.addEventListener(
     "click",
@@ -326,10 +299,8 @@ growthBtn.addEventListener(
         startGrowth();
 
     });
-
-// =========================
 // MAIN GROWTH FUNCTION
-// =========================
+
 
 function startGrowth() {
 
@@ -368,9 +339,7 @@ function startGrowth() {
     crystal.style.transform =
         "translateX(-50%)";
 
-    // =========================
     // HIGH PULL RATE
-    // =========================
 
     if (pull > 2.2) {
 
@@ -386,10 +355,7 @@ function startGrowth() {
             "28px";
 
     }
-
-    // =========================
     // HIGH TEMPERATURE
-    // =========================
 
     if (temp > 1480) {
 
@@ -405,10 +371,7 @@ function startGrowth() {
             "5px";
 
     }
-
-    // =========================
     // LOW ROTATION
-    // =========================
 
     if (rotation < 10) {
 
@@ -424,10 +387,7 @@ function startGrowth() {
             "translateX(-50%) rotate(4deg)";
 
     }
-
-    // =========================
     // GOOD CONDITIONS
-    // =========================
 
     if (
         pull >= 1 &&
@@ -450,10 +410,7 @@ function startGrowth() {
             "60px";
 
     }
-
-    // =========================
     // UPDATE OUTPUTS
-    // =========================
 
     qualityText.innerHTML =
         quality;
@@ -463,10 +420,7 @@ function startGrowth() {
 
     resultBox.innerHTML =
         result;
-
-    // =========================
     // START ANIMATION
-    // =========================
 
     crystal.style.animation =
         "growCrystal 8s linear forwards";
@@ -483,9 +437,7 @@ function startGrowth() {
 
 }
 
-// =========================
 // RESET
-// =========================
 
 resetBtn.addEventListener(
     "click",
