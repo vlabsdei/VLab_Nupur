@@ -1,82 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>
-        Czochralski Crystal Growth Virtual Lab
-    </title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czochralski Crystal Growth Virtual Lab</title>
     <link rel="stylesheet" href="./css/main.css">
-
 </head>
-
 <body>
-
-    <!-- MAIN CONTAINER -->
 
     <div class="main-container">
 
-        <!-- LEFT PANEL -->
-
         <div class="panel left-panel">
-
             <h2>Equipments</h2>
-
             <div class="equipment-area">
-
-                <!-- CRUCIBLE -->
-
-                <div class="equipment crucible"
-                     draggable="true"
-                     id="crucible">
-
+                <div class="equipment crucible" draggable="true" id="crucible">
                     <div class="crucible-inner"></div>
-
                 </div>
+                <p class="label">Crucible</p>
 
-                <p class="label">
-                    Crucible
-                </p>
-
-                <!-- SILICON -->
-
-                <div class="equipment silicon"
-                     draggable="true"
-                     id="silicon">
-
+                <div class="equipment silicon" draggable="true" id="silicon">
                     <div class="chunk"></div>
                     <div class="chunk"></div>
                     <div class="chunk"></div>
-
                 </div>
-
-                <p class="label">
-                    Silicon Chunks
-                </p>
-
+                <p class="label">Silicon Chunks</p>
             </div>
-
         </div>
 
-        <!-- CENTER PANEL -->
-
         <div class="panel center-panel">
-
-            <div class="furnace"
-                 id="furnace">
-
-                <!-- HEATER -->
+            <div class="furnace" id="furnace">
 
                 <div class="heater-ring"></div>
 
-                <!-- GUIDE BOX -->
+                <div class="label-tag furnace-label">
+                    Crystal Growth Furnace
+                </div>
 
+                <div class="label-tag heater-label">
+                    &leftarrow; Heating Zone
+                </div>
+
+                <div class="label-tag rod-label">
+                    &leftarrow; Pull Rod
+                </div>
+
+                <div class="label-tag seed-label">
+                    &leftarrow; Seed Crystal
+                </div>
+
+                <div class="label-tag melt-label">
+                    &leftarrow; Molten Silicon
+                </div>
+
+                <div class="label-tag crystal-label">
+                    Growing Silicon Crystal &rightarrow;
+                </div>
+
+                <div class="live-temp">
+                    Furnace Temperature: <span id="liveTemp">1450</span> °C
+                </div>
+                
                 <div class="guide-box crucible-guide">
                     Drop Crucible Here
                 </div>
@@ -85,152 +68,71 @@
                     Add Silicon Here
                 </div>
 
-                <!-- PULL ROD -->
-
                 <div class="pull-rod"></div>
-
-                <!-- PRE-ATTACHED SEED -->
 
                 <div class="attached-seed"></div>
 
-                <!-- GROWING CRYSTAL -->
-
-                <div class="crystal"
-                     id="crystal"></div>
-
-                <!-- CRUCIBLE AREA -->
+                <div class="crystal" id="crystal"></div>
 
                 <div class="crucible-zone">
-
-                    <!-- MOLTEN SILICON -->
-
-                    <div class="molten-silicon"
-                         id="moltenSilicon"></div>
-
+                    <div class="molten-silicon" id="moltenSilicon"></div>
                 </div>
-
             </div>
-
-            <!-- BUTTONS -->
 
             <div class="buttons">
-
-                <button id="heatBtn">
-                    Start Heating
-                </button>
-
-                <button id="growthBtn">
-                    Start Crystal Growth
-                </button>
-
-                <button id="resetBtn">
-                    Reset
-                </button>
-
+                <button id="heatBtn">Start Heating</button>
+                <button id="growthBtn">Start Crystal Growth</button>
+                <button id="resetBtn">Reset</button>
             </div>
-
         </div>
 
-        <!-- RIGHT PANEL -->
-
         <div class="panel right-panel">
-
             <h2>Process Parameters</h2>
 
-            <!-- PULL RATE -->
-
             <div class="slider-group">
-
-                <label>
-                    Pull Rate:
-                    <span id="pullValue">1.5</span>
-                    mm/min
-                </label>
-
-                <input type="range"
-                       id="pullRate"
-                       min="0.5"
-                       max="3"
-                       step="0.1"
-                       value="1.5">
-
+                <label>Pull Rate: <span id="pullValue">1.5</span> mm/min</label>
+                <input type="range" id="pullRate" min="0.5" max="3" step="0.1" value="1.5">
             </div>
 
-            <!-- ROTATION -->
-
             <div class="slider-group">
-
-                <label>
-                    Rotation Speed:
-                    <span id="rotationValue">15</span>
-                    RPM
-                </label>
-
-                <input type="range"
-                       id="rotationSpeed"
-                       min="5"
-                       max="25"
-                       step="1"
-                       value="15">
-
+                <label>Rotation Speed: <span id="rotationValue">15</span> RPM</label>
+                <input type="range" id="rotationSpeed" min="5" max="25" step="1" value="15">
             </div>
 
-            <!-- TEMPERATURE -->
-
             <div class="slider-group">
-
-                <label>
-                    Temperature:
-                    <span id="tempValue">1450</span>
-                    °C
-                </label>
-
-                <input type="range"
-                       id="temperature"
-                       min="1415"
-                       max="1500"
-                       step="1"
-                       value="1450">
-
+                <label>Temperature: <span id="tempValue">1450</span> °C</label>
+                <input type="range" id="temperature" min="1415" max="1500" step="1" value="1450">
             </div>
-
-            <!-- OUTPUTS -->
 
             <div class="output-box">
-
                 <h3>Outputs</h3>
-
-                <p>
-                    <strong>Crystal Quality:</strong>
-                    <span id="quality">100</span>%
-                </p>
-
+                <p><strong>Crystal Quality:</strong> <span id="quality">100</span>%</p>
                 <p><strong>Status:</strong></p>
-
-                <div id="statusBox">
-                    Waiting for setup...
-                </div>
+                <div id="statusBox">Waiting for setup...</div>
 
                 <p><strong>Defects:</strong></p>
-
-                <div id="defectBox">
-                    None
-                </div>
+                <div id="defectBox">None</div>
 
                 <p><strong>Growth Result:</strong></p>
+                <div id="resultBox">Not Started</div>
 
-                <div id="resultBox">
-                    Not Started
+                <div class="formula-box">
+                    <h3>Process Relations</h3>
+                    <p>Crystal Quality &prop; Stable Temperature + Controlled Pull Rate + Proper Rotation</p>
+                    <p>High Pull Rate &rarr; Thin Crystal Formation</p>
+                    <p>Low Rotation &rarr; Uneven Heat Distribution</p>
+                    <p>Silicon Melting Point: 1414°C</p>
                 </div>
 
+                <div class="formula-box">
+                    <h3>Czochralski Process Flow</h3>
+                    <p>Silicon Melting &rarr; Seed Contact &rarr; Controlled Pulling &rarr; Crystal Growth</p>
+                </div>
             </div>
-
         </div>
 
     </div>
 
     <script src="./js/main.js"></script>
-
 </body>
-
 </html>

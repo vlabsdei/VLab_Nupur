@@ -62,6 +62,9 @@ const crucibleGuide =
 const siliconGuide =
     document.querySelector(".silicon-guide");
 
+    const liveTemp =
+    document.getElementById("liveTemp");
+
 // =========================
 // STATES
 // =========================
