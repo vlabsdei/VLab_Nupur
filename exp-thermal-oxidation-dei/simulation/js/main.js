@@ -182,7 +182,7 @@ function startOxidation() {
             "O₂ + H₂O Vapor";
 
         pipeLabel.innerHTML =
-            "Steam + O₂ Inlet";
+            "Steam Inlet";
 
         oxideLayer.style.background =
             "#dff7ff";
