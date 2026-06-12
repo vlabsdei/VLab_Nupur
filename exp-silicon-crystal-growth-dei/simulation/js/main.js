@@ -1,6 +1,8 @@
 const furnace =
     document.getElementById("furnace");
-
+    
+const instructionBanner = 
+document.getElementById("instructionBanner");
 const crucible =
     document.getElementById("crucible");
 
@@ -160,6 +162,8 @@ function placeCrucible() {
 
     statusBox.innerHTML =
         "Crucible placed successfully.";
+        // Add this line inside placeCrucible()
+instructionBanner.innerHTML = "<strong>Step 2:</strong> Great! Now drag or tap the <b>Silicon Chunks</b> into the furnace crucible.";
 
 }
 // ADD SILICON FUNCTION
@@ -176,6 +180,8 @@ function addSilicon() {
 
     statusBox.innerHTML =
         "Silicon chunks added.";
+        // Add this line inside addSilicon()
+instructionBanner.innerHTML = "<strong>Step 3:</strong> Setup complete! Adjust your parameters on the right panel, then click <b>Start Heating</b>.";
 
 }
 
@@ -278,6 +284,8 @@ heatBtn.addEventListener(
 
         statusBox.innerHTML =
             "Heating started. Silicon melting.";
+            // Add this line inside heatBtn listener
+instructionBanner.innerHTML = "<strong>Step 4:</strong> Silicon is liquefying! Once melting completes, click <b>Start Crystal Growth</b>.";
 
     });
 
@@ -505,5 +513,8 @@ resetBtn.addEventListener(
 
         resultBox.innerHTML =
             "Not Started";
+
+            // Add this line inside resetBtn listener
+instructionBanner.innerHTML = "<strong>Instructions:</strong> Drag and drop the <b>Crucible</b> into the furnace first, then drag the <b>Silicon Chunks</b> into it before starting the experiment. (Mobile users: Tap items to place them).";
 
     });
