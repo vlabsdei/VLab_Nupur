@@ -1,0 +1,56 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "• Q1 What is the primary purpose of photolithography in semiconductor manufacturing?",
+      "answers": {
+        "a": "To melt silicon wafers",
+        "b": "To create circuit patterns on the wafer surface",
+        "c": "To grow silicon crystals",
+        "d": "To cut wafers into chips"
+      },
+      "explanations": {
+        "a": "Melting silicon is part of crystal growth, not photolithography.",
+        "b": "Correct! Photolithography is used to transfer circuit patterns onto the wafer.",
+        "c": "Crystal growth is performed before wafer fabrication.",
+        "d": "Cutting wafers is done during packaging and dicing."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "• Q2 What material is coated on the wafer before UV exposure?",
+      "answers": {
+        "a": "Copper",
+        "b": "Photoresist",
+        "c": "Aluminum",
+        "d": "Oxide Dust"
+      },
+      "explanations": {
+        "a": "Copper is mainly used for interconnections.",
+        "b": "Correct! A photoresist layer is coated on the wafer surface.",
+        "c": "Aluminum is not used as the coating material in this step.",
+        "d": "Oxide dust is not used in photolithography."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "• Q3 What is the role of the photomask in photolithography?",
+      "answers": {
+        "a": "It heats the wafer",
+        "b": "It removes photoresist",
+        "c": "It transfers the desired pattern using UV light",
+        "d": "It spins the wafer"
+      },
+      "explanations": {
+        "a": "Heating is done during baking processes.",
+        "b": "Developer solution removes selected photoresist.",
+        "c": "Correct! The photomask defines the pattern transferred to the wafer.",
+        "d": "Wafer spinning is performed by the spin coater."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  ]
+}

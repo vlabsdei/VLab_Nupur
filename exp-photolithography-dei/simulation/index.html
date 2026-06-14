@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photolithography</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+	<div class="orientation-overlay">
+    <div class="overlay-card">
+        <div class="phone-icon-animation">🔄</div>
+        <h2>Screen Rotation Required</h2>
+        <p>This Virtual Lab module requires a wider workspace. Please rotate your device to landscape mode to begin the experiment.</p>
+    </div>
+</div>
+
+
+    <main class="main-container">
+        <section class="panel left-panel">
+            <h2>Equipment Tray</h2>
+            <div class="equipment-area">
+                <div class="equipment-card" id="waferCard">
+                    <div class="equipment wafer-tool" id="waferTool">
+                        <div class="mini-wafer"></div>
+                    </div>
+                    <p class="equipment-label">Silicon Wafer (Click to Load)</p>
+                </div>
+
+                <div class="equipment-card" id="prCard">
+                    <div class="equipment bottle" id="photoresistBottle">
+                        <span>PR</span>
+                    </div>
+                    <p class="equipment-label">Photoresist (Click to Dispense)</p>
+                </div>
+
+                <div class="equipment-card" id="maskCard">
+                    <div class="equipment mask-tool" id="maskTool">
+                        <div class="mask-hole"></div>
+                        <div class="mask-hole"></div>
+                        <div class="mask-hole"></div>
+                    </div>
+                    <p class="equipment-label">Photomask (Click to Align)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel center-panel">
+            <h2>Photolithography Chamber</h2>
+            
+            <div class="lab-area">
+                <div class="hud-display">
+                    <div class="process-timer" id="processTimer">System Idle</div>
+                    <div class="status-lights">
+                        <div class="light green active" id="lightGreen"></div>
+                        <div class="light orange" id="lightOrange"></div>
+                        <div class="light red" id="lightRed"></div>
+                    </div>
+                </div>
+
+                <div class="instruction-banner" id="instructionBanner">
+                    <strong>CURRENT STEP:</strong> <span id="instructionText">Click on the Silicon Wafer in the Equipment Tray to begin.</span>
+                </div>
+
+                <div class="hazard-indicators">
+                    <div class="warning-tag uv-tag" id="uvHazardTag">UV Hazard</div>
+                    <div class="warning-tag heat-tag" id="heatHazardTag">Hot Surface</div>
+                </div>
+
+                <div class="cleanroom-bench">
+                    
+                    <div class="spin-coater-module">
+                        <div class="spin-coater" id="spinCoater">
+                            <div class="machine-title">Spin Coater</div>
+                            <div class="wafer-holder">
+                                <div class="wafer" id="mainWafer">
+                                    <div class="photoresist-layer" id="photoresistLayer"></div>
+                                    <div class="pattern" id="pattern">
+                                        <div class="line l1"></div>
+                                        <div class="line l2"></div>
+                                        <div class="line l3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-mask" id="mainMask">
+                        <div class="mask-aperture">
+                            <div class="mask-hole"></div>
+                            <div class="mask-hole"></div>
+                            <div class="mask-hole"></div>
+                        </div>
+                        <div class="mask-label">Photomask Fixture</div>
+                    </div>
+
+                    <div class="hotplate" id="hotplate">
+                        <div class="hotplate-surface"></div>
+                        <span class="module-label">Hot Plate</span>
+                    </div>
+
+                    <div class="wet-bench-module">
+                        <div class="developer-tank">
+                            <div class="liquid"></div>
+                            <div class="tank-title">Developer</div>
+                        </div>
+                        <div class="di-tank">
+                            <div class="water"></div>
+                            <div class="tank-title">DI Water</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="uv-source" id="uvSource">UV Light Source</div>
+                <div class="uv-light" id="uvLight"></div>
+            </div>
+
+            <div class="button-area-container">
+                <div class="button-area">
+                    <button id="coatBtn" class="btn">Spin Coat</button>
+                    <button id="bakeBtn" class="btn">Soft Bake</button>
+                    <button id="uvBtn" class="btn">UV Exposure</button>
+                    <button id="developBtn" class="btn">Develop</button>
+                    <button id="hardBakeBtn" class="btn">Hard Bake</button>
+                    <button id="resetBtn" class="btn btn-reset">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel right-panel">
+            <h2>Process Parameters</h2>
+            
+            <div class="control-card">
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <label for="spinSpeed">Spin Speed:</label>
+                        <span class="metric-display"><span id="spinValue">3000</span> RPM</span>
+                    </div>
+                    <input type="range" id="spinSpeed" min="1000" max="6000" value="3000">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <label for="exposureTime">Exposure Time:</label>
+                        <span class="metric-display"><span id="exposureValue">15</span> sec</span>
+                    </div>
+                    <input type="range" id="exposureTime" min="1" max="30" value="15">
+                </div>
+            </div>
+
+            <div class="output-box">
+                <h3>Process Outputs</h3>
+                <div class="diagnostic-row">
+                    <strong>PR Thickness:</strong>
+                    <span class="value-readout"><span id="thickness">0.00</span> µm</span>
+                </div>
+                <div class="diagnostic-row">
+                    <strong>Pattern Quality:</strong>
+                    <span class="value-readout status-badge" id="quality">Not Started</span>
+                </div>
+                <div class="console-log" id="statusBox">
+                    Start by clicking on the Silicon Wafer in the Equipment Tray.
+                </div>
+            </div>
+
+            <div class="formula-box">
+                <h3>Spin Coating Empirical Model</h3>
+                <div class="equation">
+                    t = <div class="fraction"><span class="numerator">K</span><span class="denominator">&radic;&omega;</span></div>
+                </div>
+                <div class="variable-legend">
+                    <p><strong>t</strong> &rarr; Photoresist Thickness (&micro;m)</p>
+                    <p><strong>K</strong> &rarr; Calibration Constant (316.22)</p>
+                    <p><strong>&omega;</strong> &rarr; Spin Speed (RPM)</p>
+                </div>
+            </div>
+
+            <div class="relations-box">
+                <h3>Process Relations</h3>
+                <ul>
+                    <li>Higher Spin Speed &rarr; Thinner Photoresist Layer</li>
+                    <li>Optimal Soft Bake &rarr; Solvent Evacuation</li>
+                    <li>Correct UV Exposure &rarr; Sharp Latent Image Resolution</li>
+                    <li>Complete Development &rarr; Cleared Circuit Windows</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "• Q1 What happens if the spin speed during photoresist coating is increased?",
+      "answers": {
+        "a": "The coating becomes thicker",
+        "b": "The coating becomes thinner",
+        "c": "The wafer melts",
+        "d": "UV exposure stops"
+      },
+      "explanations": {
+        "a": "Higher spin speed generally reduces coating thickness.",
+        "b": "Correct! Faster spinning produces a thinner photoresist layer.",
+        "c": "Wafer melting does not occur during spin coating.",
+        "d": "Spin coating does not directly affect UV generation."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "• Q2 Why is soft baking performed after photoresist coating?",
+      "answers": {
+        "a": "To remove solvents from the photoresist",
+        "b": "To grow oxide layers",
+        "c": "To cut the wafer",
+        "d": "To add impurities into silicon"
+      },
+      "explanations": {
+        "a": "Correct! Soft baking removes excess solvents and stabilizes the coating.",
+        "b": "Oxide growth occurs during oxidation processes.",
+        "c": "Wafer cutting is not related to baking.",
+        "d": "Doping is a separate semiconductor process."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "• Q3 What is the final outcome of the photolithography process?",
+      "answers": {
+        "a": "Formation of silicon ingots",
+        "b": "Creation of patterned regions on the wafer",
+        "c": "Growth of oxide crystals",
+        "d": "Removal of the wafer surface"
+      },
+      "explanations": {
+        "a": "Silicon ingots are produced during crystal growth.",
+        "b": "Correct! Photolithography creates precise circuit patterns on the wafer.",
+        "c": "Oxide crystal growth is not the purpose of photolithography.",
+        "d": "The entire wafer surface is not removed."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    }
+  ]
+}
