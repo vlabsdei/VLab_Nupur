@@ -1,56 +1,175 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "• Q1 What happens if the spin speed during photoresist coating is increased?",
-      "answers": {
-        "a": "The coating becomes thicker",
-        "b": "The coating becomes thinner",
-        "c": "The wafer melts",
-        "d": "UV exposure stops"
-      },
-      "explanations": {
-        "a": "Higher spin speed generally reduces coating thickness.",
-        "b": "Correct! Faster spinning produces a thinner photoresist layer.",
-        "c": "Wafer melting does not occur during spin coating.",
-        "d": "Spin coating does not directly affect UV generation."
-      },
-      "correctAnswer": "b",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "• Q2 Why is soft baking performed after photoresist coating?",
-      "answers": {
-        "a": "To remove solvents from the photoresist",
-        "b": "To grow oxide layers",
-        "c": "To cut the wafer",
-        "d": "To add impurities into silicon"
-      },
-      "explanations": {
-        "a": "Correct! Soft baking removes excess solvents and stabilizes the coating.",
-        "b": "Oxide growth occurs during oxidation processes.",
-        "c": "Wafer cutting is not related to baking.",
-        "d": "Doping is a separate semiconductor process."
-      },
-      "correctAnswer": "a",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "• Q3 What is the final outcome of the photolithography process?",
-      "answers": {
-        "a": "Formation of silicon ingots",
-        "b": "Creation of patterned regions on the wafer",
-        "c": "Growth of oxide crystals",
-        "d": "Removal of the wafer surface"
-      },
-      "explanations": {
-        "a": "Silicon ingots are produced during crystal growth.",
-        "b": "Correct! Photolithography creates precise circuit patterns on the wafer.",
-        "c": "Oxide crystal growth is not the purpose of photolithography.",
-        "d": "The entire wafer surface is not removed."
-      },
-      "correctAnswer": "b",
-      "difficulty": "intermediate"
-    }
-  ]
+"version": 2.0,
+"questions": [
+{
+"question": "Q1 What happens if the spin speed during photoresist coating is increased?",
+"answers": {
+"a": "The coating becomes thicker",
+"b": "The coating becomes thinner",
+"c": "The wafer melts",
+"d": "UV exposure stops"
+},
+"explanations": {
+"a": "Higher spin speed generally reduces coating thickness.",
+"b": "Correct! Faster spinning produces a thinner photoresist layer.",
+"c": "Wafer melting does not occur during spin coating.",
+"d": "Spin coating does not directly affect UV generation."
+},
+"correctAnswer": "b",
+"difficulty": "intermediate"
+},
+{
+"question": "Q2 Why is soft baking performed after photoresist coating?",
+"answers": {
+"a": "To remove solvents from the photoresist",
+"b": "To grow oxide layers",
+"c": "To cut the wafer",
+"d": "To add impurities into silicon"
+},
+"explanations": {
+"a": "Correct! Soft baking removes excess solvents and stabilizes the coating.",
+"b": "Oxide growth occurs during oxidation processes.",
+"c": "Wafer cutting is not related to baking.",
+"d": "Doping is a separate semiconductor process."
+},
+"correctAnswer": "a",
+"difficulty": "intermediate"
+},
+{
+"question": "Q3 What is the final outcome of the photolithography process?",
+"answers": {
+"a": "Formation of silicon ingots",
+"b": "Creation of patterned regions on the wafer",
+"c": "Growth of oxide crystals",
+"d": "Removal of the wafer surface"
+},
+"explanations": {
+"a": "Silicon ingots are produced during crystal growth.",
+"b": "Correct! Photolithography creates precise circuit patterns on the wafer.",
+"c": "Oxide crystal growth is not the purpose of photolithography.",
+"d": "The entire wafer surface is not removed."
+},
+"correctAnswer": "b",
+"difficulty": "intermediate"
+},
+{
+"question": "Q4 What is the primary purpose of UV exposure in photolithography?",
+"answers": {
+"a": "To heat the wafer",
+"b": "To modify the photoresist according to the mask pattern",
+"c": "To grow oxide layers",
+"d": "To clean the wafer"
+},
+"explanations": {
+"a": "Heating is performed during baking steps.",
+"b": "Correct! UV light transfers the mask pattern into the photoresist.",
+"c": "Oxidation is a different fabrication process.",
+"d": "Cleaning is performed separately."
+},
+"correctAnswer": "b",
+"difficulty": "intermediate"
+},
+{
+"question": "Q5 Why is a developer solution used after UV exposure?",
+"answers": {
+"a": "To cool the wafer",
+"b": "To remove selected regions of photoresist",
+"c": "To deposit metal",
+"d": "To increase wafer thickness"
+},
+"explanations": {
+"a": "Cooling is not its function.",
+"b": "Correct! The developer removes exposed or unexposed resist depending on resist type.",
+"c": "Metal deposition occurs later.",
+"d": "The wafer thickness does not increase."
+},
+"correctAnswer": "b",
+"difficulty": "intermediate"
+},
+{
+"question": "Q6 What is the purpose of the hard bake step?",
+"answers": {
+"a": "To strengthen and stabilize the developed pattern",
+"b": "To grow silicon crystals",
+"c": "To remove the photomask",
+"d": "To create photoresist"
+},
+"explanations": {
+"a": "Correct! Hard baking improves pattern durability.",
+"b": "Crystal growth occurs in the Czochralski process.",
+"c": "Mask removal is not the purpose of hard baking.",
+"d": "Photoresist is applied earlier."
+},
+"correctAnswer": "a",
+"difficulty": "intermediate"
+},
+{
+"question": "Q7 What is the effect of poor mask alignment?",
+"answers": {
+"a": "Improved circuit accuracy",
+"b": "Pattern defects and misalignment",
+"c": "Faster oxidation",
+"d": "Higher wafer thickness"
+},
+"explanations": {
+"a": "Poor alignment reduces accuracy.",
+"b": "Correct! Incorrect alignment causes pattern placement errors.",
+"c": "Oxidation is unrelated.",
+"d": "Wafer thickness remains unchanged."
+},
+"correctAnswer": "b",
+"difficulty": "intermediate"
+},
+{
+"question": "Q8 What happens if the photoresist layer is not uniform?",
+"answers": {
+"a": "Pattern quality may decrease",
+"b": "The wafer becomes larger",
+"c": "UV light becomes stronger",
+"d": "The photomask is damaged"
+},
+"explanations": {
+"a": "Correct! Uneven coating leads to poor pattern transfer.",
+"b": "Wafer dimensions do not change.",
+"c": "UV intensity is independent of coating.",
+"d": "The mask is unaffected."
+},
+"correctAnswer": "a",
+"difficulty": "intermediate"
+},
+{
+"question": "Q9 Which process parameter directly influences photoresist thickness in the simulation?",
+"answers": {
+"a": "Spin Speed",
+"b": "UV Wavelength",
+"c": "Developer Color",
+"d": "Wafer Diameter"
+},
+"explanations": {
+"a": "Correct! Higher spin speeds produce thinner coatings.",
+"b": "UV wavelength is not controlled in this simulation.",
+"c": "Developer color has no effect.",
+"d": "Wafer diameter remains fixed."
+},
+"correctAnswer": "a",
+"difficulty": "intermediate"
+},
+{
+"question": "Q10 Which sequence correctly represents the complete photolithography workflow?",
+"answers": {
+"a": "UV Exposure → Development → Spin Coating",
+"b": "Spin Coating → Soft Bake → Mask Alignment → UV Exposure → Development → Hard Bake",
+"c": "Development → Exposure → Baking",
+"d": "Oxidation → Crystal Growth → Packaging"
+},
+"explanations": {
+"a": "Photoresist must be applied before exposure.",
+"b": "Correct! This is the proper photolithography process sequence.",
+"c": "The order is incorrect.",
+"d": "These are different semiconductor manufacturing processes."
+},
+"correctAnswer": "b",
+"difficulty": "intermediate"
+}
+]
 }

@@ -1,2 +1,1 @@
-### Aim of the experiment
-To study the photolithography process used in semiconductor manufacturing and observe how ultraviolet (UV) light, photoresist coating, masks,and development processes are used to transfer circuit patterns onto silicon wafers.
+### To study the photolithography process used in semiconductor manufacturing and observe how ultraviolet (UV) light, photoresist coating, masks,and development processes are used to transfer circuit patterns onto silicon wafers.

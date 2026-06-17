@@ -1,73 +1,175 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "• Q1 What is the main purpose of thermal oxidation in semiconductor fabrication?",
-      "answers": {
-        "a": "To cut silicon wafers",
-        "b": "To create a protective SiO₂ layer",
-        "c": "To melt the silicon wafer",
-        "d": "To increase wafer thickness"
-      },
-      "explanations": {
-        "a": "Cutting wafers is part of wafer preparation, not oxidation.",
-        "b": "Correct! Thermal oxidation creates a protective and insulating silicon dioxide layer.",
-        "c": "The silicon wafer is heated during oxidation but not melted.",
-        "d": "Oxidation forms an oxide layer, not a thicker wafer."
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "• Q2 Which gas is mainly used in dry oxidation?",
-      "answers": {
-        "a": "Nitrogen",
-        "b": "Hydrogen",
-        "c": "Oxygen (O₂)",
-        "d": "Argon"
-      },
-      "explanations": {
-        "a": "Nitrogen is commonly used as an inert gas in semiconductor processing.",
-        "b": "Hydrogen is not the primary gas used in dry oxidation.",
-        "c": "Correct! Dry oxidation uses pure oxygen (O₂).",
-        "d": "Argon is an inert gas and is not used for oxidation."
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "• Q3 Which oxidation process produces oxide layers faster?",
-      "answers": {
-        "a": "Dry Oxidation",
-        "b": "Wet Oxidation",
-        "c": "Vacuum Oxidation",
-        "d": "Cold Oxidation"
-      },
-      "explanations": {
-        "a": "Dry oxidation produces high-quality layers but at a slower rate.",
-        "b": "Correct! Wet oxidation grows oxide layers much faster.",
-        "c": "Vacuum oxidation is not commonly used for thermal oxidation.",
-        "d": "Cold oxidation is not a standard semiconductor oxidation process."
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "• Q4 What is the typical temperature range used in thermal oxidation?",
-      "answers": {
-        "a": "100–300°C",
-        "b": "400–700°C",
-        "c": "800–1200°C",
-        "d": "1500–2000°C"
-      },
-      "explanations": {
-        "a": "This temperature range is too low for thermal oxidation.",
-        "b": "Thermal oxidation generally requires higher temperatures.",
-        "c": "Correct! Thermal oxidation is commonly performed between 800°C and 1200°C.",
-        "d": "This range is excessively high for standard oxidation processes."
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
+"version": 2.0,
+"questions": [
+{
+"question": "Q1 What is the main purpose of thermal oxidation in semiconductor fabrication?",
+"answers": {
+"a": "To cut silicon wafers",
+"b": "To create a protective SiO₂ layer",
+"c": "To melt the silicon wafer",
+"d": "To increase wafer thickness"
+},
+"explanations": {
+"a": "Cutting wafers is part of wafer preparation, not oxidation.",
+"b": "Correct! Thermal oxidation creates a protective and insulating silicon dioxide layer.",
+"c": "The silicon wafer is heated during oxidation but not melted.",
+"d": "Oxidation forms an oxide layer, not a thicker wafer."
+},
+"correctAnswer": "b",
+"difficulty": "beginner"
+},
+{
+"question": "Q2 Which gas is mainly used in dry oxidation?",
+"answers": {
+"a": "Nitrogen",
+"b": "Hydrogen",
+"c": "Oxygen (O₂)",
+"d": "Argon"
+},
+"explanations": {
+"a": "Nitrogen is commonly used as an inert gas in semiconductor processing.",
+"b": "Hydrogen is not the primary gas used in dry oxidation.",
+"c": "Correct! Dry oxidation uses pure oxygen (O₂).",
+"d": "Argon is an inert gas and is not used for oxidation."
+},
+"correctAnswer": "c",
+"difficulty": "beginner"
+},
+{
+"question": "Q3 Which oxidation process produces oxide layers faster?",
+"answers": {
+"a": "Dry Oxidation",
+"b": "Wet Oxidation",
+"c": "Vacuum Oxidation",
+"d": "Cold Oxidation"
+},
+"explanations": {
+"a": "Dry oxidation produces high-quality layers but at a slower rate.",
+"b": "Correct! Wet oxidation grows oxide layers much faster.",
+"c": "Vacuum oxidation is not commonly used for thermal oxidation.",
+"d": "Cold oxidation is not a standard semiconductor oxidation process."
+},
+"correctAnswer": "b",
+"difficulty": "beginner"
+},
+{
+"question": "Q4 What is the typical temperature range used in thermal oxidation?",
+"answers": {
+"a": "100–300°C",
+"b": "400–700°C",
+"c": "800–1200°C",
+"d": "1500–2000°C"
+},
+"explanations": {
+"a": "This temperature range is too low for thermal oxidation.",
+"b": "Thermal oxidation generally requires higher temperatures.",
+"c": "Correct! Thermal oxidation is commonly performed between 800°C and 1200°C.",
+"d": "This range is excessively high for standard oxidation processes."
+},
+"correctAnswer": "c",
+"difficulty": "beginner"
+},
+{
+"question": "Q5 What is the chemical formula of the oxide layer grown during thermal oxidation?",
+"answers": {
+"a": "SiO",
+"b": "SiO₂",
+"c": "CO₂",
+"d": "Al₂O₃"
+},
+"explanations": {
+"a": "Silicon monoxide is not the desired oxide layer.",
+"b": "Correct! Silicon dioxide (SiO₂) is formed during thermal oxidation.",
+"c": "Carbon dioxide is unrelated to silicon oxidation.",
+"d": "Aluminum oxide is used in other applications."
+},
+"correctAnswer": "b",
+"difficulty": "beginner"
+},
+{
+"question": "Q6 Which oxidation method generally produces higher quality oxide layers?",
+"answers": {
+"a": "Wet Oxidation",
+"b": "Dry Oxidation",
+"c": "Vacuum Oxidation",
+"d": "Rapid Cooling"
+},
+"explanations": {
+"a": "Wet oxidation is faster but generally produces less dense oxide.",
+"b": "Correct! Dry oxidation produces thinner and higher-quality oxide layers.",
+"c": "Vacuum oxidation is not commonly used for this purpose.",
+"d": "Rapid cooling is not an oxidation method."
+},
+"correctAnswer": "b",
+"difficulty": "beginner"
+},
+{
+"question": "Q7 Which parameter directly affects oxide thickness growth?",
+"answers": {
+"a": "Temperature",
+"b": "Oxidation Time",
+"c": "Oxidation Type",
+"d": "All of the Above"
+},
+"explanations": {
+"a": "Temperature affects oxidation rate.",
+"b": "Longer oxidation time increases thickness.",
+"c": "Dry and wet oxidation have different growth rates.",
+"d": "Correct! All three parameters influence oxide thickness."
+},
+"correctAnswer": "d",
+"difficulty": "beginner"
+},
+{
+"question": "Q8 Why is a silicon dioxide layer grown on the wafer surface?",
+"answers": {
+"a": "To act as an insulator and protective layer",
+"b": "To melt the wafer",
+"c": "To increase wafer diameter",
+"d": "To create metal interconnects"
+},
+"explanations": {
+"a": "Correct! SiO₂ provides insulation and protection during fabrication.",
+"b": "Oxidation does not melt the wafer.",
+"c": "Wafer diameter remains unchanged.",
+"d": "Metal interconnects are formed later."
+},
+"correctAnswer": "a",
+"difficulty": "beginner"
+},
+{
+"question": "Q9 Which material is oxidized during the thermal oxidation process?",
+"answers": {
+"a": "Copper",
+"b": "Gold",
+"c": "Silicon",
+"d": "Aluminum"
+},
+"explanations": {
+"a": "Copper is mainly used for interconnections.",
+"b": "Gold is not oxidized in this process.",
+"c": "Correct! Silicon reacts with oxygen or steam to form SiO₂.",
+"d": "Aluminum is not the substrate material here."
+},
+"correctAnswer": "c",
+"difficulty": "beginner"
+},
+{
+"question": "Q10 Which mathematical model is commonly used to estimate oxide growth during thermal oxidation?",
+"answers": {
+"a": "Ohm's Law",
+"b": "Deal-Grove Model",
+"c": "Bernoulli Equation",
+"d": "Hooke's Law"
+},
+"explanations": {
+"a": "Ohm's Law relates voltage, current, and resistance.",
+"b": "Correct! The Deal-Grove model is widely used to predict oxide growth.",
+"c": "Bernoulli's equation is used in fluid mechanics.",
+"d": "Hooke's Law describes elastic deformation."
+},
+"correctAnswer": "b",
+"difficulty": "intermediate"
+}
+]
 }

@@ -68,6 +68,109 @@
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
-    }
+    },
+    {
+"question": "Q5 What is the primary advantage of wet oxidation compared to dry oxidation?",
+"answers": {
+"a": "Higher oxide quality",
+"b": "Faster oxide growth",
+"c": "Lower furnace temperature",
+"d": "No need for oxygen"
+},
+"explanations": {
+"a": "Dry oxidation generally produces higher-quality oxide.",
+"b": "Correct! Wet oxidation provides a much faster growth rate.",
+"c": "Similar temperature ranges are used.",
+"d": "Wet oxidation still requires oxygen and water vapor."
+},
+"correctAnswer": "b",
+"difficulty": "beginner"
+},
+{
+"question": "Q6 What happens when oxidation temperature is increased?",
+"answers": {
+"a": "Oxide growth rate increases",
+"b": "Oxide growth stops",
+"c": "Wafer diameter decreases",
+"d": "Silicon becomes metal"
+},
+"explanations": {
+"a": "Correct! Higher temperatures accelerate oxidation reactions.",
+"b": "Oxidation continues and usually becomes faster.",
+"c": "Wafer diameter is unaffected.",
+"d": "Silicon remains a semiconductor."
+},
+"correctAnswer": "a",
+"difficulty": "beginner"
+},
+{
+"question": "Q7 Which output parameter was calculated using the Deal-Grove model in the simulation?",
+"answers": {
+"a": "Wafer Diameter",
+"b": "Oxide Thickness",
+"c": "Crystal Quality",
+"d": "Furnace Pressure"
+},
+"explanations": {
+"a": "Wafer diameter is not calculated in this experiment.",
+"b": "Correct! The Deal-Grove model estimates oxide thickness.",
+"c": "Quality is derived from process conditions.",
+"d": "Pressure is not calculated."
+},
+"correctAnswer": "b",
+"difficulty": "intermediate"
+},
+{
+"question": "Q8 What is the function of the silicon dioxide layer formed during oxidation?",
+"answers": {
+"a": "Acts as an insulator",
+"b": "Provides surface protection",
+"c": "Serves as a masking layer in fabrication",
+"d": "All of the above"
+},
+"explanations": {
+"a": "SiO₂ is an excellent insulator.",
+"b": "It protects the silicon surface.",
+"c": "It can be used as a masking layer.",
+"d": "Correct! Silicon dioxide serves all these purposes."
+},
+"correctAnswer": "d",
+"difficulty": "intermediate"
+},
+{
+"question": "Q9 Why does dry oxidation produce better-quality oxide layers?",
+"answers": {
+"a": "The oxide is denser and more uniform",
+"b": "It uses lower temperatures",
+"c": "No furnace is required",
+"d": "The oxide grows instantly"
+},
+"explanations": {
+"a": "Correct! Dry oxidation produces dense and high-quality oxide layers.",
+"b": "Temperature alone is not the reason.",
+"c": "A furnace is still required.",
+"d": "Oxide growth is gradual."
+},
+"correctAnswer": "a",
+"difficulty": "intermediate"
+},
+{
+"question": "Q10 During the simulation, which combination produced the thickest oxide layer?",
+"answers": {
+"a": "Low temperature and short time",
+"b": "Dry oxidation with short duration",
+"c": "High temperature and long oxidation time",
+"d": "Room temperature oxidation"
+},
+"explanations": {
+"a": "These conditions produce very little oxide growth.",
+"b": "Growth is relatively slower in dry oxidation.",
+"c": "Correct! High temperature and longer oxidation duration result in thicker oxide layers.",
+"d": "Thermal oxidation requires elevated temperatures."
+},
+"correctAnswer": "c",
+"difficulty": "beginner"
+}
+
   ]
 }

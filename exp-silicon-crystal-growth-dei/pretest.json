@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "• Q1 What is the primary raw material used for manufacturing semiconductor wafers?",
+      "question": "Q1 What is the primary raw material used for manufacturing semiconductor wafers?",
       "answers": {
         "a": "Copper",
         "b": "Silicon",
@@ -19,7 +19,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "• Q2 In the Czochralski process, silicon is initially present in which state?",
+      "question": "Q2 In the Czochralski process, silicon is initially present in which state?",
       "answers": {
         "a": "Gas",
         "b": "Liquid (Molten Silicon)",
@@ -36,7 +36,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "• Q3 What is used to start crystal growth in the Czochralski process?",
+      "question": "Q3 What is used to start crystal growth in the Czochralski process?",
       "answers": {
         "a": "Metal Rod",
         "b": "Quartz Plate",
@@ -51,6 +51,127 @@
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
-    }
+    },
+
+    {
+"question": "Q4 What is the main purpose of the crucible in the Czochralski process?",
+"answers": {
+"a": "To cool the crystal",
+"b": "To hold molten silicon",
+"c": "To cut wafers",
+"d": "To package chips"
+},
+"explanations": {
+"a": "Cooling is not the primary function of the crucible.",
+"b": "Correct! The crucible contains molten silicon during crystal growth.",
+"c": "Wafer cutting is performed later in the manufacturing process.",
+"d": "Packaging occurs after chip fabrication."
+},
+"correctAnswer": "b",
+"difficulty": "beginner"
+},
+{
+"question": "Q5 Approximately what is the melting point of silicon?",
+"answers": {
+"a": "500°C",
+"b": "900°C",
+"c": "1414°C",
+"d": "2000°C"
+},
+"explanations": {
+"a": "This temperature is too low for silicon melting.",
+"b": "Silicon remains solid at this temperature.",
+"c": "Correct! Silicon melts at approximately 1414°C.",
+"d": "This is much higher than silicon's melting point."
+},
+"correctAnswer": "c",
+"difficulty": "beginner"
+},
+{
+"question": "Q6 Which component is slowly pulled upward during crystal growth?",
+"answers": {
+"a": "Crucible",
+"b": "Seed Crystal",
+"c": "Furnace Wall",
+"d": "Silicon Wafer"
+},
+"explanations": {
+"a": "The crucible remains stationary.",
+"b": "Correct! The seed crystal is slowly pulled upward to grow the ingot.",
+"c": "The furnace structure does not move.",
+"d": "The wafer is produced later."
+},
+"correctAnswer": "b",
+"difficulty": "beginner"
+},
+{
+"question": "Q7 What is the final product obtained directly after crystal pulling?",
+"answers": {
+"a": "Microchip",
+"b": "Oxide Layer",
+"c": "Single Crystal Ingot",
+"d": "Transistor"
+},
+"explanations": {
+"a": "Microchips require many additional fabrication steps.",
+"b": "Oxidation is a separate process.",
+"c": "Correct! A large single-crystal silicon ingot is produced.",
+"d": "Transistors are fabricated later."
+},
+"correctAnswer": "c",
+"difficulty": "beginner"
+},
+{
+"question": "Q8 Why is crystal rotation used during growth?",
+"answers": {
+"a": "To improve heat distribution",
+"b": "To change silicon color",
+"c": "To reduce furnace size",
+"d": "To slice wafers"
+},
+"explanations": {
+"a": "Correct! Rotation promotes uniform temperature and crystal growth.",
+"b": "Silicon color is not affected significantly.",
+"c": "Rotation does not affect furnace dimensions.",
+"d": "Wafer slicing is a later process."
+},
+"correctAnswer": "a",
+"difficulty": "intermediate"
+},
+{
+"question": "Q9 What type of crystal structure is desired in semiconductor wafers?",
+"answers": {
+"a": "Polycrystalline",
+"b": "Amorphous",
+"c": "Single Crystal",
+"d": "Liquid Crystal"
+},
+"explanations": {
+"a": "Polycrystalline silicon contains grain boundaries.",
+"b": "Amorphous materials lack long-range order.",
+"c": "Correct! Semiconductor wafers require a single-crystal structure.",
+"d": "Liquid crystals are used in displays."
+},
+"correctAnswer": "c",
+"difficulty": "intermediate"
+},
+{
+"question": "Q10 Which semiconductor material is most commonly used for integrated circuits?",
+"answers": {
+"a": "Germanium",
+"b": "Gallium Arsenide",
+"c": "Silicon",
+"d": "Copper"
+},
+"explanations": {
+"a": "Germanium was used historically but is less common today.",
+"b": "GaAs is used in specialized applications.",
+"c": "Correct! Silicon is the dominant semiconductor material.",
+"d": "Copper is a conductor, not a semiconductor."
+},
+"correctAnswer": "c",
+"difficulty": "beginner"
+}
+
   ]
 }

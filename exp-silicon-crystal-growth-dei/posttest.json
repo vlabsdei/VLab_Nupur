@@ -1,39 +1,175 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "• Q1 What is the most likely result if the crystal is pulled too quickly during the Czochralski growth process?",
-      "answers": {
-        "a": "A larger and more uniform crystal is formed",
-        "b": "The crystal may become thin and develop defects",
-        "c": "The silicon immediately becomes a wafer",
-        "d": "The melting point of silicon increases"
-      },
-      "explanations": {
-        "a": "Pulling too quickly does not improve crystal quality.",
-        "b": "Correct! Excessive pull rates can make the crystal unstable, leading to a smaller diameter and defects.",
-        "c": "The crystal must still be sliced and polished before wafers are produced.",
-        "d": "Pull rate does not affect the melting point of silicon."
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "• Q2 Which combination of parameters generally produces a high-quality silicon crystal?",
-      "answers": {
-        "a": "Maximum pull rate and maximum temperature",
-        "b": "No rotation and very high temperature",
-        "c": "Controlled pull rate, proper rotation speed, and stable temperature",
-        "d": "Very low temperature below the melting point"
-      },
-      "explanations": {
-        "a": "Very high values can lead to instability and crystal defects.",
-        "b": "Lack of rotation can cause non-uniform crystal growth.",
-        "c": "Correct! Stable growth conditions help produce a uniform crystal with fewer defects.",
-        "d": "Silicon must remain molten for crystal growth to occur."
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
+"version": 2.0,
+"questions": [
+{
+"question": "Q1 What is the most likely result if the crystal is pulled too quickly during the Czochralski growth process?",
+"answers": {
+"a": "A larger and more uniform crystal is formed",
+"b": "The crystal may become thin and develop defects",
+"c": "The silicon immediately becomes a wafer",
+"d": "The melting point of silicon increases"
+},
+"explanations": {
+"a": "Pulling too quickly does not improve crystal quality.",
+"b": "Correct! Excessive pull rates can make the crystal unstable, leading to a smaller diameter and defects.",
+"c": "The crystal must still be sliced and polished before wafers are produced.",
+"d": "Pull rate does not affect the melting point of silicon."
+},
+"correctAnswer": "b",
+"difficulty": "beginner"
+},
+{
+"question": "Q2 Which combination of parameters generally produces a high-quality silicon crystal?",
+"answers": {
+"a": "Maximum pull rate and maximum temperature",
+"b": "No rotation and very high temperature",
+"c": "Controlled pull rate, proper rotation speed, and stable temperature",
+"d": "Very low temperature below the melting point"
+},
+"explanations": {
+"a": "Very high values can lead to instability and crystal defects.",
+"b": "Lack of rotation can cause non-uniform crystal growth.",
+"c": "Correct! Stable growth conditions help produce a uniform crystal with fewer defects.",
+"d": "Silicon must remain molten for crystal growth to occur."
+},
+"correctAnswer": "c",
+"difficulty": "beginner"
+},
+{
+"question": "Q3 What is the effect of insufficient crystal rotation during growth?",
+"answers": {
+"a": "Improved crystal uniformity",
+"b": "Uneven crystal growth and possible defects",
+"c": "Instant wafer formation",
+"d": "Lower silicon melting point"
+},
+"explanations": {
+"a": "Insufficient rotation generally reduces growth uniformity.",
+"b": "Correct! Low rotation can cause uneven temperature distribution and crystal defects.",
+"c": "Wafers are produced only after slicing the ingot.",
+"d": "Rotation does not affect the melting point."
+},
+"correctAnswer": "b",
+"difficulty": "beginner"
+},
+{
+"question": "Q4 Why is temperature control important during crystal growth?",
+"answers": {
+"a": "To maintain stable crystal formation",
+"b": "To change silicon into copper",
+"c": "To eliminate the need for a seed crystal",
+"d": "To reduce crystal diameter intentionally"
+},
+"explanations": {
+"a": "Correct! Stable temperature helps maintain uniform crystal growth.",
+"b": "Silicon cannot be converted into copper.",
+"c": "Seed crystals are still required.",
+"d": "Temperature is controlled to improve quality, not reduce diameter."
+},
+"correctAnswer": "a",
+"difficulty": "beginner"
+},
+{
+"question": "Q5 What is the primary purpose of the seed crystal in the Czochralski process?",
+"answers": {
+"a": "To heat the silicon",
+"b": "To provide a template for crystal growth",
+"c": "To cool the furnace",
+"d": "To slice wafers"
+},
+"explanations": {
+"a": "Heating is performed by the furnace.",
+"b": "Correct! The seed crystal determines the crystal structure of the growing ingot.",
+"c": "Cooling is not its purpose.",
+"d": "Wafer slicing occurs later."
+},
+"correctAnswer": "b",
+"difficulty": "beginner"
+},
+{
+"question": "Q6 Which parameter directly affects the diameter of the growing crystal?",
+"answers": {
+"a": "Pull Rate",
+"b": "Wafer Thickness",
+"c": "Packaging Material",
+"d": "Chip Size"
+},
+"explanations": {
+"a": "Correct! Pull rate strongly influences crystal diameter.",
+"b": "Wafer thickness is determined later.",
+"c": "Packaging is unrelated to crystal growth.",
+"d": "Chip size is determined during IC design."
+},
+"correctAnswer": "a",
+"difficulty": "intermediate"
+},
+{
+"question": "Q7 What is the desired output of the Czochralski crystal growth process?",
+"answers": {
+"a": "Oxide Layer",
+"b": "Single Crystal Silicon Ingot",
+"c": "Integrated Circuit",
+"d": "Metal Interconnect"
+},
+"explanations": {
+"a": "Oxide growth is a separate process.",
+"b": "Correct! The process produces a single crystal silicon ingot.",
+"c": "Integrated circuits are fabricated later.",
+"d": "Interconnects are added during chip fabrication."
+},
+"correctAnswer": "b",
+"difficulty": "beginner"
+},
+{
+"question": "Q8 What is most likely to occur if the furnace temperature becomes excessively high?",
+"answers": {
+"a": "Thermal instability and crystal defects",
+"b": "Perfect crystal formation",
+"c": "No effect on crystal quality",
+"d": "Instant crystal growth"
+},
+"explanations": {
+"a": "Correct! Excessive temperature can destabilize the growth process.",
+"b": "Very high temperatures usually reduce quality.",
+"c": "Temperature significantly affects crystal growth.",
+"d": "Crystal growth is always a controlled process."
+},
+"correctAnswer": "a",
+"difficulty": "intermediate"
+},
+{
+"question": "Q9 Why is a single-crystal structure preferred for semiconductor manufacturing?",
+"answers": {
+"a": "It provides better electrical properties",
+"b": "It is cheaper than polycrystalline silicon",
+"c": "It requires no processing",
+"d": "It eliminates oxidation"
+},
+"explanations": {
+"a": "Correct! Single-crystal silicon offers superior electrical performance.",
+"b": "Cost is not the primary reason.",
+"c": "Processing is still required.",
+"d": "Oxidation is still performed during fabrication."
+},
+"correctAnswer": "a",
+"difficulty": "intermediate"
+},
+{
+"question": "Q10 During the simulation, which combination produced the highest crystal quality?",
+"answers": {
+"a": "Controlled pull rate, stable temperature, and proper rotation",
+"b": "Maximum pull rate and maximum temperature",
+"c": "No rotation with high temperature",
+"d": "Temperature below silicon melting point"
+},
+"explanations": {
+"a": "Correct! Balanced process parameters lead to high-quality crystal growth.",
+"b": "These conditions typically create defects.",
+"c": "Lack of rotation causes non-uniform growth.",
+"d": "Silicon must remain molten during growth."
+},
+"correctAnswer": "a",
+"difficulty": "beginner"
+}
+]
 }
