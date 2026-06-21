@@ -1,0 +1,529 @@
+:root {
+    --primary-blue: #2d5da8;
+    --bg-light: #eef4fb;
+    --panel-bg: #ffffff;
+    --border-color: #d9e4f1;
+    --wafer-metallic: linear-gradient(to bottom, #9aa6b3, #5d6770);
+    --pr-mask-color: #475569;
+    --oxide-target-color: #38bdf8;
+    --success-green: #35d25d;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-light);
+    color: #333;
+    overflow-x: hidden;
+}
+
+.top-instruction-bar {
+    width: 100%;
+    background: #d9e8f5;
+    border-bottom: 1px solid #b9cde3;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #1e3d73;
+    box-sizing: border-box;
+}
+.top-instruction-bar strong {
+    color: #1a427a;
+    text-transform: uppercase;
+}
+
+.top-header {
+    background: var(--panel-bg);
+    padding: 12px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.top-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--primary-blue);
+}
+.top-header p {
+    margin: 4px 0 0 0;
+    color: #666;
+    font-size: 13px;
+}
+
+.main-container {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    width: 100%;
+    max-width: 100%;
+    height: calc(100vh - 110px);
+    box-sizing: border-box;
+}
+
+.panel {
+    background: var(--panel-bg);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.left-panel { width: 28%; display: flex; flex-direction: column; overflow-y: auto; gap: 5px; }
+.center-panel { width: 44%; display: flex; flex-direction: column; }
+.right-panel { width: 28%; display: flex; flex-direction: column; gap: 12px; overflow-y: auto; }
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 15px;
+    text-align: center;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.panel-divider {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.equipment-area {
+    display: flex;
+    flex-direction: row; 
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.equipment-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 4px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: #fdfdfd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+.equipment-card:hover {
+    background: #f0f6ff;
+    border-color: var(--primary-blue);
+    transform: scale(1.02);
+}
+
+.mini-wafer-patterned {
+    width: 45px; height: 45px; border-radius: 50%;
+    background: var(--wafer-metallic); position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+.mini-wafer-patterned::before {
+    content: 'PR'; position: absolute; top: 15px; left: 8px; right: 8px;
+    background: var(--pr-mask-color); color: white; font-size: 8px; text-align: center; font-weight: bold;
+    border-radius: 1px;
+}
+
+.bottle {
+    width: 35px; height: 50px; border-radius: 6px; background: #e11d48;
+    display: flex; align-items: center; justify-content: center; color: white;
+    font-size: 10px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.gas-canister {
+    width: 35px; height: 48px; background: #0284c7; border-radius: 4px;
+    position: relative; display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 10px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+.canister-cap {
+    position: absolute; top: -5px; width: 12px; height: 5px;
+    background: #0369a1; border-radius: 1px 1px 0 0;
+}
+
+.equipment-label {
+    margin: 6px 0 0 0; font-size: 9px; color: #555;
+    font-weight: bold; text-align: center; line-height: 1.2;
+}
+
+.lab-area {
+    position: relative; width: 100%; flex: 1;
+    background: linear-gradient(to bottom, #edf4fb, #dce8f5);
+    border: 3px solid #abc0dd; border-radius: 15px; overflow: hidden;
+    box-sizing: border-box; height: 400px;
+}
+
+.hud-display {
+    position: absolute; top: 15px; left: 15px; right: 15px;
+    display: flex; justify-content: space-between; align-items: center; z-index: 12;
+}
+.process-timer {
+    background: white; padding: 6px 12px; border-radius: 6px;
+    font-weight: bold; color: var(--primary-blue); border: 1px solid #d8e3ef; font-size: 12px;
+}
+.status-lights { display: flex; gap: 6px; }
+.light { width: 14px; height: 14px; border-radius: 50%; background: #ccc; }
+.light.green.active { background: var(--success-green); box-shadow: 0 0 8px var(--success-green); }
+.light.orange.active { background: orange; box-shadow: 0 0 8px orange; }
+.light.red.active { background: #ff5252; box-shadow: 0 0 8px #ff5252; }
+
+.hazard-indicators {
+    position: absolute; top: 65px; left: 15px; right: 15px;
+    display: flex; justify-content: space-between; pointer-events: none; z-index: 11;
+}
+.warning-tag {
+    background: #fff3cd; color: #856404; padding: 4px 8px; border-radius: 4px;
+    font-size: 10px; font-weight: bold; border: 1px solid #ffeeba; opacity: 0.15; transition: opacity 0.3s;
+}
+.warning-tag.active { opacity: 1; animation: flash-warning 1s infinite alternate; }
+@keyframes flash-warning { from { transform: scale(1); } to { transform: scale(1.03); } }
+
+.cleanroom-bench {
+    position: absolute; bottom: 140px; left: 0; width: 100%; height: 240px;
+    background: rgba(255, 255, 255, 0.4); border-top: 3px solid #abc0dd;
+    display: flex; justify-content: space-around; align-items: center; padding: 0 10px; box-sizing: border-box; z-index: 5;
+}
+
+.wet-tank, .dry-reactor {
+    width: 110px; height: 120px; border: 4px solid #6c7a88;
+    border-radius: 8px; background: white; position: relative; overflow: hidden; box-sizing: border-box; transition: all 0.3s;
+}
+.wet-liquid {
+    position: absolute; width: 100%; height: 0%; bottom: 0; background: rgba(225, 29, 72, 0.2); transition: height 1.5s ease;
+}
+.wet-tank.processing .wet-liquid {
+    background: rgba(225, 29, 72, 0.4); animation: liquid-boil 0.3s infinite alternate;
+}
+@keyframes liquid-boil { from { transform: translateY(0); } to { transform: translateY(2px); } }
+
+.handling-chuck {
+    width: 240px; height: 200px; border-radius: 8px; border: 4px dashed #94a3b8; background: #dde7f2;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; transition: all 0.3s; box-sizing: border-box;
+}
+.chuck-title, .tank-title, .reactor-title {
+    position: absolute; top: 6px; font-size: 10px; font-weight: bold; color: #333; text-transform: uppercase; width: 100%; text-align: center; z-index: 4;
+}
+
+.wafer {
+    width: 210px; height: 130px; background: #e2e8f0; border-radius: 8px;
+    position: relative; display: none; overflow: hidden; border: 2px solid #64748b; margin-top: 15px;
+}
+.layer-mask-left, .layer-mask-right {
+    position: absolute; top: 0; width: 35px; height: 20px; background: var(--pr-mask-color); z-index: 3; transition: opacity 0.5s;
+}
+.layer-mask-left { left: 15px; }
+.layer-mask-right { right: 15px; }
+.target-etch-layer { position: absolute; top: 0; left: 0; width: 100%; height: 45px; background: var(--oxide-target-color); z-index: 2; transition: all 1s ease; }
+.silicon-substrate { position: absolute; bottom: 0; left: 0; width: 100%; height: 35px; background: #8ea2b4; z-index: 1; }
+
+.layer-label, .oxide-label, .substrate-label { position: absolute; width: 100%; text-align: center; font-size: 9px; font-weight: bold; color: white; z-index: 4; }
+.layer-label { top: 2px; } .oxide-label { top: 22px; color: #1e3d73; } .substrate-label { bottom: 8px; color: #222; }
+
+.plasma-glow { position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: radial-gradient(circle, rgba(147, 51, 234, 0.6) 0%, transparent 80%); opacity: 0; transition: opacity 0.5s; }
+.dry-reactor.processing .plasma-glow { opacity: 1; }
+
+.button-area-container { padding-top: 12px; background: #ffffff; width: 100%; box-sizing: border-box; }
+.button-area { display: flex; gap: 8px; justify-content: space-between; width: 100%; }
+.btn {
+    flex: 1; padding: 10px 6px; border: none; border-radius: 6px; background: var(--primary-blue); color: white; cursor: pointer;
+    font-weight: bold; font-size: 11px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: background 0.2s; text-align: center; white-space: nowrap;
+}
+.btn:hover { background: #224882; }
+.btn-reset { background: #475569; }
+.btn-reset:hover { background: #334155; }
+
+.control-card { background: #fdfdfd; border: 1px solid var(--border-color); border-radius: 8px; padding: 10px; box-sizing: border-box; }
+.slider-group { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; }
+.selector-input { width: 100%; padding: 6px; border-radius: 4px; border: 1px solid var(--border-color); font-weight: bold; font-size: 12px; }
+.slider-header { display: flex; justify-content: space-between; font-size: 12px; font-weight: bold; }
+.metric-display { color: var(--primary-blue); }
+input[type="range"] { width: 100%; margin: 4px 0; }
+
+.output-box { background: #ffffff; border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+.output-box h3, .formula-box h3, .relations-box h3 { margin: 0 0 4px 0; font-size: 14px; color: var(--primary-blue); border-bottom: 1px solid #eef4fb; padding-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.diagnostic-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+.status-badge { background: #f1f5f9; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; border: 1px solid var(--border-color); }
+.quality-badge { background: #e6fcf5; color: #0ca678; border-color: #c3fae8; }
+.console-log { background: #fdfdfd; border: 1px solid var(--border-color); border-radius: 6px; padding: 8px; font-size: 12px; min-height: 45px; color: #555; line-height: 1.4; margin-top: 4px; }
+
+.formula-box, .relations-box { background: #ffffff; border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; box-sizing: border-box; }
+.formula-box .equation { display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: bold; margin: 6px 0; }
+.formula-box .fraction { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 2px; font-size: 13px; }
+.formula-box .numerator { border-bottom: 2px solid #333; padding-bottom: 1px; }
+.formula-box .denominator { padding-top: 1px; }
+.variable-legend p { margin: 4px 0; font-size: 12px; color: #555; }
+.relations-box ul { margin: 0; padding-left: 14px; }
+.relations-box li { font-size: 12px; margin-bottom: 5px; color: #444; }
+
+.step-tracker { position: absolute; top: 60px; left: 15px; right: 15px; display: flex; justify-content: space-between; z-index: 20; }
+.step { background: white; border: 1px solid #cdd8e6; padding: 5px 8px; border-radius: 6px; font-size: 10px; font-weight: bold; color: #555; }
+.active-step { background: #2d5da8; color: white; border-color: #2d5da8; }
+
+.etch-demo-row { position: absolute; top: 110px; left: 20px; right: 20px; display: flex; justify-content: space-around; }
+.etch-demo-card { width: 120px; background: white; border-radius: 8px; padding: 6px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+.etch-demo-card h4 { margin: 0 0 4px 0; font-size: 11px; color: var(--primary-blue); }
+.etch-demo-card p { margin: 4px 0 0 0; font-size: 9px; font-weight: bold; color: #666; }
+.wet-demo-shape { width: 45px; height: 25px; margin: auto; background: #38bdf8; border-radius: 0 0 12px 12px; }
+.dry-demo-shape { width: 45px; height: 25px; margin: auto; background: #38bdf8; }
+
+.orientation-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(240, 246, 255, 0.98); z-index: 9999; display: flex; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; text-align: center; }
+@media screen and (min-orientation: landscape) { .orientation-overlay { display: none !important; } }
+@media screen and (min-width: 768px) { .orientation-overlay { display: none !important; } }
+
+.overlay-card { background: #ffffff; padding: 30px 25px; border-radius: 16px; box-shadow: 0 10px 30px rgba(45, 93, 168, 0.15); border: 2px solid var(--border-color); max-width: 400px; }
+.phone-icon-animation { font-size: 50px; margin-bottom: 15px; display: inline-block; animation: smooth-rotate 2s infinite; }
+@keyframes smooth-rotate { 0% { transform: rotate(0deg); } 50% { transform: rotate(-90deg); } 100% { transform: rotate(0deg); } }
+
+@media screen and (max-width: 1024px) {
+    .main-container { flex-direction: column; height: auto; }
+    .left-panel, .center-panel, .right-panel { width: 100%; height: auto; }
+    .equipment-area { flex-direction: row; }
+    .lab-area { height: 460px !important; }
+    .button-area { flex-wrap: wrap; }
+    .btn { width: calc(50% - 4px); flex: unset; }
+}
+
+body{
+    font-size:18px;
+}
+
+.left-panel{
+    width:22%;
+}
+
+.center-panel{
+    width:56%;
+}
+
+.right-panel{
+    width:22%;
+}
+
+
+h2{
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.top-instruction-bar{
+    font-size:18px;
+    padding:16px 24px;
+}
+
+.equipment-card{
+    min-height:150px;
+    padding:15px;
+}
+
+.equipment-card:hover{
+    transform:translateY(-3px);
+}
+
+.equipment-label{
+    font-size:15px;
+    line-height:1.4;
+    margin-top:10px;
+}
+
+.mini-wafer-patterned{
+    width:65px;
+    height:65px;
+}
+
+.bottle{
+    width:55px;
+    height:70px;
+    font-size:14px;
+}
+
+.gas-canister{
+    width:55px;
+    height:70px;
+    font-size:14px;
+}
+
+.lab-area{
+    height:620px;
+    min-height:620px;
+}
+
+
+.process-timer{
+    font-size:16px;
+    padding:10px 18px;
+}
+
+.light{
+    width:18px;
+    height:18px;
+}
+
+.cleanroom-bench{
+    height:320px;
+}
+
+
+.wet-tank,
+.dry-reactor{
+    width:140px;
+    height:150px;
+}
+
+.handling-chuck{
+    width:340px;
+    height:260px;
+}
+
+.wafer{
+    width:290px;
+    height:180px;
+}
+
+.layer-label,
+.oxide-label,
+.substrate-label{
+    font-size:12px;
+}
+
+/* BUTTONS */
+
+.btn{
+    padding:14px 12px;
+    font-size:16px;
+}
+
+
+.slider-header{
+    font-size:17px;
+}
+
+.selector-input{
+    font-size:16px;
+    padding:10px;
+}
+
+.metric-display{
+    font-size:17px;
+}
+
+
+.output-box{
+    padding:16px;
+}
+
+.diagnostic-row{
+    font-size:17px;
+}
+
+.console-log{
+    font-size:15px;
+    min-height:80px;
+}
+
+.formula-box,
+.relations-box{
+    padding:16px;
+}
+
+.variable-legend p,
+.relations-box li{
+    font-size:15px;
+}
+
+.step-tracker{
+    display:none !important;
+}
+
+.step{
+    display:none !important;
+}
+
+.active-step{
+    display:none !important;
+}
+
+.etch-demo-row{
+    top:70px;
+}
+
+.etch-demo-card{
+    width:170px;
+    padding:10px;
+}
+
+.etch-demo-card h4{
+    font-size:15px;
+}
+
+.etch-demo-card p{
+    font-size:12px;
+}
+
+.wet-demo-shape,
+.dry-demo-shape{
+    width:70px;
+    height:40px;
+}
+@media screen and (max-width:1024px){
+
+    .main-container{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+        height:auto;
+    }
+
+    .panel{
+        width:100% !important;
+        height:auto !important;
+    }
+
+    .left-panel,
+    .center-panel,
+    .right-panel{
+        width:100% !important;
+    }
+
+    .lab-area{
+        height:750px !important;
+        min-height:750px !important;
+    }
+
+    .cleanroom-bench{
+        height:340px;
+    }
+
+    .handling-chuck{
+        width:320px;
+        height:260px;
+    }
+
+    .wafer{
+        width:280px;
+        height:170px;
+    }
+
+    .button-area{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    h2{
+        font-size:24px;
+    }
+
+    .equipment-label{
+        font-size:14px;
+    }
+}

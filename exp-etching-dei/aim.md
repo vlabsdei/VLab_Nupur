@@ -1,0 +1,1 @@
+### To understand the etching process in semiconductor manufacturing, observing how etching time, chemical concentration, and plasma power affect etch depth, pattern quality, and surface finish.

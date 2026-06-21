@@ -1,0 +1,175 @@
+{
+"version": 2.0,
+"questions": [
+{
+"question": "Q1 Which etching mode produced an isotropic profile in the simulation?",
+"answers": {
+"a": "Wet Etching",
+"b": "Dry Etching",
+"c": "Both",
+"d": "Neither"
+},
+"explanations": {
+"a": "Correct! Wet etching produced isotropic undercutting.",
+"b": "Dry etching produced anisotropic profiles.",
+"c": "The profiles were different.",
+"d": "One mode clearly produced isotropic behavior."
+},
+"correctAnswer": "a",
+"difficulty": "beginner"
+},
+{
+"question": "Q2 Which etching mode produced vertical sidewalls?",
+"answers": {
+"a": "Wet Etching",
+"b": "Dry Plasma Etching",
+"c": "Both",
+"d": "Neither"
+},
+"explanations": {
+"a": "Wet etching causes undercutting.",
+"b": "Correct! Dry plasma etching creates anisotropic profiles.",
+"c": "Only dry etching does this effectively.",
+"d": "Vertical profiles were observed."
+},
+"correctAnswer": "b",
+"difficulty": "beginner"
+},
+{
+"question": "Q3 What happened when acid concentration was increased?",
+"answers": {
+"a": "Etch rate increased",
+"b": "Etch rate decreased",
+"c": "No change occurred",
+"d": "Wafer thickness increased"
+},
+"explanations": {
+"a": "Correct! Higher concentration increased chemical activity.",
+"b": "The opposite was observed.",
+"c": "Etch rate changed noticeably.",
+"d": "Etching removes material."
+},
+"correctAnswer": "a",
+"difficulty": "beginner"
+},
+{
+"question": "Q4 What happened when RF power was increased?",
+"answers": {
+"a": "Plasma became more effective",
+"b": "Plasma disappeared",
+"c": "Wafer diameter increased",
+"d": "No effect occurred"
+},
+"explanations": {
+"a": "Correct! Higher RF power strengthens plasma activity.",
+"b": "Plasma remains active.",
+"c": "Wafer diameter does not change.",
+"d": "RF power directly affects etching."
+},
+"correctAnswer": "a",
+"difficulty": "beginner"
+},
+{
+"question": "Q5 Which layer remained protected during etching?",
+"answers": {
+"a": "Photoresist-covered regions",
+"b": "Exposed oxide regions",
+"c": "Entire wafer",
+"d": "Plasma chamber"
+},
+"explanations": {
+"a": "Correct! The photoresist masked the protected regions.",
+"b": "These regions were etched.",
+"c": "Only selected regions remained protected.",
+"d": "The chamber is not a wafer layer."
+},
+"correctAnswer": "a",
+"difficulty": "beginner"
+},
+{
+"question": "Q6 Why was photoresist stripped after etching?",
+"answers": {
+"a": "Its job as a mask was complete",
+"b": "To increase etch rate",
+"c": "To grow oxide",
+"d": "To generate plasma"
+},
+"explanations": {
+"a": "Correct! The masking function was no longer required.",
+"b": "Etching had already finished.",
+"c": "Oxidation is separate.",
+"d": "Plasma generation is unrelated."
+},
+"correctAnswer": "a",
+"difficulty": "beginner"
+},
+{
+"question": "Q7 What is a common disadvantage of wet etching?",
+"answers": {
+"a": "Undercutting",
+"b": "No material removal",
+"c": "No chemical usage",
+"d": "Perfect vertical profiles"
+},
+"explanations": {
+"a": "Correct! Wet etching can remove material sideways.",
+"b": "Material removal occurs.",
+"c": "Chemicals are required.",
+"d": "Vertical profiles are harder with wet etching."
+},
+"correctAnswer": "a",
+"difficulty": "intermediate"
+},
+{
+"question": "Q8 What is a major advantage of dry etching?",
+"answers": {
+"a": "Better profile control",
+"b": "No equipment required",
+"c": "No power consumption",
+"d": "No process parameters"
+},
+"explanations": {
+"a": "Correct! Dry etching provides excellent anisotropic control.",
+"b": "Specialized equipment is needed.",
+"c": "RF power is required.",
+"d": "Process parameters are important."
+},
+"correctAnswer": "a",
+"difficulty": "intermediate"
+},
+{
+"question": "Q9 Which process output indicates the speed of material removal?",
+"answers": {
+"a": "Etch Rate",
+"b": "Yield Quality",
+"c": "Profile Type",
+"d": "Photoresist Thickness"
+},
+"explanations": {
+"a": "Correct! Etch rate measures removal speed.",
+"b": "Yield quality is a performance metric.",
+"c": "Profile type describes geometry.",
+"d": "Not the primary output."
+},
+"correctAnswer": "a",
+"difficulty": "beginner"
+},
+{
+"question": "Q10 Which etching technique is generally preferred for modern nanoscale fabrication?",
+"answers": {
+"a": "Dry Plasma Etching",
+"b": "Wet Etching",
+"c": "Manual Scraping",
+"d": "Mechanical Polishing"
+},
+"explanations": {
+"a": "Correct! Modern fabrication requires precise anisotropic control.",
+"b": "Wet etching is less precise for nanoscale structures.",
+"c": "Not used for IC patterning.",
+"d": "Used for planarization, not pattern transfer."
+},
+"correctAnswer": "a",
+"difficulty": "intermediate"
+}
+]
+}

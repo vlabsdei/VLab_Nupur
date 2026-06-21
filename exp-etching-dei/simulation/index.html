@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semiconductor Etching Virtual Lab</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <div class="orientation-overlay">
+        <div class="overlay-card">
+            <div class="phone-icon-animation">🔄</div>
+            <h2>Screen Rotation Required</h2>
+            <p>This Virtual Lab module requires a wider workspace. Please rotate your device to landscape mode to begin the experiment.</p>
+        </div>
+    </div>
+
+    <div class="top-instruction-bar" id="instructionBanner">
+        <strong>Instructions:</strong> <span id="instructionText">Select the Etch Type in the settings panel on the left, then click the Patterned Wafer to load it.</span>
+    </div>
+
+    <main class="main-container">
+        <section class="panel left-panel">
+            <h2>Equipment Tray</h2>
+            <div class="equipment-area">
+                <div class="equipment-card" id="waferCard">
+                    <div class="equipment wafer-tool" id="waferTool">
+                        <div class="mini-wafer-patterned"></div>
+                    </div>
+                    <p class="equipment-label">Patterned Wafer (Click to Load)</p>
+                </div>
+
+                <div class="equipment-card" id="etchantCard">
+                    <div class="equipment bottle" id="etchantBottle">
+                        <span>Acid</span>
+                    </div>
+                    <p class="equipment-label">Liquid Acid (Wet Etch Prep)</p>
+                </div>
+
+                <div class="equipment-card" id="gasCard">
+                    <div class="equipment gas-canister" id="gasCanister">
+                        <div class="canister-cap"></div>
+                        <span>Gas</span>
+                    </div>
+                    <p class="equipment-label">Plasma Gas (Dry Etch Prep)</p>
+                </div>
+            </div>
+
+            <hr class="panel-divider">
+
+            <h2>Process Settings</h2>
+            <div class="control-card">
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <label for="etchType">Etch Mechanism:</label>
+                    </div>
+                    <select id="etchType" class="selector-input">
+                        <option value="wet">Wet Chemical Isotropic Etching</option>
+                        <option value="dry">Dry Reactive Ion Anisotropic Etching (RIE)</option>
+                    </select>
+                </div>
+
+                <div class="slider-group" id="concentrationGroup">
+                    <div class="slider-header">
+                        <label for="etchConcentration">Acid Concentration:</label>
+                        <span class="metric-display"><span id="concentrationValue">49</span> %</span>
+                    </div>
+                    <input type="range" id="etchConcentration" min="10" max="80" value="49">
+                </div>
+
+                <div class="slider-group" id="rfPowerGroup" style="display: none;">
+                    <div class="slider-header">
+                        <label for="rfPower">RF Plasma Power:</label>
+                        <span class="metric-display"><span id="rfValue">150</span> W</span>
+                    </div>
+                    <input type="range" id="rfPower" min="50" max="300" value="150">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <label for="etchTime">Etch Process Time:</label>
+                        <span class="metric-display"><span id="timeValue">30</span> sec</span>
+                    </div>
+                    <input type="range" id="etchTime" min="10" max="60" value="30">
+                </div>
+            </div>
+        </section>
+
+        <section class="panel center-panel">
+            <h2>Etching Processing Chamber</h2>
+            
+            <div class="lab-area">
+            <div class="hud-display">
+
+    <div class="process-timer" id="processTimer">
+        System Idle
+    </div>
+
+    <div class="status-lights">
+        <div class="light green active" id="lightGreen"></div>
+        <div class="light orange" id="lightOrange"></div>
+        <div class="light red" id="lightRed"></div>
+    </div>
+
+</div>
+
+                <div class="hazard-indicators">
+                    <div class="warning-tag chemical-tag" id="chemicalHazardTag">Chemical Acid Hazard</div>
+                    <div class="warning-tag rf-tag" id="rfHazardTag">High Voltage RF Plasma</div>
+                </div>
+
+                <div class="cleanroom-bench">
+                    <div class="wet-station-module">
+                        <div class="wet-tank" id="wetTank">
+                            <div class="wet-liquid" id="wetLiquid"></div>
+                            <div class="tank-title">Wet Acid Bench</div>
+                        </div>
+                    </div>
+
+                    <div class="handling-chuck-module">
+                        <div class="handling-chuck" id="handlingChuck">
+                            <div class="chuck-title">Wafer Stage</div>
+                            <div class="wafer" id="mainWafer">
+                                <div class="layer-label">Photoresist</div>
+                                <div class="layer-mask-left"></div>
+                                <div class="layer-mask-right"></div>
+                                <div class="target-etch-layer" id="targetEtchLayer"></div>
+                                <div class="oxide-label">SiO₂ Layer</div>
+                                <div class="silicon-substrate"></div>
+                                <div class="substrate-label">Silicon</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dry-chamber-module">
+                        <div class="dry-reactor" id="dryReactor">
+                            <div class="plasma-glow" id="plasmaGlow"></div>
+                            <div class="reactor-title">RIE Plasma Chamber</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-area-container">
+                <div class="button-area">
+                    <button id="loadChemicalBtn" class="btn">Fill Wet Bench</button>
+                    <button id="ignitePlasmaBtn" class="btn">Pump Gas / Ignite</button>
+                    <button id="startEtchBtn" class="btn">Initiate Etch</button>
+                    <button id="stripPRBtn" class="btn">Strip Photoresist</button>
+                    <button id="resetBtn" class="btn btn-reset">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel right-panel">
+            <h2>Process Outputs</h2>
+            <div class="output-box">
+                <div class="diagnostic-row">
+                    <strong>Etch Rate:</strong>
+                    <span class="value-readout"><span id="etchRateDisplay">0.00</span> nm/min</span>
+                </div>
+                <div class="diagnostic-row">
+                    <strong>Profile Selectivity:</strong>
+                    <span class="value-readout status-badge" id="anisotropyDisplay">Not Processed</span>
+                </div>
+                <div class="diagnostic-row">
+                    <strong>Calculated Yield Quality:</strong>
+                    <span class="value-readout status-badge quality-badge" id="qualityDisplay">100%</span>
+                </div>
+                <div class="console-log" id="statusBox">
+                    System initialized. Choose parameters to begin.
+                </div>
+            </div>
+
+            <div class="formula-box">
+    <h3>Etch Kinetics Empirical Model</h3>
+    <div class="equation">
+        R = 
+        <div class="fraction">
+            <span class="numerator">E<sub>c</sub> &middot; P</span>
+            <span class="denominator">t</span>
+        </div>
+    </div>
+    <div class="variable-legend">
+        <p><strong>R</strong> &rarr; Total Etch Rate Removal Velocity</p>
+        <p><strong>E<sub>c</sub></strong> &rarr; Chemistry Selectivity Index Coefficient</p>
+        <p><strong>P</strong> &rarr; Operational Parameter Input Value</p>
+        <p><strong>t</strong> &rarr; Operational Process Time</p>
+    </div>
+</div>
+
+            <div class="relations-box">
+                <h3>Process Relations</h3>
+                <ul>
+                    <li>Wet Chemical Action &rarr; Isotropic Profile (Undercutting)</li>
+                    <li>Dry Plasma Action &rarr; Anisotropic Profile (Vertical Walls)</li>
+                    <li>Higher Concentration/Power &rarr; Increased Etch Speed</li>
+                    <li>Extended Over-Etching &rarr; Mask Over-Digging Failures</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
