@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Q1 What is the primary purpose of deposition in semiconductor manufacturing?",
+      "answers": {
+        "a": "To remove material from the wafer",
+        "b": "To add thin layers of material onto the wafer",
+        "c": "To cut wafers into chips",
+        "d": "To grow silicon crystals"
+      },
+      "explanations": {
+        "a": "Material removal is performed during etching.",
+        "b": "Correct! Deposition adds thin films onto the wafer surface.",
+        "c": "Wafer dicing occurs during packaging.",
+        "d": "Crystal growth occurs during wafer manufacturing."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q2 Which of the following is commonly deposited on semiconductor wafers?",
+      "answers": {
+        "a": "Silicon Dioxide (SiO₂)",
+        "b": "Wood",
+        "c": "Plastic Sheet",
+        "d": "Rubber"
+      },
+      "explanations": {
+        "a": "Correct! Silicon dioxide is one of the most common deposited materials.",
+        "b": "Wood is not used in semiconductor fabrication.",
+        "c": "Plastic sheets are not deposited onto wafers.",
+        "d": "Rubber is not used as a semiconductor thin film."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q3 Which process adds material to the wafer surface?",
+      "answers": {
+        "a": "Etching",
+        "b": "Deposition",
+        "c": "Polishing",
+        "d": "Dicing"
+      },
+      "explanations": {
+        "a": "Etching removes material.",
+        "b": "Correct! Deposition adds thin films.",
+        "c": "Polishing smooths surfaces.",
+        "d": "Dicing separates chips."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q4 What does CVD stand for?",
+      "answers": {
+        "a": "Chemical Vapor Deposition",
+        "b": "Crystal Vapor Diffusion",
+        "c": "Controlled Vacuum Deposition",
+        "d": "Chemical Voltage Deposition"
+      },
+      "explanations": {
+        "a": "Correct! CVD stands for Chemical Vapor Deposition.",
+        "b": "This is not a semiconductor process.",
+        "c": "Incorrect expansion.",
+        "d": "Incorrect expansion."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q5 In Chemical Vapor Deposition (CVD), material reaches the wafer primarily in the form of:",
+      "answers": {
+        "a": "Solid blocks",
+        "b": "Liquid droplets",
+        "c": "Reactive gases",
+        "d": "Metal wires"
+      },
+      "explanations": {
+        "a": "Solids are not directly used in CVD.",
+        "b": "CVD mainly uses gases.",
+        "c": "Correct! Reactive gases form the deposited layer.",
+        "d": "Metal wires are not used."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q6 What does PVD stand for?",
+      "answers": {
+        "a": "Physical Vapor Deposition",
+        "b": "Process Voltage Deposition",
+        "c": "Physical Vacuum Diffusion",
+        "d": "Process Vapor Diffusion"
+      },
+      "explanations": {
+        "a": "Correct! PVD stands for Physical Vapor Deposition.",
+        "b": "Incorrect expansion.",
+        "c": "Incorrect expansion.",
+        "d": "Incorrect expansion."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q7 Which parameter directly affects deposited layer thickness?",
+      "answers": {
+        "a": "Deposition Time",
+        "b": "Wafer Color",
+        "c": "Room Lighting",
+        "d": "Operator Height"
+      },
+      "explanations": {
+        "a": "Correct! Longer deposition time increases thickness.",
+        "b": "Wafer color has no effect.",
+        "c": "Lighting does not affect deposition thickness.",
+        "d": "Operator height is unrelated."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q8 Which material is often used as an insulating layer in semiconductor devices?",
+      "answers": {
+        "a": "Copper",
+        "b": "Silicon Dioxide",
+        "c": "Gold",
+        "d": "Iron"
+      },
+      "explanations": {
+        "a": "Copper is mainly used for interconnections.",
+        "b": "Correct! Silicon dioxide acts as an insulator.",
+        "c": "Gold is used in packaging and bonding.",
+        "d": "Iron is not commonly used."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q9 What is a thin film?",
+      "answers": {
+        "a": "A very thin layer of deposited material",
+        "b": "A protective plastic cover",
+        "c": "A wafer cutting tool",
+        "d": "A silicon crystal ingot"
+      },
+      "explanations": {
+        "a": "Correct! Thin films are extremely thin deposited layers.",
+        "b": "Plastic covers are unrelated.",
+        "c": "Not a deposition component.",
+        "d": "An ingot is formed before wafer fabrication."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q10 Why are multiple deposited layers used in integrated circuits?",
+      "answers": {
+        "a": "To make wafers heavier",
+        "b": "To create different functional device layers",
+        "c": "To reduce wafer diameter",
+        "d": "To melt the silicon"
+      },
+      "explanations": {
+        "a": "Weight is not important here.",
+        "b": "Correct! Multiple layers form transistors, insulators, and interconnects.",
+        "c": "Layer deposition does not reduce wafer diameter.",
+        "d": "Deposition does not melt silicon."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

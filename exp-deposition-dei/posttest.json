@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Q1 What happens to layer thickness when deposition time increases?",
+      "answers": {
+        "a": "Thickness decreases",
+        "b": "Thickness remains constant",
+        "c": "Thickness increases",
+        "d": "Layer disappears"
+      },
+      "explanations": {
+        "a": "Thickness does not decrease with longer deposition.",
+        "b": "Thickness changes with time.",
+        "c": "Correct! Longer deposition time produces thicker films.",
+        "d": "The layer does not disappear."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q2 If deposition rate doubles while time remains constant, the film thickness will:",
+      "answers": {
+        "a": "Halve",
+        "b": "Double",
+        "c": "Remain unchanged",
+        "d": "Become zero"
+      },
+      "explanations": {
+        "a": "Incorrect relationship.",
+        "b": "Correct! Thickness is directly proportional to deposition rate.",
+        "c": "Thickness changes.",
+        "d": "Thickness cannot become zero."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q3 Which formula is used in this experiment?",
+      "answers": {
+        "a": "Thickness = Rate × Time",
+        "b": "Thickness = Rate ÷ Time",
+        "c": "Thickness = Time²",
+        "d": "Thickness = Rate + Time"
+      },
+      "explanations": {
+        "a": "Correct! This is the deposition thickness relationship.",
+        "b": "Incorrect formula.",
+        "c": "Incorrect formula.",
+        "d": "Incorrect formula."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q4 A deposition rate of 50 nm/min for 10 minutes produces approximately:",
+      "answers": {
+        "a": "50 nm",
+        "b": "100 nm",
+        "c": "500 nm",
+        "d": "5000 nm"
+      },
+      "explanations": {
+        "a": "Too low.",
+        "b": "Incorrect calculation.",
+        "c": "Correct! 50 × 10 = 500 nm.",
+        "d": "Too high."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q5 Which deposition method typically provides excellent surface coverage?",
+      "answers": {
+        "a": "CVD",
+        "b": "PVD",
+        "c": "Wafer Dicing",
+        "d": "Etching"
+      },
+      "explanations": {
+        "a": "Correct! CVD is known for good conformity and coverage.",
+        "b": "PVD coverage is generally lower than CVD.",
+        "c": "Not a deposition method.",
+        "d": "Etching removes material."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q6 Which deposition method is commonly used for metal layers?",
+      "answers": {
+        "a": "PVD",
+        "b": "Oxidation",
+        "c": "Photolithography",
+        "d": "Ion Implantation"
+      },
+      "explanations": {
+        "a": "Correct! PVD is widely used for metal deposition.",
+        "b": "Oxidation grows oxide layers.",
+        "c": "Photolithography creates patterns.",
+        "d": "Ion implantation adds dopants."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q7 Which parameter would most likely increase deposition thickness?",
+      "answers": {
+        "a": "Increasing deposition time",
+        "b": "Reducing deposition rate",
+        "c": "Turning off the system",
+        "d": "Changing wafer color"
+      },
+      "explanations": {
+        "a": "Correct! More deposition time means thicker films.",
+        "b": "Reducing rate lowers thickness growth.",
+        "c": "No deposition occurs.",
+        "d": "Wafer color has no effect."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q8 What is the main purpose of depositing insulating layers?",
+      "answers": {
+        "a": "To electrically isolate device regions",
+        "b": "To cut wafers",
+        "c": "To increase wafer diameter",
+        "d": "To melt silicon"
+      },
+      "explanations": {
+        "a": "Correct! Insulating layers separate electrical regions.",
+        "b": "Cutting occurs later.",
+        "c": "Deposition does not affect wafer diameter.",
+        "d": "Silicon is not melted."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q9 What would happen if deposition continues for too long?",
+      "answers": {
+        "a": "Film may become excessively thick",
+        "b": "The layer disappears",
+        "c": "The wafer turns into an ingot",
+        "d": "No change occurs"
+      },
+      "explanations": {
+        "a": "Correct! Excessive deposition can create overly thick films.",
+        "b": "The layer does not disappear.",
+        "c": "An ingot is formed during crystal growth.",
+        "d": "Thickness continues increasing."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q10 What is the final outcome of the deposition process?",
+      "answers": {
+        "a": "Removal of wafer material",
+        "b": "Formation of a thin film layer on the wafer",
+        "c": "Crystal growth",
+        "d": "Wafer packaging"
+      },
+      "explanations": {
+        "a": "Material removal is etching.",
+        "b": "Correct! Deposition forms thin films on the wafer surface.",
+        "c": "Crystal growth is a separate process.",
+        "d": "Packaging occurs near the end of fabrication."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

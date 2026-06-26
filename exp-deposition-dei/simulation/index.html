@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thin Film Deposition</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+
+    <div class="top-instruction-bar">
+        <strong>Instructions:</strong>
+        <span id="instructionText">
+            Load the silicon wafer to begin the deposition process.
+        </span>
+    </div>
+
+   
+    <main class="main-container">
+ <section class="panel left-panel">
+
+            <h2>Equipment Tray</h2>
+
+            <div class="equipment-area">
+
+                <div class="equipment-card" id="waferCard">
+
+                    <div class="equipment-display">
+
+                        <div class="mini-wafer"></div>
+
+                    </div>
+
+                    <p class="equipment-label">
+                        Silicon Wafer
+                    </p>
+
+                </div>
+
+                <div class="equipment-card" id="gasCard">
+
+                    <div class="equipment-display">
+
+                        <div class="gas-icon">
+                            GAS
+                        </div>
+
+                    </div>
+
+                    <p class="equipment-label">
+                        CVD Gas Source
+                    </p>
+
+                </div>
+
+                <div class="equipment-card" id="targetCard">
+
+                    <div class="equipment-display">
+
+                        <div class="target-icon">
+                            TARGET
+                        </div>
+
+                    </div>
+
+                    <p class="equipment-label">
+                        PVD Sputter Target
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+  <section class="panel center-panel">
+
+            <h2>Deposition Chamber</h2>
+
+           
+            <div class="step-tracker">
+
+                <div class="step active-step" id="step1">
+                    Load Wafer
+                </div>
+
+                <div class="step" id="step2">
+                    Prepare Source
+                </div>
+
+                <div class="step" id="step3">
+                    Configure
+                </div>
+
+                <div class="step" id="step4">
+                    Deposit
+                </div>
+
+                <div class="step" id="step5">
+                    Complete
+                </div>
+
+            </div>
+
+        
+           
+            <div class="lab-area">
+
+                <div class="vacuum-chamber">
+
+                    <div class="chamber-header">
+
+                        <div class="vacuum-label">
+                            HIGH VACUUM DEPOSITION CHAMBER
+                        </div>
+
+                    </div>
+
+            
+                    <div class="showerhead" id="showerhead">
+
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+
+                    </div>
+
+                    
+                    <div class="pvd-target hidden"
+                         id="pvdTarget">
+
+                        SPUTTER TARGET
+
+                    </div>
+
+                    
+                    <div class="plasma-zone"
+                         id="plasmaZone">
+
+                        <div class="plasma-core"></div>
+
+                    </div>
+
+                    
+                    <div class="particle-zone"
+                         id="particleZone">
+
+                    </div>
+
+                     <div class="deposition-stream"
+                         id="depositionStream">
+
+                    </div>
+  <div class="wafer-stage">
+
+                        <div class="wafer-chuck">
+
+                            <div class="wafer-real"
+                                 id="waferReal">
+
+                                <div class="film-layer"
+                                     id="filmLayer">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+             <div class="visualization-row">
+
+                    <div class="view-card">
+
+                        <h3>Top View</h3>
+
+                        <div class="wafer-top-view">
+
+                            <div class="deposited-layer-top"
+                                 id="depositedLayerTop">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="view-card">
+
+                        <h3>Cross Section View</h3>
+
+                        <div class="cross-section-wafer">
+
+                            <div class="deposited-layer"
+                                 id="depositedLayer">
+
+                            </div>
+
+                            <div class="silicon-layer">
+                                Silicon Wafer
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- BUTTONS -->
+
+            <div class="button-area-container">
+
+                <div class="button-area">
+
+                    <button id="loadWaferBtn"
+                            class="btn">
+                        Load Wafer
+                    </button>
+
+                    <button id="prepareBtn"
+                            class="btn"
+                            disabled>
+                        Prepare Source
+                    </button>
+
+                    <button id="startBtn"
+                            class="btn"
+                            disabled>
+                        Start Deposition
+                    </button>
+
+                    <button id="pauseBtn"
+                            class="btn"
+                            disabled>
+                        Pause
+                    </button>
+
+                    <button id="resetBtn"
+                            class="btn btn-reset">
+                        Reset
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="panel right-panel">
+
+            <h2>Process Parameters</h2>
+
+            <div class="control-card">
+
+                <div class="slider-group">
+
+                    <label>
+                        Deposition Type
+                    </label>
+
+                    <select id="depositionType">
+
+                        <option value="cvd">
+                            Chemical Vapor Deposition (CVD)
+                        </option>
+
+                        <option value="pvd">
+                            Physical Vapor Deposition (PVD)
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="slider-group">
+
+                    <label>
+                        Film Material
+                    </label>
+
+                    <select id="materialType">
+
+                        <option value="oxide">
+                            Silicon Dioxide (SiO₂)
+                        </option>
+
+                        <option value="poly">
+                            Polysilicon
+                        </option>
+
+                        <option value="aluminum">
+                            Aluminum
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="slider-group">
+
+                    <div class="slider-header">
+
+                        <label>
+                            Deposition Rate
+                        </label>
+
+                        <span>
+                            <span id="rateValue">
+                                50
+                            </span>
+                            nm/min
+                        </span>
+
+                    </div>
+
+                    <input type="range"
+                           id="depositionRate"
+                           min="5"
+                           max="100"
+                           value="50">
+
+                </div>
+
+                <div class="slider-group">
+
+                    <div class="slider-header">
+
+                        <label>
+                            Deposition Time
+                        </label>
+
+                        <span>
+                            <span id="timeValue">
+                                10
+                            </span>
+                            min
+                        </span>
+
+                    </div>
+
+                    <input type="range"
+                           id="depositionTime"
+                           min="1"
+                           max="30"
+                           value="10">
+
+                </div>
+
+            </div>
+
+            <div class="output-box">
+
+                <h3>Process Outputs</h3>
+
+                <div class="diagnostic-row">
+
+                    <strong>
+                        Film Thickness:
+                    </strong>
+
+                    <span id="thicknessOutput">
+                        0
+                    </span>
+
+                    nm
+
+                </div>
+
+                <div class="diagnostic-row">
+
+                    <strong>
+                        Coverage:
+                    </strong>
+
+                    <span id="coverageOutput">
+                        Not Started
+                    </span>
+
+                </div>
+
+                <div class="diagnostic-row">
+
+                    <strong>
+                        Layer Quality:
+                    </strong>
+
+                    <span id="qualityOutput">
+                        Not Started
+                    </span>
+
+                </div>
+
+                <div class="diagnostic-row">
+
+                    <strong>
+                        Process Status:
+                    </strong>
+
+                    <span id="processStatus">
+                        Idle
+                    </span>
+
+                </div>
+
+                <div class="console-log"
+                     id="statusBox">
+
+                    System initialized.
+                    Load wafer to begin deposition.
+
+                </div>
+
+            </div>
+
+            <!-- FORMULA -->
+
+            <div class="formula-box">
+
+                <h3>
+                    Film Thickness Formula
+                </h3>
+
+                <div class="equation">
+
+                    Thickness = Rate × Time
+
+                </div>
+
+                <div class="variable-legend">
+
+                    <p>
+                        Thickness = Film Thickness (nm)
+                    </p>
+
+                    <p>
+                        Rate = Deposition Rate (nm/min)
+                    </p>
+
+                    <p>
+                        Time = Deposition Time (min)
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="relations-box">
+
+                <h3>
+                    Process Comparison
+                </h3>
+
+                <ul>
+
+                    <li>
+                        CVD → Excellent Step Coverage
+                    </li>
+
+                    <li>
+                        PVD → Directional Deposition
+                    </li>
+
+                    <li>
+                        Plasma Used in PVD
+                    </li>
+
+                    <li>
+                        Higher Rate → Faster Growth
+                    </li>
+
+                    <li>
+                        Longer Time → Thicker Films
+                    </li>
+
+                </ul>
+
+            </div>
+
+              <div class="process-visual-row">
+
+                <div class="process-card">
+
+                    <h4>CVD</h4>
+
+                    <div class="cvd-demo"></div>
+
+                    <p>
+                        Conformal Coating
+                    </p>
+
+                </div>
+
+                <div class="process-card">
+
+                    <h4>PVD</h4>
+
+                    <div class="pvd-demo"></div>
+
+                    <p>
+                        Line-of-Sight Deposition
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
+
