@@ -27,6 +27,12 @@ An ion implantation system consists of several major components:
 * **Vacuum Chamber:** Prevents ion collisions with air molecules and maintains beam stability.
 * **Wafer Stage (Chuck):** Holds the silicon wafer securely during implantation.
 
+<div align="center">
+
+<img src="images/ion.png"
+     alt="Setup for Ion implantation">
+
+</div>
 
 ### Common Dopant Materials
 
