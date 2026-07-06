@@ -1,0 +1,202 @@
+:root {
+    --primary-blue: #2d5da8;
+    --accent-light: #edf4fb;
+    --border-grey: #d9e4f1;
+    --bg-light: #eef4fb;
+    --panel-white: #ffffff;
+    --chamber-metallic: #5a6578;
+    --chamber-interior-light: #2e3642;
+    --plasma-color: rgba(0, 191, 255, 0.6);
+    --beam-glow: rgba(30, 144, 255, 0.75);
+    --success-green: #2baf53;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-light);
+    color: #333;
+    overflow-x: hidden;
+    font-size: 14px;
+}
+
+.top-instruction-bar {
+    width: 100%;
+    background: #d9e8f5;
+    border-bottom: 1px solid #b9cde3;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #1e3d73;
+}
+.top-instruction-bar strong { text-transform: uppercase; font-weight: 700; }
+
+.top-header {
+    background: var(--panel-white);
+    padding: 10px 16px;
+    text-align: center;
+    border-bottom: 2px solid var(--border-grey);
+}
+.top-header h1 { margin: 0; font-size: 20px; color: var(--primary-blue); }
+.top-header p { margin: 2px 0 0 0; color: #666; font-size: 11px; }
+
+.main-container {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    width: 100%;
+    height: calc(100vh - 95px);
+}
+
+.panel {
+    background: var(--panel-white);
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-grey);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-panel { width: 22%; overflow-y: auto; }
+.center-panel { width: 56%; }
+.right-panel { width: 22%; overflow-y: auto; gap: 10px; }
+
+h2 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--accent-light);
+    padding-bottom: 4px;
+    text-align: center;
+}
+
+/* EQUIPMENT CARDS */
+.equipment-area { display: flex; flex-direction: column; gap: 10px; }
+.equipment-card {
+    border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; background: #fcfdfe;
+    display: flex; flex-direction: column; align-items: center; transition: all 0.2s;
+}
+.equipment-card:not(.card-disabled):hover { background: var(--accent-light); border-color: var(--primary-blue); }
+.equipment-card.card-disabled { opacity: 0.5; background: #f1f5f9; }
+
+.equip-icon { width: 40px; height: 40px; margin-bottom: 4px; }
+.wafer-icon { background: radial-gradient(circle at 70% 30%, #e2e8f0, #94a3b8); border-radius: 50%; border: 2px solid #64748b; }
+.source-icon { background: linear-gradient(135deg, #3b82f6, #1d4ed8); clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); }
+.analyzer-icon { background: radial-gradient(circle, #475569 40%, transparent 45%); border: 3px dashed #1e293b; border-radius: 50%; }
+.column-icon { background: repeating-linear-gradient(to bottom, #475569, #475569 4px, #94a3b8 4px, #94a3b8 8px); }
+.equipment-label { margin: 2px 0; font-size: 12px; color: #444; font-weight: 600; }
+.status-badge { font-size: 9px; font-weight: bold; padding: 1px 6px; border-radius: 10px; }
+.state-idle { background: #e2e8f0; color: #475569; }
+.state-active { background: #dcfce7; color: #15803d; }
+
+/* STEP TRACKER */
+.step-tracker { display: flex; justify-content: space-between; margin-bottom: 10px; gap: 4px; }
+.step { flex: 1; background: #f1f5f9; border: 1px solid #cbd5e1; padding: 4px 2px; border-radius: 4px; font-size: 10px; font-weight: bold; text-align: center; color: #64748b; }
+.step.active-step { background: var(--primary-blue); color: white; border-color: var(--primary-blue); }
+
+/* CHAMBER AREA */
+.lab-area { position: relative; width: 100%; flex: 1; border: 3px solid #475569; border-radius: 12px; overflow: hidden; background-image: radial-gradient(circle at center, #3a4352 0%, #222831 100%); }
+.hud-display { position: absolute; top: 8px; left: 8px; right: 8px; display: flex; justify-content: space-between; z-index: 20; }
+.process-timer { background: rgba(255,255,255,0.95); padding: 4px 10px; border-radius: 4px; font-weight: bold; color: var(--primary-blue); font-size: 12px; font-family: monospace; }
+.status-lights { display: flex; gap: 4px; }
+.light { width: 12px; height: 12px; border-radius: 50%; background: #4a5568; }
+.light.green.active { background: var(--success-green); box-shadow: 0 0 8px var(--success-green); }
+.light.orange.active { background: #f59e0b; box-shadow: 0 0 8px #f59e0b; }
+.light.red.active { background: #ef4444; box-shadow: 0 0 8px #ef4444; }
+
+.hazard-indicators { position: absolute; top: 40px; left: 8px; right: 8px; display: flex; justify-content: space-between; z-index: 19; }
+.warning-tag { background: rgba(254, 243, 199, 0.95); color: #92400e; padding: 2px 6px; border-radius: 4px; font-size: 9px; font-weight: bold; opacity: 0; }
+.warning-tag.active-tag { opacity: 1; }
+
+.chamber-frame { display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%; padding-top: 10px; }
+.chamber-module { background: linear-gradient(to right, #6b7280, #4b5563, #6b7280); border: 1px solid #9ca3af; position: relative; display: flex; align-items: center; justify-content: center; }
+.module-title { position: absolute; font-size: 8px; font-weight: bold; color: #cbd5e1; text-transform: uppercase; bottom: 1px; width: 100%; text-align: center; }
+
+.ion-source-source { width: 80px; height: 40px; border-radius: 4px 4px 0 0; }
+.plasma-glow { width: 80%; height: 70%; background: radial-gradient(circle, #00bfff, transparent 70%); opacity: 0; }
+.plasma-active { opacity: 1; }
+
+.magnetic-analyzer { width: 100px; height: 35px; border-radius: 50% / 20%; margin-top: 1px; }
+.magnetic-rings { position: absolute; width: 80px; height: 24px; border: 1px dashed rgba(0, 191, 255, 0); border-radius: 50%; }
+.magnet-active #magRing1 { border-color: rgba(0, 191, 255, 0.6); animation: spinMag 2s linear infinite; }
+@keyframes spinMag { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.acceleration-column { width: 65px; height: 50px; margin-top: 1px; display: flex; flex-direction: column; justify-content: space-around; }
+.column-grids { width: 90%; height: 4px; background: #374151; margin: 0 auto; }
+.column-active .column-grids { border-color: #00bfff; box-shadow: 0 0 4px #00bfff; }
+
+.ion-beam-track { width: 260px; height: 110px; position: relative; overflow: hidden; }
+.ion-beam { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 8px; height: 100%; background: transparent; }
+.beam-active-firing { background: linear-gradient(to bottom, var(--beam-glow), rgba(0, 191, 255, 0.9)); }
+.beam-scanning-active { animation: beamScan 1.6s ease-in-out infinite alternate; }
+
+.end-station { width: 100%; flex: 1; background: #242b35; border-top: 2px solid #5a6578; padding: 6px; }
+.dual-view-container { display: flex; gap: 8px; width: 100%; height: 100%; }
+.view-block { flex: 1; background: #1a202c; border: 1px solid #4a5568; border-radius: 6px; display: flex; flex-direction: column; padding: 4px; }
+.view-title { font-size: 10px; font-weight: bold; color: #a0aec0; text-transform: uppercase; text-align: center; margin-bottom: 2px; }
+.wafer-chuck { flex: 1; display: flex; align-items: center; justify-content: center; }
+
+.wafer-top-surface { width: 85px; height: 85px; background: #4a5568; border-radius: 50%; position: relative; border: 2px solid #718096; display: none; }
+.wafer-cross-section { width: 130px; height: 85px; background: #4a5568; border-radius: 4px; position: relative; overflow: hidden; border: 2px solid #718096; display: none; }
+.pr-mask { position: absolute; top: 0; width: 35px; height: 20px; background: #5a6578; color: #fff; font-size: 7px; text-align: center; }
+.left-mask { left: 5px; } .right-mask { right: 5px; }
+.dopant-penetration-profile { position: absolute; top: 20px; left: 40px; width: 50px; height: 0; background: transparent; }
+.substrate-label { position: absolute; bottom: 4px; width: 100%; text-align: center; font-size: 9px; color: rgba(255,255,255,0.2); }
+
+/* CONTROLS & INTERFACES */
+.button-area-container { padding-top: 8px; background: #fff; }
+.button-area { display: flex; gap: 4px; flex-wrap: wrap; }
+.btn { flex: 1; min-width: 70px; padding: 10px 6px; border: none; border-radius: 6px; background: var(--primary-blue); color: white; cursor: pointer; font-weight: bold; font-size: 12px; text-align: center; }
+.btn-locked { opacity: 0.4; cursor: not-allowed !important; background: #64748b !important; }
+.btn-reset { background: #475569; }
+
+.control-card { background: #fdfdfd; border: 1px solid var(--border-grey); border-radius: 8px; padding: 8px; display: flex; flex-direction: column; gap: 6px; }
+.slider-group { display: flex; flex-direction: column; }
+.selector-input { width: 100%; padding: 6px; border-radius: 4px; border: 1px solid var(--border-grey); font-size: 12px; }
+.slider-header { display: flex; justify-content: space-between; font-size: 11px; font-weight: bold; }
+
+.output-box { border: 1px solid var(--border-grey); border-radius: 8px; padding: 8px; display: flex; flex-direction: column; gap: 6px; }
+.diagnostic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.output-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 4px; padding: 6px; text-align: center; }
+.card-title { font-size: 9px; font-weight: bold; color: #64748b; text-transform: uppercase; display: block; }
+.card-value { font-size: 12px; font-weight: bold; color: var(--primary-blue); font-family: monospace; }
+.console-log { background: #dae2f3; border-radius: 4px; padding: 8px; font-size: 11px; min-height: 55px; color: #05090b; font-family: monospace; }
+
+.formula-box { padding: 8px; background: #f8fafc; border: 1px solid var(--border-grey); border-radius: 8px; }
+.formula-box h3 { margin: 0; font-size: 11px; color: var(--primary-blue); text-transform: uppercase; }
+.equation { text-align: center; font-weight: bold; font-family: monospace; margin: 4px 0; }
+.flow-relation { font-size: 10px; color: #b45309; text-align: center; }
+.variable-legend p { margin: 2px 0; font-size: 10px; color: #555; }
+.variable-legend strong {
+    color: #1e293b;
+    font-family: monospace;
+    font-size: 13px;
+}
+/* ==========================================================================
+   MOBILE RESPONSIVE MEDIA QUERY CORRECTIONS
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    body { overflow-y: auto; }
+    .main-container { flex-direction: column; height: auto; gap: 15px; padding: 10px; }
+    .panel { width: 100% !important; height: auto !important; }
+    
+    /* Make the Left equipment tray render items horizontally on mobile */
+    .equipment-area { flex-direction: row; flex-wrap: wrap; }
+    .equipment-card { flex: 1; min-width: 45%; padding: 8px; }
+    
+    /* Shrink the workspace canvas slightly to prevent scrolling layout breaks */
+    .lab-area { height: 380px; min-height: 380px; }
+    .ion-beam-track { height: 85px; }
+    
+    /* Transform side-by-side views into a clean, stacked column format */
+    .dual-view-container { flex-direction: column; gap: 6px; align-items: center; }
+    .view-block { width: 100%; max-width: 240px; height: 110px; }
+    
+    .step { font-size: 9px; padding: 4px 1px; }
+    .btn { padding: 12px 4px; font-size: 11px; }
+}

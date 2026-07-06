@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Q1 During the simulation, which parameter had the greatest influence on the projected junction depth?",
+      "answers": {
+        "a": "Ion Dose",
+        "b": "Implantation Energy",
+        "c": "Wafer Diameter",
+        "d": "Vacuum Pressure"
+      },
+      "explanations": {
+        "a": "Ion dose mainly controls dopant concentration.",
+        "b": "Correct! Implantation energy determines how deeply ions penetrate into the silicon wafer.",
+        "c": "Wafer diameter remains constant throughout the process.",
+        "d": "Vacuum pressure allows ion travel but does not directly determine junction depth."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q2 Increasing the ion dose during implantation primarily results in:",
+      "answers": {
+        "a": "Higher dopant concentration",
+        "b": "Reduced junction depth",
+        "c": "Larger wafer diameter",
+        "d": "Lower implantation energy"
+      },
+      "explanations": {
+        "a": "Correct! A higher ion dose implants more dopant atoms into the wafer.",
+        "b": "Junction depth is mainly controlled by implantation energy.",
+        "c": "Wafer diameter is unchanged.",
+        "d": "Ion dose and implantation energy are independent parameters."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q3 Which output parameter directly indicates how far the implanted ions have penetrated into the silicon wafer?",
+      "answers": {
+        "a": "Sheet Resistance",
+        "b": "Implant Uniformity",
+        "c": "Junction Depth",
+        "d": "Device Quality"
+      },
+      "explanations": {
+        "a": "Sheet resistance depends on dopant concentration.",
+        "b": "Uniformity describes how evenly ions are distributed.",
+        "c": "Correct! Junction depth measures the penetration depth of implanted ions.",
+        "d": "Device quality is an overall performance indicator."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q4 Which combination of process parameters generally produced the highest device quality during the simulation?",
+      "answers": {
+        "a": "Very low energy and very low dose",
+        "b": "Moderate implantation energy and recommended ion dose",
+        "c": "Highest possible energy and longest implantation time",
+        "d": "Random parameter selection"
+      },
+      "explanations": {
+        "a": "Very low values usually result in insufficient doping.",
+        "b": "Correct! Operating within the recommended parameter range produces the best implantation quality.",
+        "c": "Extremely high values may introduce excessive lattice damage.",
+        "d": "Random values rarely produce optimum results."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q5 Which dopant selected in the simulation produces a P-type semiconductor region?",
+      "answers": {
+        "a": "Phosphorus",
+        "b": "Arsenic",
+        "c": "Boron",
+        "d": "Silicon"
+      },
+      "explanations": {
+        "a": "Phosphorus produces N-type silicon.",
+        "b": "Arsenic also produces N-type silicon.",
+        "c": "Correct! Boron is the standard P-type dopant.",
+        "d": "Silicon is the substrate material."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q6 Why is beam scanning performed during ion implantation?",
+      "answers": {
+        "a": "To cool the wafer",
+        "b": "To ensure uniform dopant distribution across the wafer surface",
+        "c": "To increase wafer thickness",
+        "d": "To reduce implantation energy"
+      },
+      "explanations": {
+        "a": "Cooling is not the purpose of beam scanning.",
+        "b": "Correct! Beam scanning provides uniform implantation over the entire wafer.",
+        "c": "Wafer thickness does not change during implantation.",
+        "d": "Scanning does not affect implantation energy."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q7 Which output parameter is most directly affected by changes in ion dose?",
+      "answers": {
+        "a": "Sheet Resistance",
+        "b": "Wafer Diameter",
+        "c": "Crystal Orientation",
+        "d": "Vacuum Pressure"
+      },
+      "explanations": {
+        "a": "Correct! Increasing dopant concentration generally decreases sheet resistance.",
+        "b": "Wafer diameter remains unchanged.",
+        "c": "Crystal orientation is fixed during wafer fabrication.",
+        "d": "Vacuum pressure is controlled independently."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q8 Which process step must be completed before starting ion implantation in the simulation?",
+      "answers": {
+        "a": "Prepare Ion Source",
+        "b": "Unload Wafer",
+        "c": "Perform Annealing",
+        "d": "Deposit Metal Layer"
+      },
+      "explanations": {
+        "a": "Correct! The ion source, magnetic analyzer, and accelerator must be prepared before implantation begins.",
+        "b": "The wafer must remain inside the chamber.",
+        "c": "Annealing is performed after implantation.",
+        "d": "Metal deposition is a different fabrication process."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q9 What is the purpose of the acceleration column in an ion implanter?",
+      "answers": {
+        "a": "To cool implanted ions",
+        "b": "To accelerate ions to the required implantation energy",
+        "c": "To remove dopants from the wafer",
+        "d": "To grow silicon dioxide"
+      },
+      "explanations": {
+        "a": "The acceleration column does not cool ions.",
+        "b": "Correct! It accelerates ions using a high-voltage electric field before implantation.",
+        "c": "Ion implantation introduces dopants rather than removing them.",
+        "d": "Silicon dioxide is grown during oxidation."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q10 Based on the simulation, the highest device quality is achieved when:",
+      "answers": {
+        "a": "Recommended implantation energy, ion dose, and implantation time are maintained",
+        "b": "The highest possible implantation energy is always selected",
+        "c": "Only implantation time is increased",
+        "d": "The lowest ion dose is used"
+      },
+      "explanations": {
+        "a": "Correct! Maintaining the recommended operating conditions produces the best junction formation and overall device quality.",
+        "b": "Very high energy may damage the crystal lattice.",
+        "c": "Time alone does not ensure optimum implantation.",
+        "d": "Very low ion dose results in insufficient doping."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ion Implantation Virtual Laboratory</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <div class="top-instruction-bar" id="instructionBanner">
+        <strong>Instructions:</strong> <span id="instructionText">To begin the experiment, load the Silicon Wafer substrate from the Equipment Tray on the left panel.</span>
+    </div>
+
+
+    <main class="main-container">
+        
+        <section class="panel left-panel">
+            <h2>Equipment Tray</h2>
+            <div class="equipment-area">
+                <div class="equipment-card" id="equipWafer">
+                    <div class="equip-icon wafer-icon"></div>
+                    <p class="equipment-label">Silicon Wafer</p>
+                    <span class="status-badge state-idle">Ready</span>
+                </div>
+
+                <div class="equipment-card" id="equipSource">
+                    <div class="equip-icon source-icon"></div>
+                    <p class="equipment-label">Ion Source</p>
+                    <span class="status-badge state-idle">Ready</span>
+                </div>
+
+                <div class="equipment-card" id="equipAnalyzer">
+                    <div class="equip-icon analyzer-icon"></div>
+                    <p class="equipment-label">Magnetic Mass Analyzer</p>
+                    <span class="status-badge state-idle">Ready</span>
+                </div>
+
+                <div class="equipment-card" id="equipColumn">
+                    <div class="equip-icon column-icon"></div>
+                    <p class="equipment-label">Acceleration Column</p>
+                    <span class="status-badge state-idle">Ready</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel center-panel">
+            <div class="step-tracker">
+                <div class="step active-step" id="step1">1. Load</div>
+                <div class="step" id="step2">2. Prep</div>
+                <div class="step" id="step3">3. Config</div>
+                <div class="step" id="step4">4. Implant</div>
+                <div class="step" id="step5">5. Done</div>
+            </div>
+
+            <div class="lab-area">
+                <div class="hud-display">
+                    <div class="process-timer" id="processTimer">System Ready</div>
+                    <div class="status-lights">
+                        <div class="light green active" id="lightGreen"></div>
+                        <div class="light orange" id="lightOrange"></div>
+                        <div class="light red" id="lightRed"></div>
+                    </div>
+                </div>
+
+                <div class="hazard-indicators">
+                    <div class="warning-tag" id="hvHazardTag">HV Active</div>
+                    <div class="warning-tag" id="thermalHazardTag">RTA Hot</div>
+                </div>
+
+                <div class="chamber-frame">
+                    <div class="chamber-module ion-source-source" id="sourceChamber">
+                        <div class="plasma-glow" id="plasmaGlow"></div>
+                        <div class="module-title">Plasma Source</div>
+                    </div>
+
+                    <div class="chamber-module magnetic-analyzer" id="magnetChamber">
+                        <div class="magnetic-rings" id="magRing1"></div>
+                        <div class="magnetic-rings" id="magRing2"></div>
+                        <div class="module-title">Mass Analyzer</div>
+                    </div>
+
+                    <div class="chamber-module acceleration-column" id="columnChamber">
+                        <div class="column-grids"></div>
+                        <div class="column-grids"></div>
+                        <div class="module-title">HV Accelerator</div>
+                    </div>
+
+                    <div class="ion-beam-track">
+                        <div class="ion-beam" id="ionBeam"></div>
+                    </div>
+
+                    <div class="end-station">
+                        <div class="dual-view-container">
+                            <div class="view-block">
+                                <div class="view-title">Top View</div>
+                                <div class="wafer-chuck">
+                                    <div class="wafer-top-surface" id="waferTop">
+                                        <div class="notch"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="view-block">
+                                <div class="view-title">Cross-Section</div>
+                                <div class="wafer-chuck">
+                                    <div class="wafer-cross-section" id="waferCross">
+                                        <div class="pr-mask left-mask">PR Mask</div>
+                                        <div class="pr-mask right-mask">PR Mask</div>
+                                        <div class="dopant-penetration-profile" id="dopantProfile"></div>
+                                        <div class="substrate-label">Silicon</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-area-container">
+                <div class="button-area">
+                    <button id="btnLoadWafer" class="btn">Load Wafer</button>
+                    <button id="btnPrepareSource" class="btn btn-locked" disabled>Prepare Source</button>
+                    <button id="btnStartImplant" class="btn btn-locked" disabled>Implant</button>
+                    <button id="btnPause" class="btn btn-locked btn-pause" disabled>Pause</button>
+                    <button id="btnReset" class="btn btn-reset">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel right-panel">
+            <h2>Process Parameters</h2>
+            <div class="control-card">
+                <div class="slider-group">
+                    <label for="dopantType">Dopant Ion:</label>
+                    <select id="dopantType" class="selector-input">
+                        <option value="boron">Boron (B+ &rarr; P-Type)</option>
+                        <option value="phosphorus">Phosphorus (P+ &rarr; N-Type)</option>
+                        <option value="arsenic">Arsenic (As+ &rarr; N-Type)</option>
+                    </select>
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <label for="energySlider">Energy:</label>
+                        <span class="metric-display"><span id="energyValue">100</span> keV</span>
+                    </div>
+                    <input type="range" id="energySlider" min="20" max="200" value="100" step="5">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <label for="doseSlider">Dosage:</label>
+                        <span class="metric-display"><span id="doseValue">1.0</span> &times; 10<sup>14</sup></span>
+                    </div>
+                    <input type="range" id="doseSlider" min="13.0" max="16.0" value="14.0" step="0.1">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <label for="timeSlider">Duration:</label>
+                        <span class="metric-display"><span id="timeValue">30</span> sec</span>
+                    </div>
+                    <input type="range" id="timeSlider" min="10" max="60" value="10" step="1">
+                </div>
+            </div>
+
+            <h2>Process Outputs</h2>
+            <div class="output-box">
+                <div class="diagnostic-grid">
+                    <div class="output-card">
+                        <span class="card-title">Junction Depth</span>
+                        <div class="card-value"><span id="outDepth">0.0</span> nm</div>
+                    </div>
+                    <div class="output-card">
+                        <span class="card-title">Sheet Res.</span>
+                        <div class="card-value"><span id="outResistance">0.0</span> &Omega;/sq</div>
+                    </div>
+                    <div class="output-card">
+                        <span class="card-title">Uniformity</span>
+                        <div class="card-value"><span id="outUniformity">N/A</span></div>
+                    </div>
+                    <div class="output-card">
+                        <span class="card-title">Quality</span>
+                        <div class="card-value"><span id="outQuality">N/A</span></div>
+                    </div>
+                </div>
+                <div class="console-log" id="statusBox">
+                    System standing by. Load substrate to begin.
+                </div>
+            </div>
+
+            <div class="formula-box">
+    <h3>Projected Range Model</h3>
+    <div class="equation">
+    R<sub>p</sub> = E<sub>c</sub> &times; &#8730;Energy
+</div>
+    <div class="flow-relation">
+        Higher Energy &rarr; Greater Junction Depth
+    </div>
+    <div class="variable-legend">
+        <p><strong>R<sub>p</sub></strong> &rarr; Projected Mean Depth Penetration Center Range (nm)</p>
+        <p><strong>E<sub>c</sub></strong> &rarr; Substrate Atomic Lattice Matrix Stopping Index</p>
+        <p><strong>Energy</strong> &rarr; Accelerator Beam Force Voltage (keV)</p>
+    </div>
+</div>
+        </section>
+
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

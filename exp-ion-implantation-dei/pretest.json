@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Q1 What is the primary purpose of ion implantation in semiconductor manufacturing?",
+      "answers": {
+        "a": "To deposit thin films on the wafer",
+        "b": "To introduce controlled dopant atoms into silicon",
+        "c": "To remove oxide layers",
+        "d": "To grow silicon crystals"
+      },
+      "explanations": {
+        "a": "Thin films are added during deposition processes.",
+        "b": "Correct! Ion implantation introduces dopant atoms into silicon to modify its electrical properties.",
+        "c": "Oxide removal is performed during etching.",
+        "d": "Crystal growth occurs during wafer manufacturing."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q2 Which of the following is commonly used as a P-type dopant during ion implantation?",
+      "answers": {
+        "a": "Boron",
+        "b": "Phosphorus",
+        "c": "Arsenic",
+        "d": "Silicon"
+      },
+      "explanations": {
+        "a": "Correct! Boron is the most common P-type dopant.",
+        "b": "Phosphorus is an N-type dopant.",
+        "c": "Arsenic is also an N-type dopant.",
+        "d": "Silicon is the substrate material."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q3 Which of the following is commonly used as an N-type dopant?",
+      "answers": {
+        "a": "Boron",
+        "b": "Gallium",
+        "c": "Phosphorus",
+        "d": "Aluminum"
+      },
+      "explanations": {
+        "a": "Boron creates P-type regions.",
+        "b": "Gallium is also a P-type dopant.",
+        "c": "Correct! Phosphorus is widely used for N-type doping.",
+        "d": "Aluminum is not commonly used for ion implantation."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q4 Which component accelerates ions to high energy before they strike the wafer?",
+      "answers": {
+        "a": "Wafer Chuck",
+        "b": "Acceleration Column",
+        "c": "Oxidation Furnace",
+        "d": "Spin Coater"
+      },
+      "explanations": {
+        "a": "The wafer chuck only holds the wafer.",
+        "b": "Correct! The acceleration column accelerates ions using high voltage.",
+        "c": "Oxidation furnaces grow oxide layers.",
+        "d": "Spin coaters apply photoresist."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q5 Which device separates ions according to their mass-to-charge ratio?",
+      "answers": {
+        "a": "Diffusion Furnace",
+        "b": "Magnetic Mass Analyzer",
+        "c": "Etching Chamber",
+        "d": "Sputtering Target"
+      },
+      "explanations": {
+        "a": "Diffusion furnaces do not separate ions.",
+        "b": "Correct! The magnetic analyzer selects the required ion species.",
+        "c": "Etching removes material from the wafer.",
+        "d": "Sputtering targets are used in PVD."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q6 Increasing implantation energy mainly affects which parameter?",
+      "answers": {
+        "a": "Wafer Diameter",
+        "b": "Junction Depth",
+        "c": "Oxide Thickness",
+        "d": "Photoresist Thickness"
+      },
+      "explanations": {
+        "a": "Wafer diameter remains unchanged.",
+        "b": "Correct! Higher implantation energy results in deeper junctions.",
+        "c": "Oxide thickness is unrelated to implantation.",
+        "d": "Photoresist thickness is unaffected."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q7 Ion dose primarily controls which property?",
+      "answers": {
+        "a": "Wafer Thickness",
+        "b": "Dopant Concentration",
+        "c": "Crystal Orientation",
+        "d": "Vacuum Pressure"
+      },
+      "explanations": {
+        "a": "Wafer thickness does not change.",
+        "b": "Correct! Ion dose determines the number of implanted dopant atoms.",
+        "c": "Crystal orientation is fixed during wafer growth.",
+        "d": "Vacuum pressure is independently controlled."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q8 Why is a high-vacuum environment required during ion implantation?",
+      "answers": {
+        "a": "To cool the wafer",
+        "b": "To prevent ions from colliding with air molecules",
+        "c": "To increase wafer thickness",
+        "d": "To grow silicon dioxide"
+      },
+      "explanations": {
+        "a": "Cooling is not the primary purpose.",
+        "b": "Correct! Vacuum allows ions to travel without scattering.",
+        "c": "Wafer thickness is unchanged.",
+        "d": "Oxide growth is performed during oxidation."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q9 Which process is commonly performed after ion implantation to repair crystal damage?",
+      "answers": {
+        "a": "Annealing",
+        "b": "Lithography",
+        "c": "Etching",
+        "d": "Deposition"
+      },
+      "explanations": {
+        "a": "Correct! Annealing repairs lattice damage and activates dopants.",
+        "b": "Lithography patterns the wafer.",
+        "c": "Etching removes unwanted material.",
+        "d": "Deposition adds thin films."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q10 Why is ion implantation preferred over thermal diffusion in modern semiconductor fabrication?",
+      "answers": {
+        "a": "It uses lower temperatures and provides precise control of dopant concentration and depth",
+        "b": "It completely eliminates the need for annealing",
+        "c": "It does not require dopant atoms",
+        "d": "It increases wafer diameter"
+      },
+      "explanations": {
+        "a": "Correct! Ion implantation provides excellent control over junction depth and dopant concentration.",
+        "b": "Annealing is still required after implantation.",
+        "c": "Dopants are essential for ion implantation.",
+        "d": "Wafer diameter remains unchanged."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}
