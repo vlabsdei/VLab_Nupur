@@ -21,7 +21,8 @@ body {
     font-family: Arial, sans-serif;
     background: var(--bg-light);
     color: #333;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 h2 {
