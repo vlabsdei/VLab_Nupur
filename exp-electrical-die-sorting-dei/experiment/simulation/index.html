@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical Die Sorting Virtual Lab</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <div class="top-instruction-bar" id="instructionBanner">
+        <strong>Instructions:</strong> <span id="instructionText">Load the Wafer Substrate from the Equipment Tray on the left to initialize the sorting array.</span>
+    </div>
+
+    <main class="main-container">
+        <section class="panel left-panel">
+            <h2>Equipment Tray</h2>
+            <div class="equipment-area">
+                <div class="equipment-card" id="waferCard">
+                    <div class="equipment-display">
+                        <div class="mini-wafer-grid">
+                            <div class="mini-dot"></div><div class="mini-dot"></div>
+                            <div class="mini-dot"></div><div class="mini-dot"></div>
+                        </div>
+                    </div>
+                    <p class="equipment-label">Wafer Substrate</p>
+                </div>
+
+                <div class="equipment-card" id="probeCard">
+                    <div class="equipment-display">
+                        <div class="probe-card-icon">PROBE CARD</div>
+                    </div>
+                    <p class="equipment-label">Multi-Probe Card</p>
+                </div>
+
+                <div class="equipment-card" id="thermalCard">
+                    <div class="equipment-display">
+                        <div class="thermal-icon">THERMAL</div>
+                    </div>
+                    <p class="equipment-label">Thermal Chuck Unit</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel center-panel">
+            <div class="step-tracker">
+                <div class="step active-step" id="step1">Load Wafer</div>
+                <div class="step" id="step2">Route Tester</div>
+                <div class="step" id="step3">Calibrate Stress</div>
+                <div class="step" id="step4">Run Sorting</div>
+                <div class="step" id="step5">Complete</div>
+            </div>
+
+            <div class="lab-area">
+                <div class="hud-display">
+                    <div class="process-timer" id="processTimer">System Idle</div>
+                    <div class="status-right">
+                        <div class="status-led green active" id="lightGreen"></div>
+                        <div class="status-led orange" id="lightOrange"></div>
+                        <div class="status-led red" id="lightRed"></div>
+                    </div>
+                </div>
+
+                <div class="vacuum-chamber">
+                    <div class="chamber-header">
+                        <div class="vacuum-label">DIGITAL MATRIX CIRCUIT PROBER TESTING STATION</div>
+                    </div>
+
+                    <div class="probe-head hidden" id="probeHead">
+                        <div class="probe-needle"></div>
+                        <div class="probe-needle"></div>
+                        <div class="probe-needle"></div>
+                    </div>
+
+                    <div class="wafer-grid-container" id="waferGridContainer">
+                        <div class="center-empty-text" id="centerText">LOWER ACTIVE WAFER SUBSTRATE (DIE GRID INTERFACE)</div>
+                    </div>
+                </div>
+
+                <div class="visualization-row">
+                    <div class="view-card">
+                        <h3>Top Surface Die Sweep</h3>
+                        <div class="surface-sweep-display" id="surfaceSweepDisplay">
+                            <div class="radar-line"></div>
+                        </div>
+                    </div>
+
+                    <div class="view-card">
+                        <h3>Propagation Waveform Timing</h3>
+                        <div class="oscilloscope-display">
+                            <svg viewBox="0 0 200 80" class="wave-svg">
+                                <path id="wavePath" d="M 0 40 L 200 40" fill="none" stroke="#475569" stroke-width="2"/>
+                                <line x1="0" y1="40" x2="200" y2="40" stroke="#334155" stroke-dasharray="4"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-area-container">
+                <div class="button-area">
+                    <button id="loadWaferBtn" class="btn">Load Substrate</button>
+                    <button id="prepareBtn" class="btn" disabled>Route Tester</button>
+                    <button id="startBtn" class="btn" disabled>Start Sorting</button>
+                    <button id="pauseBtn" class="btn" disabled>Pause</button>
+                    <button id="resetBtn" class="btn btn-reset">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel right-panel">
+            <h2>Process Parameters</h2>
+            <div class="control-card">
+                <div class="slider-group">
+                    <label for="binningMode">Tester Speed Binning Mode</label>
+                    <select id="binningMode">
+                        <option value="standard">Standard Logic Cycle Grade</option>
+                        <option value="high">High-Performance Stress Tier</option>
+                        <option value="automotive">Automotive Safety Tolerance</option>
+                    </select>
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <label for="supplyVoltage">Supply Voltage</label>
+                        <span><span id="voltageValue">3.3</span> V</span>
+                    </div>
+                    <input type="range" id="supplyVoltage" min="1.0" max="5.0" step="0.1" value="3.3">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <label for="testFrequency">Test Frequency</label>
+                        <span><span id="frequencyValue">50</span> MHz</span>
+                    </div>
+                    <input type="range" id="testFrequency" min="1" max="100" step="1" value="50">
+                </div>
+            </div>
+
+            <div class="output-box">
+                <h3>Process Outputs</h3>
+                <div class="diagnostic-row">
+                    <strong>Pass Count:</strong> <span id="passOutput">0</span>
+                </div>
+                <div class="diagnostic-row">
+                    <strong>Fail Count:</strong> <span id="failOutput">0</span>
+                </div>
+                <div class="diagnostic-row">
+                    <strong>Net Yield:</strong> <span id="yieldOutput">Not Started</span>
+                </div>
+                <div class="diagnostic-row">
+                    <strong>Quality Grade:</strong> <span id="gradeOutput">Not Started</span>
+                </div>
+                <div class="console-log" id="statusBox">
+                    System standing by. Load integrated chip die sub-layer to start sorting arrays processing...
+                </div>
+            </div>
+
+          <div class="formula-box">
+    <h3>Propagation Delay Model</h3>
+    <div class="equation">
+        <i>t<sub>pd</sub></i> &prop; (<i>C</i> &times; <i>V</i>) / <i>I<sub>drift</sub></i>
+    </div>
+    <div class="variable-legend">
+        <p><strong>t<sub>pd</sub></strong> = Internal Logic Propagation Gate Delay</p>
+        <p><strong>C</strong> = Transistor Node Parasitic Capacitance</p>
+        <p><strong>V</strong> = Driving Tester Supply Operating Voltage</p>
+        <p><strong>I<sub>drift</sub></strong> = Active Channel Carrier Drift Current</p>
+    </div>
+</div>
+
+            <div class="relations-box">
+                <h3>Process Comparisons</h3>
+                <ul>
+                    <li>Higher Test Frequency &rarr; Tightened Time Windows</li>
+                    <li>Under-Voltage &rarr; Logic Switching Lag Failures</li>
+                    <li>Over-Voltage &rarr; Transistor Rupture Risk Shorts</li>
+                    <li>Bin Classifications &rarr; Direct Component Price Tiers</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

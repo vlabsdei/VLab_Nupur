@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Q1 Why does the fail count on the wafer increase as the test frequency is turned up to extreme maximum limits?",
+      "answers": {
+        "a": "The wire lengths on the chip physically expand due to clock signals",
+        "b": "The shrinking time window forces marginal transistors to miss logic deadlines",
+        "c": "High frequencies automatically extinguish the chamber gas plasma cloud",
+        "d": "The high clock speed permanently erases the layout design files"
+      },
+      "explanations": {
+        "a": "Frequency settings handle timing bounds; they do not alter metal trace dimensions.",
+        "b": "Correct! High frequencies squeeze data windows, causing slightly flawed lines to glitch.",
+        "c": "Plasma boundaries relate to deposition chambers, not circuit probing beds.",
+        "d": "Design files remain locked inside non-volatile software server domains."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Q2 What is 'Speed Binning' inside an industrial testing workflow?",
+      "answers": {
+        "a": "The physical velocity at which wafers are sliced into small squares",
+        "b": "Categorizing passing chips into different price tiers based on maximum frequency",
+        "c": "The rotation speed of the wafer chuck platform during chemical cleaning",
+        "d": "The time it takes for a plasma beam to sweep left to right"
+      },
+      "explanations": {
+        "a": "Dicing tool dynamics dictate how fast saws slice through base materials.",
+        "b": "Correct! Binning sorts good chips into speed classes matching market value tiers.",
+        "c": "RPM indicators track centrifugal parameters on spin cleaning units.",
+        "d": "Raster step timings match parameter profiles inside scanner assemblies."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q3 If you configure an excessively high voltage parameter, what hardware failure risk can occur?",
+      "answers": {
+        "a": "The silicon wafer dissolves completely into acid solutions",
+        "b": "Thin transistor insulation layers break down and permanently short out",
+        "c": "The clock frequency drops to zero natively across all lines",
+        "d": "The total chip count on the wafer grid expands by ten percent"
+      },
+      "explanations": {
+        "a": "Acid reactions depend on liquid mixture distributions in chemical hoods.",
+        "b": "Correct! Voltage spikes can break down the ultra-thin insulating layer underneath the gates.",
+        "c": "Clock limits remain fixed by test engineering console choices.",
+        "d": "Physical slot numbers are fixed by the exposure mask used during lithography."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Q4 How can spatial failure mapping of red blocks assist process engineers?",
+      "answers": {
+        "a": "It indicates exactly which factory processing tool is misaligned or contaminated",
+        "b": "It tells the operator to bypass the probe sorting step on future batches",
+        "c": "It forces the completed wafer to repair its internal circuit breaks automatically",
+        "d": "It determines the total shipping container volume weight limits"
+      },
+      "explanations": {
+        "a": "Correct! Seeing error patterns helps track failures back to specific faulty machines.",
+        "b": "Testing rules remain mandatory for every production wafer lot.",
+        "c": "Mapping creates diagnostic records; it does not trigger automatic physical repairs.",
+        "d": "Freight weights depend on material densities and packaging materials choices."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Q5 If a die works properly at 25 MHz but fails at 100 MHz, how should it be managed?",
+      "answers": {
+        "a": "Scrapped as non-functional waste material",
+        "b": "Binned as a standard part to be sold for lower-speed applications",
+        "c": "Returned to the sputtering chamber to receive more metal routing layers",
+        "d": "Forced into high-end servers that require premium clock performance"
+      },
+      "explanations": {
+        "a": "The die functions safely at baseline rules and should not be thrown away.",
+        "b": "Correct! Down-binning saves the part so it can be sold for budget-tier setups.",
+        "c": "Finished wafers cannot go backward into early metal deposition tools.",
+        "d": "Placing slow chips into demanding high-speed slots causes immediate server crashes."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q6 Which equation explains why increasing voltage allows chips to run at higher frequencies?",
+      "answers": {
+        "a": "R = ρ * (L / A)",
+        "b": "Propagation Delay ∝ (C * V) / Drive Current",
+        "c": "F = m * a",
+        "d": "V = I * R"
+      },
+      "explanations": {
+        "a": "This defines static geometric resistance boundaries for wiring lines.",
+        "b": "Correct! Higher voltages boost drive current, reducing propagation delays so circuits react faster.",
+        "c": "This calculates macroscopic acceleration metrics in mechanical domains.",
+        "d": "This relates voltage to current and resistance across simple passive networks."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Q7 What is a parametric failure bin designation during testing?",
+      "answers": {
+        "a": "A chip that works perfectly but has minor cosmetic scratches on its back",
+        "b": "A chip that suffers a fundamental physical failure, like a ruptured gate oxide or major short",
+        "c": "A chip that runs faster than the maximum limits of the tester unit",
+        "d": "A wafer that contains zero working dies across its area"
+      },
+      "explanations": {
+        "a": "Cosmetic micro-scratches are handled by packaging or sorting visual tool inspects.",
+        "b": "Correct! Parametric failures indicate fundamental electrical attributes fall outside allowable ranges.",
+        "c": "Fast components are rewarded with high speed bin status grades.",
+        "d": "A dead wafer represents a catastrophic process lot yield failure condition."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q8 Why are modern automated testing stations equipped with thermal chuck stages?",
+      "answers": {
+        "a": "To freeze the gas plasma before it can escape the room boundaries",
+        "b": "To evaluate chip performance limits under realistic hot and cold operating conditions",
+        "c": "To boil away any leftover metal residues from the sputtering stage",
+        "d": "To increase the final physical circumference of the silicon wafer"
+      },
+      "explanations": {
+        "a": "Plasma loops are restricted to enclosed PVD deposition tool cavities.",
+        "b": "Correct! Temperature checks ensure the chip operates reliably in extreme consumer environments.",
+        "c": "Residue clearing requires physical acid etching runs, not thermal tests.",
+        "d": "Wafer diameter is fixed by raw mechanical ingot slicing rules."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q9 If a processed test wafer has 500 total die slots and 400 components pass, what is the net yield?",
+      "answers": {
+        "a": "125%",
+        "b": "80%",
+        "c": "20%",
+        "d": "50%"
+      },
+      "explanations": {
+        "a": "Yield scores cannot exceed 100% of the total available die count.",
+        "b": "Correct! 400 divided by 500 equals a 0.80 value, or an 80% passing yield efficiency.",
+        "c": "20% represents the scrap factor or failure drop metrics, not the yield.",
+        "d": "This value does not match the proportion of functional components."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q10 Which testing approach balances maximum device clock speed with healthy manufacturing yields?",
+      "answers": {
+        "a": "Running all tests at 5V and 100MHz without considering defect variables",
+        "b": "Adjusting voltage and frequency parameters to find the highest stable operating speeds before failure counts surge",
+        "c": "Turning off the probe card needle sensors entirely to register an artificial 100% pass score",
+        "d": "Shaking the wafer chuck mechanically to force loose atoms into position"
+      },
+      "explanations": {
+        "a": "Blasting maximum rules right away destroys functional margins, causing yield numbers to crater.",
+        "b": "Correct! Finding the sweet spot maximizes performance while protecting yield metrics.",
+        "c": "Disabling sensor tracks creates false data logs, causing bad chips to break in user hands.",
+        "d": "Mechanical shaking breaks probe needle arrays and fractures delicate silicon surfaces."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+:root {
+    --primary-blue: #2d5da8;
+    --bg-light: #eef4fb;
+    --panel-bg: #ffffff;
+    --border-color: #d9e4f1;
+    --success-green: #32d74b;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --dark-chamber: #0f172a;
+    --dark-metal: #334155;
+    --light-metal: #94a3b8;
+    
+    --die-untested: #475569;
+    --die-pass-premium: #10b981;
+    --die-pass-standard: #0ea5e9;
+    --die-fail-time: #ef4444;
+    --die-fail-param: #f97316;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-light);
+    color: #333;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 12px;
+    color: var(--primary-blue);
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+h3 { margin-bottom: 10px; font-size: 14px; color: var(--primary-blue); }
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.top-instruction-bar {
+    width: 100%;
+    padding: 12px 20px;
+    background: #dbeafe;
+    border-bottom: 1px solid #bfdbfe;
+    color: #1e3a8a;
+    font-size: 14px;
+}
+.top-instruction-bar strong { text-transform: uppercase; }
+
+.main-container {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    height: calc(100vh - 50px);
+}
+
+.panel {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+    height: 100%;
+}
+
+.left-panel { width: 20%; display: flex; flex-direction: column; }
+.center-panel { width: 55%; display: flex; flex-direction: column; }
+.right-panel { width: 25%; overflow-y: auto; }
+
+.equipment-area { display: flex; flex-direction: column; gap: 12px; }
+.equipment-card {
+    background: #f8fbff; border: 1px solid #dbe6f2; border-radius: 10px;
+    padding: 12px; text-align: center; cursor: pointer; transition: .3s;
+}
+.equipment-card:hover { transform: translateY(-3px); border-color: var(--primary-blue); }
+.equipment-display { height: 90px; display: flex; align-items: center; justify-content: center; }
+
+/* Microscopic Grid Mock Asset Styling */
+.mini-wafer-grid {
+    width: 65px; height: 65px; border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #94a3b8, #475569);
+    border: 2px solid #334155;
+    display: grid; grid-template-columns: repeat(2, 1fr); padding: 12px; gap: 8px;
+}
+.mini-dot { background: #cbd5e1; border-radius: 2px; }
+
+.probe-card-icon, .thermal-icon {
+    width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;
+    border-radius: 10px; color: white; font-weight: bold; font-size: 11px; text-align: center;
+}
+.probe-card-icon { background: linear-gradient(135deg, #6366f1 40%, #4338ca 90%); }
+.thermal-icon { background: linear-gradient(135deg, #14b8a6 40%, #0f766e 90%); }
+.equipment-label { margin-top: 10px; font-size: 13px; font-weight: bold; }
+
+.step-tracker { display: flex; gap: 8px; margin-bottom: 12px; }
+.step {
+    flex: 1; text-align: center; padding: 8px; background: #e2e8f0;
+    border-radius: 6px; font-size: 12px; font-weight: bold; color: #64748b;
+}
+.active-step { background: var(--primary-blue); color: white; }
+
+.hud-display { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.process-timer { font-weight: bold; color: #0f172a; font-family: monospace; font-size: 14px; }
+.status-right { display: flex; gap: 8px; }
+.status-led { width: 14px; height: 14px; border-radius: 50%; background: #94a3b8; }
+.status-led.active { box-shadow: 0 0 10px currentColor; }
+.status-led.green.active { background: var(--success-green); color: var(--success-green); }
+.status-led.orange.active { background: var(--warning); color: var(--warning); }
+.status-led.red.active { background: var(--danger); color: var(--danger); }
+
+.lab-area { position: relative; flex: 1; display: flex; flex-direction: column; gap: 15px; }
+
+/* Central Workspace Simulation Chamber */
+.vacuum-chamber {
+    position: relative; height: 280px; background: #0b0f19;
+    border-radius: 14px; overflow: hidden; border: 3px solid #475569;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.chamber-header { position: absolute; top: 0; width: 100%; height: 35px; background: #475569; display: flex; align-items: center; justify-content: center; z-index: 10; }
+.vacuum-label { color: white; font-size: 12px; font-weight: bold; letter-spacing: 1px; }
+
+.probe-head {
+    position: absolute; top: 40px; display: flex; gap: 14px; z-index: 5;
+    animation: proberHover 1.5s infinite alternate ease-in-out;
+}
+.probe-needle { width: 4px; height: 25px; background: linear-gradient(to bottom, #cbd5e1, #94a3b8); border-radius: 0 0 2px 2px; }
+
+@keyframes proberHover {
+    from { transform: translateY(0); }
+    to { transform: translateY(4px); }
+}
+
+.center-empty-text { font-size: 13px; font-weight: bold; color: #64748b; text-align: center; }
+
+/* The Sorter Matrix Map Layout Classes */
+.wafer-grid-container { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding-top: 35px; }
+.wafer-matrix-grid {
+    display: grid; grid-template-columns: repeat(9, 24px); grid-template-rows: repeat(9, 24px); gap: 2.5px;
+    background: #111827; padding: 10px; border-radius: 50%; border: 3px solid #64748b;
+}
+.die-element { background: var(--die-untested); border-radius: 2px; transition: background 0.05s linear; }
+.die-element.scanning { box-shadow: 0 0 8px #fff; border: 1px solid #fff; }
+.die-element.masked { opacity: 0; pointer-events: none; }
+
+/* Real-Time Graphic Splits */
+.visualization-row { display: flex; gap: 12px; }
+.view-card { flex: 1; background: white; border: 1px solid var(--border-color); border-radius: 10px; padding: 12px; text-align: center; }
+
+.surface-sweep-display {
+    width: 120px; height: 120px; margin: auto; border-radius: 50%; border: 2px solid #475569;
+    background: #020617; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 11px; font-weight: bold;
+}
+.radar-line {
+    position: absolute; width: 100%; height: 100%; top: 0; left: 0;
+    background: linear-gradient(45deg, rgba(16,185,129,0.15) 0%, transparent 50%);
+    transform-origin: center center; display: none;
+}
+.radar-active .radar-line { display: block; animation: radarRotate 2.5s linear infinite; }
+@keyframes radarRotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.oscilloscope-display { width: 220px; height: 90px; margin: auto; background: #020617; border: 2px solid #475569; border-radius: 6px; padding: 4px; }
+.wave-svg { width: 100%; height: 100%; }
+
+.button-area-container { margin-top: 10px; }
+.button-area { display: flex; gap: 8px; }
+.btn { flex: 1; border: none; background: var(--primary-blue); color: white; padding: 12px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 13px; transition: background 0.2s; text-align: center; }
+.btn:hover { background: #1d4f95; }
+.btn-reset { background: #475569; }
+
+.control-card, .output-box, .formula-box, .relations-box { background: white; border: 1px solid var(--border-color); border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+.slider-group { margin-bottom: 10px; display: flex; flex-direction: column; gap: 4px; }
+.slider-header { display: flex; justify-content: space-between; font-size: 13px; font-weight: bold; }
+select { padding: 6px; border-radius: 4px; border: 1px solid var(--border-color); font-weight: bold; background: #f8fbff; }
+input[type="range"] { cursor: pointer; }
+
+.console-log { margin-top: 10px; padding: 10px; background: #0f172a; border-radius: 6px; min-height: 85px; font-family: monospace; color: #38bdf8; font-size: 12px; line-height: 1.4; border-left: 4px solid var(--primary-blue); white-space: pre-line; }
+.diagnostic-row { margin-bottom: 6px; font-size: 13px; }
+.equation { display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: bold; margin: 8px 0; font-family: monospace; color: #9a3412; }
+.variable-legend p { margin: 4px 0; font-size: 12px; color: #555; }
+.relations-box ul { padding-left: 16px; font-size: 12px; color: #444; }
+.relations-box li { margin-bottom: 4px; }
+
+@media(max-width:1100px) {
+    body { overflow-y: auto; }
+    .main-container { flex-direction: column; height: auto; }
+    .left-panel, .center-panel, .right-panel { width: 100%; }
+    .equipment-area { flex-direction: row; }
+    .button-area { flex-wrap: wrap; }
+}

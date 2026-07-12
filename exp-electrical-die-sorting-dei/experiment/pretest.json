@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Q1 What is the primary purpose of Electrical Die Sorting (EDS) in a semiconductor fab?",
+      "answers": {
+        "a": "To physically cut the wafer disk into separate computing chips",
+        "b": "To test every chip electrically and filter out defective dies before packaging",
+        "c": "To grow a protective oxide glass insulator over the bare silicon substrate",
+        "d": "To chemically polish structural blemishes off the back of the wafer disk"
+      },
+      "explanations": {
+        "a": "Dicing or sawing cuts the wafer into separate pieces, which occurs after testing.",
+        "b": "Correct! EDS tests every individual die to ensure functional parts are sent to packaging.",
+        "c": "Oxidation layers are grown much earlier in the frontend manufacturing line.",
+        "d": "Backside polishing is a physical planarization step, not a logical verification process."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q2 In the virtual lab visualization grid, what do Green and Red color blocks signify?",
+      "answers": {
+        "a": "Green shows P-type wells; Red shows N-type source regions",
+        "b": "Green shows passing chips; Red shows failing or defective chips",
+        "c": "Green shows copper wires; Red shows aluminum contact lines",
+        "d": "Green shows high temperature zones; Red shows cryo-cooled points"
+      },
+      "explanations": {
+        "a": "Doping regions are handled during ion implantation, not electrical die sorting.",
+        "b": "Correct! Green blocks identify passing functional dies, while Red labels reject parts.",
+        "c": "Wiring metallurgy choices are handled during back-end metallization steps.",
+        "d": "The color layout tracks step-by-step test pass/fail results, not thermal gradients."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q3 What happens to the internal transistor gate logic when supply voltage drops too low?",
+      "answers": {
+        "a": "The transistors switch states faster, increasing processing performance",
+        "b": "The transistors cannot switch states fast enough, causing timing path failures",
+        "c": "The metal wires melt due to immense thermal energy spikes",
+        "d": "The chip converts automatically into a high-capacity memory storage array"
+      },
+      "explanations": {
+        "a": "Lower voltages reduce drive current, which slows down transistor switching speeds.",
+        "b": "Correct! Under-voltage states create propagation delays, leading to chip failures.",
+        "c": "Melting occurs due to high current overloads, which is associated with over-voltage.",
+        "d": "Physical transistor configurations cannot transform logic structures into memory arrays."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q4 How is the manufacturing Yield Percentage mathematically calculated?",
+      "answers": {
+        "a": "(Total Fabricated Dies / Total Passing Dies) * 100%",
+        "b": "(Total Passing Dies / Total Fabricated Dies) * 100%",
+        "c": "Total Passing Dies multiplied by the Test Frequency value",
+        "d": "Supply Voltage divided by the total number of Red failing blocks"
+      },
+      "explanations": {
+        "a": "This fraction is inverted and would mathematically produce values greater than 100%.",
+        "b": "Correct! Yield percentage measures the passing dies divided by total fabricated dies.",
+        "c": "Yield is an efficiency ratio, not a function of raw frequency values.",
+        "d": "This does not match any valid semiconductor manufacturing or efficiency metric."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q5 What hardware interface connects the automated testing unit to the tiny metal pads on a chip?",
+      "answers": {
+        "a": "A Magnetron Sputter Cathode Target",
+        "b": "A Specialized Microscopic Probe Card",
+        "c": "A High-Voltage Linear Accelerator Tube",
+        "d": "An Anisotropic Plasma Gas Injector Nozzle"
+      },
+      "explanations": {
+        "a": "Sputter targets are used to supply raw metal atoms inside PVD chambers.",
+        "b": "Correct! Probe cards use micro-needles to establish electrical contact with the wafer pads.",
+        "c": "Linear accelerator columns are used to speed up ions during implantation.",
+        "d": "Gas nozzles feed reactive chemical ions into dry plasma etching configurations."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q6 Which phase of semiconductor fabrication deals with checking and sorting dies before final assembly?",
+      "answers": {
+        "a": "Front-End-of-Line (FEOL)",
+        "b": "Back-End-of-Line (BEOL) Testing",
+        "c": "Ingot Crystal Pulling",
+        "d": "Chemical-Mechanical Planarization"
+      },
+      "explanations": {
+        "a": "FEOL deals with making raw components inside the silicon, not late-stage sort checks.",
+        "b": "Correct! Late-stage probing and filtering fall under BEOL sorting pipelines.",
+        "c": "Ingot pulling runs during standard raw baseline substrate preparation steps.",
+        "d": "Planarization is a physical flattening process, not an electrical sanity test."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q7 What are the two primary parameters tweaked by the operator during this sorting simulation?",
+      "answers": {
+        "a": "Gas Pressure and Target Volume",
+        "b": "Supply Voltage and Test Frequency",
+        "c": "Etch Time and Ion Dose",
+        "d": "Lattice Energy and Beam Focus"
+      },
+      "explanations": {
+        "a": "Gas dynamics apply to gas processing chambers, not die sort probing beds.",
+        "b": "Correct! Voltage and frequency controls act as your core testing stress rules.",
+        "c": "Etch time matches processing setups, while ion values define doping profiles.",
+        "d": "Beam parameters belong to ion implantation and lithography sub-consoles."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q8 What historic method was used to tag a broken die on a physical wafer before software mapping tools?",
+      "answers": {
+        "a": "Laser-cutting a visible alignment hole directly through the silicon layer",
+        "b": "Dropping a physical dot of specialized magnetic ink onto the die surface",
+        "c": "Baking the substrate inside a high-temperature structural anneal furnace",
+        "d": "Scratching the active pattern layer using sharp diamond tip tweezers"
+      },
+      "explanations": {
+        "a": "Laser cutting creates internal physical fractures that destroy neighboring dies.",
+        "b": "Correct! Legacy probers used physical ink drop heads to flag bad parts.",
+        "c": "Furnace steps run to repair crystal damage, not mark test errors.",
+        "d": "Manual scraping introduces contamination and unpredictable crystal fractures."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q9 Which term represents the metric for computational speed checks forced onto a die?",
+      "answers": {
+        "a": "Sheet Resistance Value",
+        "b": "Test Frequency (MHz)",
+        "c": "Spatial Thickness Parameter",
+        "d": "Thermal Exhaust Constant"
+      },
+      "explanations": {
+        "a": "Sheet resistance handles electrical attributes following ion doping steps.",
+        "b": "Correct! Test frequency dictates clock cycle rules per second during check routines.",
+        "c": "Thickness definitions govern physical depth profiles during mask or wiring steps.",
+        "d": "Thermal tracking parameters handle cooling limits, not clock cycles."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q10 Why does testing a die at the wafer level provide an immense business advantage?",
+      "answers": {
+        "a": "It chemically transforms standard silicon to make its gates switch faster",
+        "b": "It avoids wasting money on final packaging materials for defective chips",
+        "c": "It bypasses the need for costly photolithography masking sequences",
+        "d": "It automatically bridges open circuits and repairs bad metallization lines"
+      },
+      "explanations": {
+        "a": "Electrical sort testing checks functional criteria; it cannot alter chemical compositions.",
+        "b": "Correct! Screening parts early prevents high downstream packaging expenses on scrap elements.",
+        "c": "Mask layouts are required to set up the circuit baseline architecture beforehand.",
+        "d": "Testing evaluates operating telemetry; it does not repair layout cracks or faults."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    }
+  ]
+}
