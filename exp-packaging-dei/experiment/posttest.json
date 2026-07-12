@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Q1 What structural defect can occur if the wire bonding tool presses down onto a pad with way too much ultrasonic force?",
+      "answers": {
+        "a": "Wire Sweeping",
+        "b": "Die Cratering",
+        "c": "Popcorn Effect",
+        "d": "Resistor Bleeding"
+      },
+      "explanations": {
+        "a": "Frequency settings handle timing bounds; they do not alter metal trace dimensions.",
+        "b": "Correct! Excessive force or vibration can crack the fragile crystalline silicon layer directly underneath the pad.",
+        "c": "Plasma boundaries relate to deposition chambers, not circuit probing beds.",
+        "d": "Design files remain locked inside non-volatile software server domains."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Q2 What can happen if the protective plastic compound and the internal silicon die expand at wildly different rates when heated?",
+      "answers": {
+        "a": "The wire tracks will automatically turn into silicon glass",
+        "b": "The wire joints can snap or pull off due to high internal stress",
+        "c": "The chip will automatically wipe its hardcoded memory",
+        "d": "The dicing saw tape will melt inside the molding machine"
+      },
+      "explanations": {
+        "a": "Dicing tool dynamics dictate how fast saws slice through base materials.",
+        "b": "Correct! Disproportionate expansion rates (a CTE mismatch) create heavy pulling forces that snap the wire bonds.",
+        "c": "RPM indicators track centrifugal parameters on spin cleaning units.",
+        "d": "Raster step timings match parameter profiles inside scanner assemblies."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q3 What is the 'Popcorn Effect' in microchip package failures?",
+      "answers": {
+        "a": "The pleasant clicking noise a dicing saw makes during clean cuts",
+        "b": "Trapped moisture expanding into steam during high-heat soldering, cracking the package body open",
+        "c": "When gold bonding wires accidentally melt back into raw copper atoms",
+        "d": "When a chip automatically shifts into a premium speed grade"
+      },
+      "explanations": {
+        "a": "Acid reactions depend on liquid mixture distributions in chemical hoods.",
+        "b": "Correct! Trapped internal moisture vaporizes and expands explosively during board assembly thermal reflow.",
+        "c": "Clock limits remain fixed by test engineering console choices.",
+        "d": "The physical die count is permanently fixed by the initial lithography step layout."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Q4 What is a 'wire sweep' defect during the encapsulation molding phase?",
+      "answers": {
+        "a": "When a diamond saw blade cuts through a gold connection line",
+        "b": "When the fast-flowing liquid plastic resin bends closely spaced wire loops into each other, causing short circuits",
+        "c": "When an operator manually polishes the surface of the wafer chuck",
+        "d": "When the tester pins are turned off to get a perfect yield percentage"
+      },
+      "explanations": {
+        "a": "Correct! High-velocity liquid resin flow can mechanically shift or bend long, closely spaced wire loops into contact.",
+        "b": "Testing rules remain mandatory for every production wafer lot.",
+        "c": "Mapping creates diagnostic records; it does not trigger automatic physical repairs.",
+        "d": "Freight weights depend on material densities and packaging materials choices."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Q5 Why is copper wire bonding cheaper but physically harder to configure than traditional gold wire bonding?",
+      "answers": {
+        "a": "Copper wire can only work inside freezing environments",
+        "b": "Copper is physically stiffer and harder than gold, requiring careful pressure adjustments to avoid pad damage",
+        "c": "Copper melts at a much lower temperature than packaging plastic",
+        "d": "Copper requires special liquid acids to be sprayed onto the wafer continuously"
+      },
+      "explanations": {
+        "a": "The die functions safely at baseline rules and should not be thrown away.",
+        "b": "Correct! The material hardness of copper requires tight calibration of bonding forces to prevent silicon cracking.",
+        "c": "Finished wafers cannot go backward into early metal deposition tools.",
+        "d": "Placing slow chips into demanding high-speed slots causes immediate server crashes."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q6 What primary event happens inside the machine tool during the 'transfer molding' phase?",
+      "answers": {
+        "a": "A diamond blade rotates at 30,000 RPM to isolate individual dies",
+        "b": "Hot liquid plastic resin is injected under heavy pressure to seal the chip assembly",
+        "c": "Microscopic gold wires are stitched using high-frequency sound energy",
+        "d": "Electronic needles touch landing pads to check internal timing parameters"
+      },
+      "explanations": {
+        "a": "This defines static geometric resistance boundaries for wiring lines.",
+        "b": "Correct! Liquefied epoxy resin flows into a hot mold cavity under pressure to enclose the die assembly.",
+        "c": "This calculates macroscopic acceleration metrics in mechanical domains.",
+        "d": "This relates voltage to current and resistance across simple passive networks."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Q7 How does a thermosonic wire bonder create the very first connection point when using gold wire?",
+      "answers": {
+        "a": "By using an electrical spark to melt the wire tip into a ball, then mashing it down with force and vibration",
+        "b": "By freezing the wire until it adheres to the pad via cryogenic suction",
+        "c": "By spraying a layer of toxic acid onto the pad to melt the silicon layer",
+        "d": "By rotating the substrate chuck at 5000 RPM until friction melts the frame"
+      },
+      "explanations": {
+        "a": "Cosmetic micro-scratches are handled by packaging or sorting visual tool inspects.",
+        "b": "Correct! An electrical flame-off melts the wire end into a ball, which is then welded using ultrasonic sound energy.",
+        "c": "Fast components are rewarded with high speed bin status grades.",
+        "d": "A dead wafer represents a catastrophic process lot yield failure condition."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q8 Why is gold wire historically selected for critical wire bonding applications despite its high cost?",
+      "answers": {
+        "a": "It dissolves instantly inside epoxy molding compound mixtures",
+        "b": "It combines excellent electrical conductivity with superb resistance to oxidation",
+        "c": "It is the hardest metal known, preventing die cratering entirely",
+        "d": "It transforms into a semiconductor when heated above one hundred degrees"
+      },
+      "explanations": {
+        "a": "Plasma loops are restricted to enclosed PVD deposition tool cavities.",
+        "b": "Correct! Gold handles micro-scale connections smoothly and never oxidizes or corrodes over time.",
+        "c": "Residue clearing requires physical acid etching runs, not thermal tests.",
+        "d": "Wafer diameter is fixed by raw mechanical ingot slicing rules."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q9 What does a very low 'Bond Pull Strength' reading indicate during structural inspection testing?",
+      "answers": {
+        "a": "The package has achieved a perfect, air-tight environmental seal",
+        "b": "The wire connection joint is weak and likely to break or lift off under stress",
+        "c": "The test frequency parameters need to be cranked up immediately",
+        "d": "The silicon die has grown too large for its outer plastic housing layout"
+      },
+      "explanations": {
+        "a": "Yield scores cannot exceed 100% of the total available die count.",
+        "b": "Correct! Low pull force values highlight weak metal welds that are prone to structural failures.",
+        "c": "20% represents the scrap factor or failure drop metrics, not the yield.",
+        "d": "This value does not match the proportion of functional components."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q10 What tuning strategy achieves the best balance of reliable wire joints and high manufacturing yields?",
+      "answers": {
+        "a": "Cranking the ultrasonic force to absolute maximum right from the start",
+        "b": "Adjusting force and molding temperatures to find the safest windows before cracks or shorts occur",
+        "c": "Disabling all checking monitors to log an artificial perfect score",
+        "d": "Shaking the assembly tool rapidly to throw loose atoms into alignment"
+      },
+      "explanations": {
+        "a": "Blasting maximum rules right away destroys functional margins, causing yield numbers to crater.",
+        "b": "Correct! Proper calibration balances bond strength against stress limits to prevent chip failures.",
+        "c": "Disabling sensor tracks creates false data logs, causing bad chips to break in user hands.",
+        "d": "Mechanical shaking breaks probe needle arrays and fractures delicate silicon surfaces."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    }
+  ]
+}

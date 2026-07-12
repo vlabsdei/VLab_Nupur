@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semiconductor Packaging Virtual Lab</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <div class="top-instruction-bar" id="instructionBanner">
+        <strong>Instructions:</strong> <span id="instructionText">Load the Singulated Die Chuck from the Equipment Tray on the left to initialize the packaging line.</span>
+    </div>
+
+    <main class="main-container">
+        <section class="panel left-panel">
+            <h2>Equipment Tray</h2>
+            <div class="equipment-area">
+                <div class="equipment-card" id="dieCard">
+                    <div class="equipment-display">
+                        <div class="mini-die-box">
+                            <div class="mini-die-silicon"></div>
+                        </div>
+                    </div>
+                    <p class="equipment-label">Singulated Die Chuck</p>
+                </div>
+
+                <div class="equipment-card" id="leadframeCard">
+                    <div class="equipment-display">
+                        <div class="leadframe-icon">LEADFRAME</div>
+                    </div>
+                    <p class="equipment-label">Substrate Carrier</p>
+                </div>
+
+                <div class="equipment-card" id="moldCard">
+                    <div class="equipment-display">
+                        <div class="mold-icon">EMC MOLD</div>
+                    </div>
+                    <p class="equipment-label">Molding Cavity</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel center-panel">
+            <div class="step-tracker">
+                <div class="step active-step" id="step1">Load Wafer</div>
+                <div class="step" id="step2">Route Tester</div>
+                <div class="step" id="step3">Calibrate Stress</div>
+                <div class="step" id="step4">Run Sorting</div>
+                <div class="step" id="step5">Complete</div>
+            </div>
+
+            <div class="lab-area">
+                <div class="hud-display">
+                    <div class="process-timer" id="processTimer">System Idle</div>
+                    <div class="status-right">
+                        <div class="status-led green active" id="lightGreen"></div>
+                        <div class="status-led orange" id="lightOrange"></div>
+                        <div class="status-led red" id="lightRed"></div>
+                    </div>
+                </div>
+
+                <div class="vacuum-chamber">
+                    <div class="chamber-header">
+                        <div class="vacuum-label">THERMOSONIC BONDING & INJECTION MOLDING STATION</div>
+                    </div>
+
+                    <div class="capillary-tool hidden" id="capillaryTool">
+                        <div class="capillary-arm"></div>
+                        <div class="capillary-tip"></div>
+                        <div class="spark-glow" id="sparkGlow"></div>
+                    </div>
+
+                    <div class="packaging-envelope" id="packagingEnvelope">
+                        <div class="center-empty-text" id="centerText">LOWER ACTIVE STRATIFIED DIE SUBSTRATE (ASSEMBLY BLOCK)</div>
+                    </div>
+                </div>
+
+                <div class="visualization-row">
+                    <div class="view-card">
+                        <h3>Package Encapsulation Fill</h3>
+                        <div class="surface-sweep-display" id="moldingDisplay">
+                            <div class="emc-resin-fill" id="emcResinFill"></div>
+                            <div class="mold-die-placeholder hidden" id="moldDiePlaceholder">
+                                <div class="mold-internal-wires" id="moldInternalWires"></div>
+                            </div>
+                            <span class="resin-label" id="resinLabel">MOLD CAVITY EMPTY</span>
+                        </div>
+                    </div>
+
+                    <div class="view-card">
+                        <h3>Dynamic Joint Shear Strength</h3>
+                        <div class="oscilloscope-display">
+                            <svg viewBox="0 0 200 80" class="wave-svg">
+                                <path id="wavePath" d="M 0 70 L 200 70" fill="none" stroke="#475569" stroke-width="2"/>
+                                <line x1="0" y1="40" x2="200" y2="40" stroke="#334155" stroke-dasharray="4"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-area-container">
+                <div class="button-area">
+                    <button id="loadWaferBtn" class="btn">Load Substrate</button>
+                    <button id="prepareBtn" class="btn" disabled>Route Tester</button>
+                    <button id="startBtn" class="btn" disabled>Start Sorting</button>
+                    <button id="pauseBtn" class="btn" disabled>Pause</button>
+                    <button id="resetBtn" class="btn btn-reset">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel right-panel">
+            <h2>Process Parameters</h2>
+            <div class="control-card">
+                <div class="slider-group">
+                    <label class="dropdown-label" for="wireMaterial">Interconnect Wire Material</label>
+                    <select id="wireMaterial">
+                        <option value="gold">Thermosonic Gold (Au) Wire</option>
+                        <option value="copper">High-Performance Copper (Cu) Wire</option>
+                        <option value="aluminum">Aluminum (Al) Wedge Contact</option>
+                    </select>
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <label for="ultrasonicForce">Capillary Ultrasonic Force</label>
+                        <span><span id="forceValue">65</span> mN</span>
+                    </div>
+                    <input type="range" id="ultrasonicForce" min="10" max="150" step="1" value="65">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <label for="moldTemperature">Molding Temperature</label>
+                        <span><span id="temperatureValue">175</span> °C</span>
+                    </div>
+                    <input type="range" id="moldTemperature" min="120" max="220" step="5" value="175">
+                </div>
+            </div>
+
+            <div class="output-box">
+                <h3>Process Outputs</h3>
+                <div class="diagnostic-row">
+                    <strong>Bond Pull Strength:</strong> <span id="pullOutput">0.0</span> gf
+                </div>
+                <div class="diagnostic-row">
+                    <strong>Wire Sweep Rate:</strong> <span id="sweepOutput">Not Started</span>
+                </div>
+                <div class="diagnostic-row">
+                    <strong>Delamination Score:</strong> <span id="delamOutput">Not Started</span>
+                </div>
+                <div class="diagnostic-row">
+                    <strong>Assembly Status:</strong> <span id="statusOutput">Idle</span>
+                </div>
+                <div class="console-log" id="statusBox">
+                    System initialized. Load singulated die carrier to begin assembly processing lot...
+                </div>
+            </div>
+
+            <div class="formula-box">
+                <h3>Package Bond Reliability Model</h3>
+                <div class="equation">
+                    <i>t<sub>lifespan</sub></i> &prop; 1 / (<i>&Delta;CTE</i> &times; <i>&Delta;T</i>)
+                </div>
+                <div class="variable-legend">
+                    <p><strong>t<sub>lifespan</sub></strong> = Package Mechanical Operating Life</p>
+                    <p><strong>&Delta;CTE</strong> = Coefficient of Thermal Expansion Mismatch</p>
+                    <p><strong>&Delta;T</strong> = Encapsulation / Curing Temperature Delta</p>
+                </div>
+            </div>
+
+            <div class="relations-box">
+                <h3>Process Comparisons</h3>
+                <ul>
+                    <li>Higher Bonding Force &rarr; Higher Pull, Cratering Risk</li>
+                    <li>Stiffer Metal Wires &rarr; Requires Precision Field Profiles</li>
+                    <li>Excessive Curing Heat &rarr; Delamination Shear Stresses</li>
+                    <li>Encapsulation Shell &rarr; Shielded Environmental Isolation</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

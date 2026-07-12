@@ -1,0 +1,2 @@
+### Aim of the experiment
+### To learn the basic backend manufacturing steps that turn a fragile, cut microchip die into a protected, functional semiconductor package, and to see how bonding forces and plastic molding temperatures affect its final structural reliability.

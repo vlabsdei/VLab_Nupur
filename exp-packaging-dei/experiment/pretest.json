@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Q1 What is the main goal of the semiconductor packaging process?",
+      "answers": {
+        "a": "To turn silicon into a liquid state so it can be poured onto circuit boards",
+        "b": "To protect the fragile silicon chip and connect its wiring to a circuit board",
+        "c": "To chemically change the internal logic gates from P-type to N-type wells",
+        "d": "To cut the wafer disk into smaller individual processing squares"
+      },
+      "explanations": {
+        "a": "Doping profiles are locked during frontend ion implantation long before packaging.",
+        "b": "Correct! Packaging provides mechanical protection, environmental sealing, and connection routing.",
+        "c": "Oxide growth runs during early frontend wafer fabrication loops.",
+        "d": "Logic testing is performed during the sorting stage (EDS) before packaging."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q2 Which backend manufacturing step physically cuts the full silicon wafer disk into separate chip squares?",
+      "answers": {
+        "a": "Chemical Vapor Deposition",
+        "b": "Wafer Dicing (Singulation)",
+        "c": "Thermosonic Wire Bonding",
+        "d": "Transfer Injection Molding"
+      },
+      "explanations": {
+        "a": "CVD grows thin chemical films across full wafers early in production.",
+        "b": "Correct! Dicing saws or cuts the wafer along scribe lines to isolate individual dies.",
+        "c": "Wire bonding builds interconnect lines after the die has been separated.",
+        "d": "Plasma etching removes structural mask patterns during frontend loops."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q3 What basic tool is used to stitch microscopic interconnect wires from the die pad to the package leads?",
+      "answers": {
+        "a": "A high-vacuum plasma gas nozzle",
+        "b": "A precision capillary tool nozzle",
+        "c": "A diamond-tipped dicing saw blade",
+        "d": "A high-voltage linear ion accelerator"
+      },
+      "explanations": {
+        "a": "Lasers generate excessive heat that would destroy delicate transistor junctions.",
+        "b": "Correct! Wire bonding machines use a very fine, hollow needle called a capillary tool to feed and weld wires.",
+        "c": "Gas torches destroy microchips instantly via severe thermal degradation.",
+        "d": "Adhesive joints are used for displays, not traditional high-speed wire bonding loops."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q4 What physical compound is standardly used to create the hard outer plastic body of a microchip?",
+      "answers": {
+        "a": "Liquid nitrogen coolant fluid",
+        "b": "Epoxy Molding Compound (EMC)",
+        "c": "Pure crystalline polysilicon gas",
+        "d": "Corrosive hydrofluoric cleaning acid"
+      },
+      "explanations": {
+        "a": "Liquid nitrogen is a temporary cooling medium, not a solid structural housing.",
+        "b": "Correct! EMC forms the rigid, protective plastic brick housing around the chip.",
+        "c": "Polysilicon forms gate structures, not external protective package bodies.",
+        "d": "Hydrofluoric acid is a highly corrosive etchant used to strip oxide films."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q5 What does the abbreviation CTE stand for in packaging material science?",
+      "answers": {
+        "a": "Capillary Travel Execution",
+        "b": "Coefficient of Thermal Expansion",
+        "c": "Chemical Tracking Efficiency",
+        "d": "Current Transmission Error"
+      },
+      "explanations": {
+        "a": "This is a descriptive phrase for machine movement, not a material metric.",
+        "b": "Correct! CTE quantifies how much a material expands when subjected to temperature shifts.",
+        "c": "Process logistics tracking metrics utilize alternate industry metrics.",
+        "d": "This relates to signal integrity debugging, not mechanical properties."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q6 Which phase of semiconductor fabrication deals with cutting, wiring, and molding chips after wafer processing is complete?",
+      "answers": {
+        "a": "Front-End-of-Line (FEOL)",
+        "b": "Back-End-of-Line (BEOL) Assembly",
+        "c": "Ingot Crystal Growth",
+        "d": "Photolithography Exposure"
+      },
+      "explanations": {
+        "a": "FEOL deals with making raw components inside the silicon, not late-stage sort checks.",
+        "b": "Correct! Late-stage operations that take place after the wafer is finished fall under BEOL assembly.",
+        "c": "Ingot pulling runs during standard raw baseline substrate preparation steps.",
+        "d": "Planarization is a physical flattening process, not an electrical sanity test."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q7 What are the two primary machine parameters calibrated by the user in this packaging simulation?",
+      "answers": {
+        "a": "Gas Flow Rate and Chamber Vacuum Pressure",
+        "b": "Capillary Ultrasonic Force and Molding Temperature",
+        "c": "Light Wavelength and Exposure Lens Focus",
+        "d": "Laser Etch Depth and Dopant Ion Energy"
+      },
+      "explanations": {
+        "a": "Gas dynamics apply to gas processing chambers, not package assembly tools.",
+        "b": "Correct! The operator directly adjusts the structural tool force (for wiring) and the heat of the mold tool.",
+        "c": "Optical settings handle lithography steps, while ion parameters shape active junctions.",
+        "d": "Beam parameters belong to ion implantation and lithography sub-consoles."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q8 What object holds the silicon die securely and provides the metal pins that stick out of standard microchips?",
+      "answers": {
+        "a": "A circular quartz wafer chuck",
+        "b": "A metallic leadframe or substrate",
+        "c": "A high-pressure argon gas canister",
+        "d": "A transparent glass lithography mask"
+      },
+      "explanations": {
+        "a": "Laser cutting creates internal physical fractures that destroy neighboring dies.",
+        "b": "Correct! The leadframe is a metal framework that supports the die and branches out into the macro-scale pins.",
+        "c": "Furnace steps run to repair crystal damage, not mark test errors.",
+        "d": "Manual scraping introduces contamination and unpredictable crystal fractures."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q9 Which interconnect method uses a high-frequency acoustic friction profile to mash aluminum wire flat against a pad without melting it first?",
+      "answers": {
+        "a": "Thermosonic Ball Bonding",
+        "b": "Wedge Bonding",
+        "c": "Oxy-Acetylene Fusion Welding",
+        "d": "Conductive Epoxy Gluing"
+      },
+      "explanations": {
+        "a": "Sheet resistance handles electrical attributes following ion doping steps.",
+        "b": "Correct! Wedge bonding uses ultrasonic vibration to squash the side of the wire flat without a ball-melt step.",
+        "c": "Thickness definitions govern physical depth profiles during mask or wiring steps.",
+        "d": "Thermal tracking parameters handle cooling limits, not clock cycles."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q10 Why do we package individual microchips instead of leaving them as exposed silicon squares?",
+      "answers": {
+        "a": "Exposed silicon dissolves instantly inside room-temperature air",
+        "b": "To safeguard the circuits from moisture, corrosion, dust, and physical impacts",
+        "c": "Packaging automatically forces a slow chip to run twice as fast",
+        "d": "To ensure the chip doesn't accidentally change color during operation"
+      },
+      "explanations": {
+        "a": "Electrical sort testing checks functional criteria; it cannot alter chemical compositions.",
+        "b": "Correct! The package acts as a rugged shield to keep the chip functional in real-world environments.",
+        "c": "Mask layouts are required to set up the circuit baseline architecture beforehand.",
+        "d": "Testing evaluates operating telemetry; it does not repair layout cracks or faults."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    }
+  ]
+}
