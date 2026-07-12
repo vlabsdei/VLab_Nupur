@@ -1,0 +1,1 @@
+### To simulate chip metallization and analyze how wire dimensions and material choice alter electrical resistance (R).

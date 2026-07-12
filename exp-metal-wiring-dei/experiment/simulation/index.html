@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Metal Wiring Interconnect Laboratory</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+    <div class="top-instruction-bar" id="instructionBanner">
+        <strong>Instructions:</strong> <span id="instructionText">To initialize metallization tracks, load the active IC Substrate die by clicking on load substrate at the bottom.</span>
+    </div>
+
+    <main class="main-container">
+        
+        <section class="panel left-panel">
+            <h2>Equipment Tray</h2>
+            <div class="equipment-area">
+                <div class="equipment-card" id="equipDie">
+                    <div class="equip-icon die-icon"></div>
+                    <p class="equipment-label">IC Substrate Die</p>
+                    <span class="status-badge state-idle">Ready</span>
+                </div>
+
+                <div class="equipment-card" id="equipDeposition">
+                    <div class="equip-icon metal-dep-icon"></div>
+                    <p class="equipment-label">Metal Sputter Target</p>
+                    <span class="status-badge state-idle">Ready</span>
+                </div>
+
+                <div class="equipment-card" id="equipEtch">
+                    <div class="equip-icon pattern-icon"></div>
+                    <p class="equipment-label">Plasma Etch Module</p>
+                    <span class="status-badge state-idle">Ready</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel center-panel">
+            <div class="step-tracker">
+                <div class="step active-step" id="step1">1. Load Substrate</div>
+                <div class="step" id="step2">2. Route Material</div>
+                <div class="step" id="step3">3. Calibrate Trace</div>
+                <div class="step" id="step4">4. Run Deposition</div>
+                <div class="step" id="step5">5. Complete</div>
+            </div>
+
+            <div class="lab-area">
+                <div class="hud-display">
+                    <div class="process-timer" id="processTimer">System Standing By</div>
+                    <div class="status-lights">
+                        <div class="light green active" id="lightGreen"></div>
+                        <div class="light orange" id="lightOrange"></div>
+                        <div class="light red" id="lightRed"></div>
+                    </div>
+                </div>
+
+                <div class="chamber-frame">
+                    <div class="ohmmeter-display" id="ohmmeterPanel">
+                        <div class="meter-label">DIGITAL RESISTANCE OHMMETER</div>
+                        <div class="meter-readout"><span id="liveMeterVal">---</span> &Omega;</div>
+                    </div>
+
+                    <div class="wire-track-container">
+                        <div class="interconnect-wire" id="wireTrace">
+                            <div class="electron-flow-particles" id="electronFlow"></div>
+                        </div>
+                        <div class="silicon-base-wafer">Lower Active Device Layer (Substrate Grid)</div>
+                    </div>
+                </div>
+
+                <div class="visualization-row">
+                    <div class="view-card">
+                        <h3>Top Surface View</h3>
+                        <div class="wafer-chuck">
+                            <div class="wafer-top-surface" id="waferTop">
+                                <div class="trace-line-top" id="traceLineTop"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="view-card">
+                        <h3>Cross-Section Profile</h3>
+                        <div class="wafer-chuck">
+                            <div class="wafer-cross-section" id="waferCross">
+                                <div class="oxide-insulator left-insulator">SiO2 Oxide</div>
+                                <div class="oxide-insulator right-insulator">SiO2 Oxide</div>
+                                <div class="metal-trench-fill" id="metalTrenchFill"></div>
+                                <div class="substrate-base-label">Silicon Base</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-area-container">
+                <div class="button-area">
+                    <button id="btnLoadDie" class="btn">Load Substrate</button>
+                    <button id="btnRouteMetal" class="btn btn-locked" disabled>Route Material</button>
+                    <button id="btnStartWiring" class="btn btn-locked" disabled>Deposit Track</button>
+                    <button id="btnPause" class="btn btn-locked btn-pause" disabled>Pause</button>
+                    <button id="btnReset" class="btn btn-reset">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel right-panel">
+            <h2>Process Parameters</h2>
+            <div class="control-card">
+                <div class="slider-group">
+                    <label for="metalType">Metal Material Selection:</label>
+                    <select id="metalType" class="selector-input">
+                        <option value="aluminum">Aluminum (Al &bull; Baseline)</option>
+                        <option value="copper">Copper (Cu &bull; Low Resistivity)</option>
+                        <option value="tungsten">Tungsten (W &bull; High Reliability Contacts)</option>
+                    </select>
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <label for="widthSlider">Wire Width:</label>
+                        <span class="metric-display"><span id="widthValue">275</span> nm</span>
+                    </div>
+                    <input type="range" id="widthSlider" min="50" max="500" value="275" step="5">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <label for="thicknessSlider">Wire Thickness:</label>
+                        <span class="metric-display"><span id="thicknessValue">550</span> nm</span>
+                    </div>
+                    <input type="range" id="thicknessSlider" min="100" max="1000" value="550" step="10">
+                </div>
+            </div>
+
+            <h2>Process Outputs</h2>
+            <div class="output-box">
+                <div class="diagnostic-grid">
+                    <div class="output-card">
+                        <span class="card-title">Resistance (R)</span>
+                        <div class="card-value"><span id="outResistance">0.00</span> &Omega;</div>
+                    </div>
+                    <div class="output-card">
+                        <span class="card-title">Conductivity</span>
+                        <div class="card-value"><span id="outConductivity">0.0</span> MS/m</div>
+                    </div>
+                    <div class="output-card">
+                        <span class="card-title">Connection Quality</span>
+                        <div class="card-value"><span id="outQuality">N/A</span></div>
+                    </div>
+                    <div class="output-card">
+                        <span class="card-title">Current Flow Ease</span>
+                        <div class="card-value"><span id="outFlow">N/A</span></div>
+                    </div>
+                </div>
+                <div class="console-log" id="statusBox">
+                    System standing by. Load integrated chip die sub-layer to start metallization processing...
+                </div>
+            </div>
+
+            <div class="formula-box">
+                <h3>Interconnect Resistance Formula</h3>
+                <div class="equation">R = &rho; * (L / A)</div>
+                <div class="flow-relation">
+                    Smaller Width &amp; Thickness &rarr; Restricted Cross Section &rarr; Surging Line Resistance
+                </div>
+                <div class="variable-legend">
+                    <p><strong>R</strong> &rarr; Net Metal Line Resistance (&Omega;)</p>
+                    <p><strong>&rho;</strong> &rarr; Material Bulk Intrinsic Resistivity</p>
+                    <p><strong>L</strong> &rarr; Micro-channel Line Path Length</p>
+                    <p><strong>A</strong> &rarr; Cross-Section Area (Width * Thickness)</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

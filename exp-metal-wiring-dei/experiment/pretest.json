@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Q1 What is the primary purpose of the metallization process in microchip manufacturing?",
+      "answers": {
+        "a": "To create insulating oxide barriers over the wafer",
+        "b": "To wire together separate transistors to build an electronic circuit network",
+        "c": "To chemically clean and polish the raw silicon substrate",
+        "d": "To cut the wafer disk into smaller individual processing squares"
+      },
+      "explanations": {
+        "a": "Insulating barriers are formed by separate dielectric or oxide tools.",
+        "b": "Correct! Metallization acts like roads, connecting separate transistor structures.",
+        "c": "Cleaning and polishing are structural preparation or chemical-mechanical steps.",
+        "d": "Cutting individual squares is the dicing process performed at structural end assembly."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q2 Which fundamental equation dictates the electrical resistance of the finished wire track?",
+      "answers": {
+        "a": "R = ρ * (L / A)",
+        "b": "F = m * a",
+        "c": "V = I * Z",
+        "d": "Rp ∝ √Energy"
+      },
+      "explanations": {
+        "a": "Correct! Line resistance depends on resistivity, length, and cross-section area.",
+        "b": "This is Newton's second law of mechanical motion.",
+        "c": "This represents general alternating current impedance.",
+        "d": "This relates to penetration depths inside ion implantation physics."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q3 How is the cross-sectional path area (A) of the metal line track calculated inside the simulation?",
+      "answers": {
+        "a": "Length divided by Width",
+        "b": "Width multiplied by Thickness",
+        "c": "Resistivity multiplied by Length",
+        "d": "Radius squared multiplied by Pi"
+      },
+      "explanations": {
+        "a": "Length and width do not define a cross-sectional channel area.",
+        "b": "Correct! Cross section area equals horizontal width times vertical layer thickness.",
+        "c": "This calculates a factor matching physical resistance equations.",
+        "d": "This calculates circular plane domains, not square trench profiles."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q4 What physical state is the Argon gas turned into during the sputtering phase?",
+      "answers": {
+        "a": "Liquid coolant stream",
+        "b": "Glowing plasma cloud",
+        "c": "Solid lattice layer",
+        "d": "Precursor acid vapor"
+      },
+      "explanations": {
+        "a": "Cryogenic liquid streams serve alternate thermal management tasks.",
+        "b": "Correct! Gas particles are energized to form a reactive, conductive plasma cloud.",
+        "c": "Gas does not transition into solid crystalline matrix lattices.",
+        "d": "Acid vapors relate to wet chemical profile processing chambers."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q5 Which tool terminal holds the pre-etched insulating wafer securely inside the vacuum zone?",
+      "answers": {
+        "a": "The Sputter Target Cathode",
+        "b": "The Wafer Chuck Stage",
+        "c": "The Sector Magnet Channel",
+        "d": "The RF Generator Matrix"
+      },
+      "explanations": {
+        "a": "The sputter target is the solid raw block of metal to be dislodged.",
+        "b": "Correct! The wafer chuck platform supports the substrate baseline during deposition.",
+        "c": "Sector magnets serve to bend beams inside ion implantation accelerators.",
+        "d": "The generator handles raw electrical power delivery limits."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q6 What is intrinsic bulk resistivity (ρ)?",
+      "answers": {
+        "a": "The structural height limit of a finished metal wire track",
+        "b": "A material property describing how strongly atoms naturally oppose electric current",
+        "c": "The speed at which Argon ions bombard the target source",
+        "d": "The percentage grade rating tracking connection yield flaws"
+      },
+      "explanations": {
+        "a": "Thickness defines structural trace height limits.",
+        "b": "Correct! Resistivity tracks how strongly a specific metal blocks electron movement.",
+        "c": "Bombardment kinetic speed is controlled by electrical field potential parameters.",
+        "d": "Quality indicators handle percentage parameter yield score rules."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q7 Why is a high vacuum required inside a physical vapor deposition chamber?",
+      "answers": {
+        "a": "To allow dislodged metal atoms to fly freely without hitting air contamination",
+        "b": "To heat up the silicon chip until it liquefies into trenches",
+        "c": "To convert the metal trace directly back into raw precursor gas",
+        "d": "To manually etch pattern lines without using photolithography masks"
+      },
+      "explanations": {
+        "a": "Correct! Removing air particles provides a clean line-of-sight path for atoms.",
+        "b": "Liquefying substrates destroys lower active transistor circuits.",
+        "c": "The goal is solid trace film accumulation, not gas vaporization revert loops.",
+        "d": "Vacuum states don't bypass lithography masking requirements."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q8 Which of these metals acts as the traditional baseline material for legacy chip wiring?",
+      "answers": {
+        "a": "Aluminum",
+        "b": "Copper",
+        "c": "Tungsten",
+        "d": "Silicon Dioxide"
+      },
+      "explanations": {
+        "a": "Correct! Aluminum was widely used as the original baseline wiring track layer.",
+        "b": "Copper represents advanced low-resistivity lines that replaced Aluminum.",
+        "c": "Tungsten handles specialized vertical high-temperature local plug vias.",
+        "d": "Silicon Dioxide is a glass-like electrical insulator, not a conductor."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q9 The phase of chip processing dealing with wire layers and interconnect routing is called:",
+      "answers": {
+        "a": "Front-End-of-Line (FEOL)",
+        "b": "Back-End-of-Line (BEOL)",
+        "c": "Silicon Ingot Slicing",
+        "d": "Thermal Core Activation"
+      },
+      "explanations": {
+        "a": "FEOL covers forming transistor junctions inside raw silicon crystal substrates.",
+        "b": "Correct! BEOL handles the wiring and multi-level metal line routing steps.",
+        "c": "Slicing operates during early bulk wafer wafer production cycles.",
+        "d": "Activation runs as a thermal furnace process following ion bombardment."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q10 What physical obstacle occurs when you force electricity through a narrower metal path?",
+      "answers": {
+        "a": "Electrical resistance decreases",
+        "b": "Electrical resistance increases",
+        "c": "The path automatically grows shorter",
+        "d": "The material properties swap back into gas states"
+      },
+      "explanations": {
+        "a": "Resistance goes up when cross section space is restricted.",
+        "b": "Correct! Restricting cross section parameters forces electrons to choke up.",
+        "c": "Physical track length remains constant during operational cycles.",
+        "d": "Solid metal wires require high melting temperatures to liquefy or vaporize."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Q1 As the sputtering cycle proceeds over time, why does the digital ohmmeter display a drop in resistance?",
+      "answers": {
+        "a": "The length of the trace is actively shrinking",
+        "b": "The metal layer is building up, widening the conductive path area",
+        "c": "The system temperature is dropping below absolute freezing points",
+        "d": "The choice of metal is swapping automatically to lower values"
+      },
+      "explanations": {
+        "a": "Track channel length bounds remain fixed by the substrate trench mask layout.",
+        "b": "Correct! As metal fills the trench, cross section thickness scales up, cutting resistance.",
+        "c": "Chamber cooling loops maintain uniform thermal boundaries, not extreme drops.",
+        "d": "The source material targets cannot swap elements mid-deposition process."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q2 If you select Copper instead of Aluminum or Tungsten, what happens to the output diagnostics?",
+      "answers": {
+        "a": "The net resistance drops due to Copper's lower bulk resistivity profile",
+        "b": "The trace line becomes physically longer inside the center chamber view",
+        "c": "The line stops conducting current completely",
+        "d": "The thickness slider value is locked to a fixed minimum boundary"
+      },
+      "explanations": {
+        "a": "Correct! Copper possesses low natural resistivity, optimizing track conductivity.",
+        "b": "Material modifications don't change geometric channel length footprints.",
+        "c": "Copper is an excellent electronic conductor widely used across advanced computing platforms.",
+        "d": "Slider input boundaries operate independently of chemical metal choices."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q3 Shrinking both Wire Width and Wire Thickness simultaneously results in:",
+      "answers": {
+        "a": "An exponential spike in line resistance",
+        "b": "A complete drop in bulk material conductivity values",
+        "c": "A higher processing quality score rating from electro-migration metrics",
+        "d": "The visual track expanding to cover the active silicon label layer"
+      },
+      "explanations": {
+        "a": "Correct! Compressing both dimensions creates a severe geometric electron bottleneck.",
+        "b": "Conductivity is an inherent material property and does not scale with dimension changes.",
+        "c": "Severely downscaling wires increases current congestion, lowering device reliability.",
+        "d": "Lowering values shrinks the graphics profiles inside your viewport modules."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q4 What physical phenomenon causes the dislodgement of target atoms inside the simulation chamber?",
+      "answers": {
+        "a": "Chemical acid dissolution along photoresist profiles",
+        "b": "Kinetic energy transfer via high-speed plasma ion collisions",
+        "c": "Thermal evaporation caused by structural laser melting heaters",
+        "d": "High-voltage magnetic mass analyzer filter sweeps"
+      },
+      "explanations": {
+        "a": "Chemical dissolution handles liquid wet etching profile steps.",
+        "b": "Correct! Sputtering relies on gas plasma ions smashing atoms out of target faces.",
+        "c": "Thermal evaporation is a separate PVD technique that uses resistive heating, not plasma.",
+        "d": "Mass analyzers handle ion species tracking, not physical target abrasion loops."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Q5 What defect risk lowers the 'Connection Quality' score when width is dialed to extremely low thresholds?",
+      "answers": {
+        "a": "Lattice Amorphization",
+        "b": "Electromigration",
+        "c": "Oxide Under-etching",
+        "d": "Thermal Outgassing"
+      },
+      "explanations": {
+        "a": "Amorphization tracks deep silicon lattice damage caused by ion beam collisions.",
+        "b": "Correct! High electron currents in tiny wires physically push metal atoms out of place.",
+        "c": "Under-etching relates to faulty pattern development phases before metallization.",
+        "d": "Outgassing covers vacuum vapor release risks from unbaked processing plastics."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Q6 Why do white arrow patterns appear flowing through the metal wire path during Step 5?",
+      "answers": {
+        "a": "To illustrate gas plasma venting out of extraction ports",
+        "b": "To signify active electron current flowing across the complete circuit track",
+        "c": "To track photoresist masks being stripped cleanly off trenches",
+        "d": "To indicate structural cracks forming inside the silicon oxide base"
+      },
+      "explanations": {
+        "a": "Plasma loops are sealed during active operation cycles, not vented across substrates.",
+        "b": "Correct! Flow particles show that the track is solid and conducting electric current.",
+        "c": "Stripping runs as an independent chemical cleaning stage outside PVD tool suites.",
+        "d": "Flow loops track operating electron current pathways, not fracture defects."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q7 Which material provides high reliability and is preferred for vertical contact plugs?",
+      "answers": {
+        "a": "Aluminum",
+        "b": "Tungsten",
+        "c": "Copper",
+        "d": "Silicon Dioxide"
+      },
+      "explanations": {
+        "a": "Aluminum handles general interconnect wiring but lacks high thermal resistance.",
+        "b": "Correct! Tungsten's high melting point makes it ideal for local transistor contact plugs.",
+        "c": "Copper handles horizontal multi-level wiring highways but requires barrier layers.",
+        "d": "Silicon Dioxide serves as the insulating barrier layer around the metal plug."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q8 How does cross-sectional area (A) mathematically relate to line resistance (R)?",
+      "answers": {
+        "a": "Resistance is directly proportional to cross-sectional area",
+        "b": "Resistance is inversely proportional to cross-sectional area",
+        "c": "Resistance is completely independent of wire area scaling metrics",
+        "d": "Resistance matches area parameters multiplied by target lengths squared"
+      },
+      "explanations": {
+        "a": "If they were directly proportional, larger areas would increase resistance.",
+        "b": "Correct! Area is in the denominator, meaning a larger area lowers line resistance.",
+        "c": "Cross section dimensions directly control net structural carrier channel bottlenecks.",
+        "d": "The math models straight inverse fractions, skipping exponential lengths terms."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Q9 In the separated cross-section monitor view, what layer serves as the structural 'mold' walls?",
+      "answers": {
+        "a": "The SiO2 Oxide Insulation regions",
+        "b": "The Bulk Silicon base floor layer",
+        "c": "The high-vacuum plasma tracking boundaries",
+        "d": "The pure metal target block face"
+      },
+      "explanations": {
+        "a": "Correct! Pre-etched oxide trenches act as insulating side walls for the wire track.",
+        "b": "The silicon floor supports the transistors beneath the wire paths.",
+        "c": "Vacuum boundaries define space dimensions, not sub-micron wafer features.",
+        "d": "The target block sits above the wafer as the source of metal atoms."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q10 What is a core process advantage of multi-level metallization stacking?",
+      "answers": {
+        "a": "It allows complex routing configurations across multiple independent vertical layers",
+        "b": "It eliminates the need to use pure metal materials like Copper",
+        "c": "It forces resistance metrics to drop back into absolute zero ranges natively",
+        "d": "It removes vacuum constraints from the sputtering chamber tools completely"
+      },
+      "explanations": {
+        "a": "Correct! Stacking lets fabs build 10-15 layers of wires vertically to maximize space.",
+        "b": "Material purity remains crucial for every vertical layer to ensure proper function.",
+        "c": "Dropping resistance to zero requires superconductive cooling steps, not layer stacking.",
+        "d": "Every vertical metallization track requires vacuum processing to avoid contamination."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    }
+  ]
+}
