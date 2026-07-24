@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gradeOutput.textContent = grade;
 
         instructionText.textContent = "Die sorting operational batch run completed successfully.";
-        statusBox.innerHTML = `Wafer sorting complete.<br>Final Lot Yield: <b>${finalYield.toFixed(1)}%</b> &rarr; Grade Grade: [<b>${grade}</b>]`;
+        statusBox.innerHTML = `Wafer sorting complete.<br>Final Lot Yield: <b>${finalYield.toFixed(1)}%</b> : Grade Grade: [<b>${grade}</b>]`;
     }
 
     pauseBtn.addEventListener("click", () => {

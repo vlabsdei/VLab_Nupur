@@ -1,9 +1,9 @@
 ### Procedure
 
 1. Select the target dopant impurity region profile using the **Dopant Ion Selection** dropdown menu:
-   * **Boron (B+ &rarr; P-Type)** for creating sub-surface holes.
-   * **Phosphorus (P+ &rarr; N-Type)** for introducing free electrons.
-   * **Arsenic (As+ &rarr; N-Type)** for introducing heavy, shallow electron regions.
+   * **Boron (B+ : P-Type)** for creating sub-surface holes.
+   * **Phosphorus (P+ : N-Type)** for introducing free electrons.
+   * **Arsenic (As+ : N-Type)** for introducing heavy, shallow electron regions.
 
 2. Click on the **Silicon Wafer** icon card within the equipment tray on the left panel to load the substrate.
 

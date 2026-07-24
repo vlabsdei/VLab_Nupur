@@ -98,7 +98,7 @@ Electrical die sorting processes are mandatory across manufacturing workflows fo
 
 * Stress-testing high-performance computer processors (CPUs and GPUs) for stable overclocking baselines.
 * Disabling bad rows or activating spare backup memory cells inside DRAM and Flash storage blocks.
-* Qualifying mission-critical automotive chips to ensure flawless performance under voltage drops.
+* Qualifying mission critical automotive chips to ensure flawless performance under voltage drops.
 * Gathering yield statistic trends to optimize chemical and lithography steps in future production lots.
 
 ### Expected Experimental Outcome
