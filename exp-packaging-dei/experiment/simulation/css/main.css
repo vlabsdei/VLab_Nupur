@@ -199,7 +199,7 @@ select { padding: 6px; border-radius: 4px; border: 1px solid var(--border-color)
 .dropdown-label { font-size: 13px; font-weight: bold; color: #333; margin-bottom: 4px; display: block; }
 input[type="range"] { cursor: pointer; }
 
-.console-log { margin-top: 10px; padding: 10px; background: #0f172a; border-radius: 6px; min-height: 85px; font-family: monospace; color: #38bdf8; font-size: 12px; line-height: 1.4; border-left: 4px solid var(--primary-blue); white-space: pre-line; }
+.console-log { margin-top: 10px; padding: 10px; background: #f3f4f5; border-radius: 6px; min-height: 85px; font-family: monospace; color: #000000; font-size: 12px; line-height: 1.4; border-left: 4px solid var(--primary-blue); white-space: pre-line; }
 .diagnostic-row { margin-bottom: 6px; font-size: 13px; }
 .equation { display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: bold; margin: 12px 0; font-family: "Times New Roman", Times, serif; color: #9a3412; letter-spacing: 0.5px; }
 .variable-legend p { margin: 6px 0; font-size: 12px; color: #555; line-height: 1.4; }
